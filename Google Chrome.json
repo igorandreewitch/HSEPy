@@ -1,0 +1,1784 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GLSA-202402-23",
+                "_score": 107.37827,
+                "_source": {
+                    "lastseen": "2024-03-16T17:10:59",
+                    "description": "### Background\n\nChromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web. Google Chrome is one fast, simple, and secure browser for all your devices. Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.\n\n### Description\n\nMultiple vulnerabilities have been discovered in Chromium and its derivatives. Please review the CVE identifiers referenced below for details.\n\n### Impact\n\nPlease review the referenced CVE identifiers for details.\n\n### Workaround\n\nThere is no known workaround at this time.\n\n### Resolution\n\nAll Google Chrome users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/google-chrome-121.0.6167.139\"\n     \n\nAll Chromium users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/chromium-121.0.6167.139\"\n     \n\nAll Microsoft Edge users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/microsoft-edge-121.0.2277.83\"",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2024-02-19T00:00:00",
+                    "type": "gentoo",
+                    "title": "Chromium, Google Chrome, Microsoft Edge: Multiple Vulnerabilities",
+                    "bulletinFamily": "unix",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0333",
+                        "CVE-2024-0517",
+                        "CVE-2024-0518",
+                        "CVE-2024-0519",
+                        "CVE-2024-0804",
+                        "CVE-2024-0805",
+                        "CVE-2024-0806",
+                        "CVE-2024-0807",
+                        "CVE-2024-0808",
+                        "CVE-2024-0809",
+                        "CVE-2024-0810",
+                        "CVE-2024-0811",
+                        "CVE-2024-0812",
+                        "CVE-2024-0813",
+                        "CVE-2024-0814",
+                        "CVE-2024-1059",
+                        "CVE-2024-1060",
+                        "CVE-2024-1077"
+                    ],
+                    "modified": "2024-02-19T00:00:00",
+                    "id": "GLSA-202402-23",
+                    "href": "https://security.gentoo.org/glsa/202402-23",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/gentoo/GLSA-202402-23"
+                },
+                "highlight": {
+                    "affectedPackage.packageName": [
+                        "www-client/<span class=\"vulners-highlight\">google</span>-<span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> is one fast, simple, and secure browser for all your devices.",
+                        "the CVE identifiers referenced below for details.\n\n### Impact\n\nPlease review the referenced CVE identifiers for details.\n\n### Workaround\n\nThere is no known workaround at this time.\n\n### Resolution\n\nAll <span class=\"vulners-highlight\">Google</span>",
+                        "<span class=\"vulners-highlight\">Chrome</span> users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">google</span>-<span class=\"vulners-highlight\">chrome</span>-121.0.6167.139\"\n     \n\nAll Chromium users should upgrade"
+                    ],
+                    "title": [
+                        "Chromium, <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>, Microsoft Edge: Multiple Vulnerabilities"
+                    ]
+                },
+                "sort": [
+                    107.37827,
+                    1708300800000
+                ],
+                "flatDescription": "Background Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web. Google Chrome is one fast, simple, and secure browser for all your devices. Microsoft Edge is a browser that combines a minimal design with..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "FF4CF2C7-4FEE-51F2-A180-642D8DBFFDC7",
+                "_score": 92.10304,
+                "_source": {
+                    "lastseen": "2024-03-11T17:27:08",
+                    "description": "## \u5de5\u5177\u7b80\u4ecb\n\n- \u5168\u7403\u9996\u6b3e\u5355\u6587\u4ef6\u5229\u7528 CVE-2023-4357 Chrome XXE \u6f0f\u6d1e EXP\uff0c\u5b9e\u73b0\u5bf9\u8bbf\u5ba2\u8005\u672c\u5730\u6587\u4ef6\u7a83...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-17T10:32:31",
+                    "type": "githubexploit",
+                    "title": "Exploit for Vulnerability in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-4357"
+                    ],
+                    "modified": "2024-03-11T08:09:09",
+                    "id": "FF4CF2C7-4FEE-51F2-A180-642D8DBFFDC7",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/FF4CF2C7-4FEE-51F2-A180-642D8DBFFDC7"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Vulnerability in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    92.10304,
+                    1700217151000
+                ],
+                "flatDescription": "\u5de5\u5177\u7b80\u4ecb  \u5168\u7403\u9996\u6b3e\u5355\u6587\u4ef6\u5229\u7528 CVE-2023-4357 Chrome XXE \u6f0f\u6d1e..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "3A476178-78E5-5B26-993F-17566490ECBD",
+                "_score": 91.45189,
+                "_source": {
+                    "lastseen": "2024-03-11T17:26:07",
+                    "description": "## \u5de5\u5177\u7b80\u4ecb\n\n- \u5168\u7403\u9996\u6b3e\u5355\u6587\u4ef6\u5229\u7528 CVE-2023-4357 Chrome XXE \u6f0f\u6d1e EXP\uff0c\u5b9e\u73b0\u5bf9\u8bbf\u5ba2\u8005\u672c\u5730\u6587\u4ef6\u7a83...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-17T10:32:31",
+                    "type": "githubexploit",
+                    "title": "Exploit for Vulnerability in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-4357"
+                    ],
+                    "modified": "2024-03-11T08:09:09",
+                    "id": "3A476178-78E5-5B26-993F-17566490ECBD",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/3A476178-78E5-5B26-993F-17566490ECBD"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Vulnerability in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    91.45189,
+                    1700217151000
+                ],
+                "flatDescription": "\u5de5\u5177\u7b80\u4ecb  \u5168\u7403\u9996\u6b3e\u5355\u6587\u4ef6\u5229\u7528 CVE-2023-4357 Chrome XXE \u6f0f\u6d1e..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "05E89B41-0C46-5518-BD71-7B6F330196E9",
+                "_score": 86.763756,
+                "_source": {
+                    "lastseen": "2024-03-16T18:07:50",
+                    "description": "Exploit for CVE-2022-4262\r\n=====================\r\n- Official Chr...",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2024-01-24T11:58:54",
+                    "type": "githubexploit",
+                    "title": "Exploit for Type Confusion in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2022-4262"
+                    ],
+                    "modified": "2024-03-14T18:35:18",
+                    "id": "05E89B41-0C46-5518-BD71-7B6F330196E9",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/05E89B41-0C46-5518-BD71-7B6F330196E9"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Type Confusion in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    86.763756,
+                    1706097534000
+                ],
+                "flatDescription": "Exploit for CVE-2022-4262  Official..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "0A786718-FAE7-5A66-983B-1D1244656089",
+                "_score": 86.5674,
+                "_source": {
+                    "lastseen": "2024-03-15T09:40:40",
+                    "description": "Exploit for CVE-2023-3079\r\n=====================\r\n- Shoutout to ...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-08-15T04:16:46",
+                    "type": "githubexploit",
+                    "title": "Exploit for Type Confusion in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-3079"
+                    ],
+                    "modified": "2024-03-15T02:27:43",
+                    "id": "0A786718-FAE7-5A66-983B-1D1244656089",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/0A786718-FAE7-5A66-983B-1D1244656089"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Type Confusion in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    86.5674,
+                    1692073006000
+                ],
+                "flatDescription": "Exploit for CVE-2023-3079  Shoutout to..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "1DE03583-5652-5654-A86C-2A76F5EE2F1E",
+                "_score": 79.09813,
+                "_source": {
+                    "lastseen": "2024-03-11T17:25:53",
+                    "description": "# CVE-2023-4357-APT-Style-exploitation\n...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-19T22:20:10",
+                    "type": "githubexploit",
+                    "title": "Exploit for Vulnerability in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-4357"
+                    ],
+                    "modified": "2024-02-21T09:23:35",
+                    "id": "1DE03583-5652-5654-A86C-2A76F5EE2F1E",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/1DE03583-5652-5654-A86C-2A76F5EE2F1E"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Vulnerability in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    79.09813,
+                    1700432410000
+                ],
+                "flatDescription": "CVE-2023-4357-APT-Style-exploitation..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GCSA-828588782084671111",
+                "_score": 78.76052,
+                "_source": {
+                    "lastseen": "2024-03-16T20:14:54",
+                    "description": "The Stable channel has been updated to 122.0.6261.128/.129 for Windows and Mac and 122.0.6261.128 to Linux which will roll out over the coming days/weeks. A full list of changes in this build is available in the [Log](<https://chromium.googlesource.com/chromium/src/+log/122.0.6261.112..122.0.6261.128?pretty=fuller&n=10000>).\n\n\n\nThe Extended Stable channel has been updated to 122.0.6261.129 for Windows and Mac which will roll out over the coming days/weeks.\n\n\n\n\nSecurity Fixes and Rewards\n\nNote: Access to bug details and links may be kept restricted until a majority of users are updated with a fix. We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven&#x27;t yet fixed.\n\n**  \n**\n\nThis update includes [3](<https://issues.chromium.org/issues?q=customfield1223088:3-M122>) security fixes. Below, we highlight fixes that were contributed by external researchers. Please see the [Chrome Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n**  \n**\n\n[TBD][[327696052](<https://issues.chromium.org/issues/327696052>)] High CVE-2024-2400: Use after free in Performance Manager. Reported by zh1x1an1221 of Ant Group Tianqiong Security Lab on 2024-03-01\n\n**  \n**\n\nWe would also like to thank all security researchers that worked with us during the development cycle to prevent security bugs from ever reaching the stable channel.  \n\nAs usual, our ongoing internal security work was responsible for a wide range of fixes:\n\n  * [[329224653](<https://issues.chromium.org/issues/329224653>)] Various fixes from internal audits, fuzzing and other initiatives\n\n\nMany of our security bugs are detected using [AddressSanitizer](<https://code.google.com/p/address-sanitizer/wiki/AddressSanitizer>), [MemorySanitizer](<https://code.google.com/p/memory-sanitizer/wiki/MemorySanitizer>), [UndefinedBehaviorSanitizer](<https://www.chromium.org/developers/testing/undefinedbehaviorsanitizer>), [Control Flow Integrity](<https://sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/google/afl>).\n\n\n\n\nInterested in switching release channels? Find out how [here](<https://www.chromium.org/getting-involved/dev-channel>). If you find a new issue, please let us know by [filing a bug](<https://crbug.com/>). The [community help forum](<https://support.google.com/chrome/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nDaniel Yip  \n\nGoogle Chrome",
+                    "cvss3": {},
+                    "published": "2024-03-12T00:00:00",
+                    "type": "chrome",
+                    "title": "Stable Channel Update for Desktop",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2024-2400"
+                    ],
+                    "modified": "2024-03-12T00:00:00",
+                    "id": "GCSA-828588782084671111",
+                    "href": "https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_12.html",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/chrome/GCSA-828588782084671111"
+                },
+                "highlight": {
+                    "description": [
+                        "Please see the [<span class=\"vulners-highlight\">Chrome</span> Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n**  \n**\n\n[TBD][[327696052](<https://issues.chromium.org/issues/327696052",
+                        "/sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/<span class=\"vulners-highlight\">google</span>",
+                        "The [community help forum](<https://support.google.com/<span class=\"vulners-highlight\">chrome</span>/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nDaniel Yip  \n\n<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "type": [
+                        "<span class=\"vulners-highlight\">chrome</span>"
+                    ]
+                },
+                "sort": [
+                    78.76052,
+                    1710201600000
+                ],
+                "flatDescription": "The Stable channel has been updated to 122.0.6261.128/.129 for Windows and Mac and 122.0.6261.128 to Linux which will roll out over the coming days/weeks. A full list of changes in this build is available in the Log. The Extended Stable channel has been updated to 122.0.6261.129 for Windows and..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "82BB504A-197C-55FF-8E5D-895F8C421296",
+                "_score": 78.60949,
+                "_source": {
+                    "lastseen": "2024-03-11T01:32:52",
+                    "description": "# CVE-2023-2033-Analysis\n\nThe full bug report has been published...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-04-26T15:24:02",
+                    "type": "githubexploit",
+                    "title": "Exploit for Type Confusion in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-2033"
+                    ],
+                    "modified": "2024-02-27T15:02:07",
+                    "id": "82BB504A-197C-55FF-8E5D-895F8C421296",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/82BB504A-197C-55FF-8E5D-895F8C421296"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Type Confusion in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    78.60949,
+                    1682522642000
+                ],
+                "flatDescription": "CVE-2023-2033-Analysis The full bug report has been..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GCSA-562537554776316090",
+                "_score": 77.60835,
+                "_source": {
+                    "lastseen": "2024-03-16T20:14:54",
+                    "description": "The Stable channel has been updated to 122.0.6261.111/.112 for Windows and Mac and 122.0.6261.111 to Linux which will roll out over the coming days/weeks. A full list of changes in this build is available in the [Log](<https://chromium.googlesource.com/chromium/src/+log/122.0.6261.94..122.0.6261.112?pretty=fuller&n=10000>).\n\n\n\nThe Extended Stable channel has been updated to 122.0.6261.112 for Windows and Mac which will roll out over the coming days/weeks.\n\n\n\n\n Security Fixes and Rewards\n\nNote: Access to bug details and links may be kept restricted until a majority of users are updated with a fix. We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven&#x27;t yet fixed.\n\n\n\n\nThis update includes [3](<https://issues.chromium.org/issues?q=customfield1223088:2-M122>) security fixes. Below, we highlight fixes that were contributed by external researchers. Please see the [Chrome Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n\n\n\n[$12000][[325893559](<https://issues.chromium.org/issues/325893559>)] High CVE-2024-2173: Out of bounds memory access in V8. Reported by 5fceb6172bbf7e2c5a948183b53565b9 on 2024-02-19\n\n[$7000][[325866363](<https://issues.chromium.org/issues/325866363>)] High CVE-2024-2174: Inappropriate implementation in V8. Reported by 5f46f4ee2e17957ba7b39897fb376be8 on 2024-02-19\n\n[$6000][[325936438](<https://issues.chromium.org/issues/325936438>)] High CVE-2024-2176: Use after free in FedCM. Reported by Anonymous on 2024-02-20\n\n\n\n\nWe would also like to thank all security researchers that worked with us during the development cycle to prevent security bugs from ever reaching the stable channel.\n\n\n\n\nMany of our security bugs are detected using [AddressSanitizer](<https://code.google.com/p/address-sanitizer/wiki/AddressSanitizer>), [MemorySanitizer](<https://code.google.com/p/memory-sanitizer/wiki/MemorySanitizer>), [UndefinedBehaviorSanitizer](<https://www.chromium.org/developers/testing/undefinedbehaviorsanitizer>), [Control Flow Integrity](<https://sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/google/afl>).\n\n\n\n\n\n\nInterested in switching release channels? Find out how [here](<https://www.chromium.org/getting-involved/dev-channel>). If you find a new issue, please let us know by [filing a bug](<https://crbug.com/>). The [community help forum](<https://support.google.com/chrome/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\nGoogle Chrome",
+                    "cvss3": {},
+                    "published": "2024-03-05T00:00:00",
+                    "type": "chrome",
+                    "title": "Stable Channel Update for Desktop",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2024-2173",
+                        "CVE-2024-2174",
+                        "CVE-2024-2176"
+                    ],
+                    "modified": "2024-03-05T00:00:00",
+                    "id": "GCSA-562537554776316090",
+                    "href": "https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/chrome/GCSA-562537554776316090"
+                },
+                "highlight": {
+                    "description": [
+                        "Please see the [<span class=\"vulners-highlight\">Chrome</span> Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n\n\n\n[$12000][[325893559](<https://issues.chromium.org/issues/325893559>",
+                        "/sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/<span class=\"vulners-highlight\">google</span>",
+                        "The [community help forum](<https://support.google.com/<span class=\"vulners-highlight\">chrome</span>/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\n<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "type": [
+                        "<span class=\"vulners-highlight\">chrome</span>"
+                    ]
+                },
+                "sort": [
+                    77.60835,
+                    1709596800000
+                ],
+                "flatDescription": "The Stable channel has been updated to 122.0.6261.111/.112 for Windows and Mac and 122.0.6261.111 to Linux which will roll out over the coming days/weeks. A full list of changes in this build is available in the Log. The Extended Stable channel has been updated to 122.0.6261.112 for Windows and..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "DE7F730E-5AD7-5287-B7D7-903C9A0C1D16",
+                "_score": 76.69917,
+                "_source": {
+                    "lastseen": "2024-03-16T17:57:24",
+                    "description": "# CVE-2024-0519-Chrome-exploit\nExecute arbitrary code on the vic...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-03-04T10:25:06",
+                    "type": "githubexploit",
+                    "title": "Exploit for Out-of-bounds Write in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0519"
+                    ],
+                    "modified": "2024-03-13T18:33:23",
+                    "id": "DE7F730E-5AD7-5287-B7D7-903C9A0C1D16",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/DE7F730E-5AD7-5287-B7D7-903C9A0C1D16"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Out-of-bounds Write in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    76.69917,
+                    1709547906000
+                ],
+                "flatDescription": "CVE-2024-0519-Chrome-exploit Execute arbitrary code on the..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GLSA-202401-34",
+                "_score": 73.194885,
+                "_source": {
+                    "lastseen": "2024-03-16T13:04:07",
+                    "description": "### Background\n\nChromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web. Google Chrome is one fast, simple, and secure browser for all your devices. Microsoft Edge is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.\n\n### Description\n\nMultiple vulnerabilities have been discovered in Chromium and its derivatives. Please review the CVE identifiers referenced below for details.\n\n### Impact\n\nPlease review the referenced CVE identifiers for details.\n\n### Workaround\n\nThere is no known workaround at this time.\n\n### Resolution\n\nAll Google Chrome users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/google-chrome-120.0.6099.109\"\n     \n\nAll Chromium users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/chromium-120.0.6099.109\"\n     \n\nAll Microsoft Edge users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/microsoft-edge-120.0.2210.133\"",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "CHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.6,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-31T00:00:00",
+                    "type": "gentoo",
+                    "title": "Chromium, Google Chrome, Microsoft Edge: Multiple Vulnerabilities",
+                    "bulletinFamily": "unix",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-2312",
+                        "CVE-2023-2929",
+                        "CVE-2023-2930",
+                        "CVE-2023-2931",
+                        "CVE-2023-2932",
+                        "CVE-2023-2933",
+                        "CVE-2023-2934",
+                        "CVE-2023-2935",
+                        "CVE-2023-2936",
+                        "CVE-2023-2937",
+                        "CVE-2023-2938",
+                        "CVE-2023-2939",
+                        "CVE-2023-2940",
+                        "CVE-2023-2941",
+                        "CVE-2023-3079",
+                        "CVE-2023-3214",
+                        "CVE-2023-3215",
+                        "CVE-2023-3216",
+                        "CVE-2023-3217",
+                        "CVE-2023-3420",
+                        "CVE-2023-3421",
+                        "CVE-2023-3422",
+                        "CVE-2023-3727",
+                        "CVE-2023-3728",
+                        "CVE-2023-3730",
+                        "CVE-2023-3732",
+                        "CVE-2023-3733",
+                        "CVE-2023-3734",
+                        "CVE-2023-3735",
+                        "CVE-2023-3736",
+                        "CVE-2023-3737",
+                        "CVE-2023-3738",
+                        "CVE-2023-3740",
+                        "CVE-2023-4068",
+                        "CVE-2023-4069",
+                        "CVE-2023-4070",
+                        "CVE-2023-4071",
+                        "CVE-2023-4072",
+                        "CVE-2023-4073",
+                        "CVE-2023-4074",
+                        "CVE-2023-4075",
+                        "CVE-2023-4076",
+                        "CVE-2023-4077",
+                        "CVE-2023-4078",
+                        "CVE-2023-4349",
+                        "CVE-2023-4350",
+                        "CVE-2023-4351",
+                        "CVE-2023-4352",
+                        "CVE-2023-4353",
+                        "CVE-2023-4354",
+                        "CVE-2023-4355",
+                        "CVE-2023-4356",
+                        "CVE-2023-4357",
+                        "CVE-2023-4358",
+                        "CVE-2023-4359",
+                        "CVE-2023-4360",
+                        "CVE-2023-4361",
+                        "CVE-2023-4362",
+                        "CVE-2023-4363",
+                        "CVE-2023-4364",
+                        "CVE-2023-4365",
+                        "CVE-2023-4366",
+                        "CVE-2023-4367",
+                        "CVE-2023-4368",
+                        "CVE-2023-4427",
+                        "CVE-2023-4428",
+                        "CVE-2023-4429",
+                        "CVE-2023-4430",
+                        "CVE-2023-4431",
+                        "CVE-2023-4572",
+                        "CVE-2023-4761",
+                        "CVE-2023-4762",
+                        "CVE-2023-4763",
+                        "CVE-2023-4764",
+                        "CVE-2023-4900",
+                        "CVE-2023-4901",
+                        "CVE-2023-4902",
+                        "CVE-2023-4903",
+                        "CVE-2023-4904",
+                        "CVE-2023-4905",
+                        "CVE-2023-4906",
+                        "CVE-2023-4907",
+                        "CVE-2023-4908",
+                        "CVE-2023-4909",
+                        "CVE-2023-5186",
+                        "CVE-2023-5187",
+                        "CVE-2023-5217",
+                        "CVE-2023-5218",
+                        "CVE-2023-5346",
+                        "CVE-2023-5472",
+                        "CVE-2023-5473",
+                        "CVE-2023-5474",
+                        "CVE-2023-5475",
+                        "CVE-2023-5476",
+                        "CVE-2023-5477",
+                        "CVE-2023-5478",
+                        "CVE-2023-5479",
+                        "CVE-2023-5480",
+                        "CVE-2023-5481",
+                        "CVE-2023-5482",
+                        "CVE-2023-5483",
+                        "CVE-2023-5484",
+                        "CVE-2023-5485",
+                        "CVE-2023-5486",
+                        "CVE-2023-5487",
+                        "CVE-2023-5849",
+                        "CVE-2023-5850",
+                        "CVE-2023-5851",
+                        "CVE-2023-5852",
+                        "CVE-2023-5853",
+                        "CVE-2023-5854",
+                        "CVE-2023-5855",
+                        "CVE-2023-5856",
+                        "CVE-2023-5857",
+                        "CVE-2023-5858",
+                        "CVE-2023-5859",
+                        "CVE-2023-5996",
+                        "CVE-2023-5997",
+                        "CVE-2023-6112",
+                        "CVE-2023-6345",
+                        "CVE-2023-6346",
+                        "CVE-2023-6347",
+                        "CVE-2023-6348",
+                        "CVE-2023-6350",
+                        "CVE-2023-6351",
+                        "CVE-2023-6508",
+                        "CVE-2023-6509",
+                        "CVE-2023-6510",
+                        "CVE-2023-6511",
+                        "CVE-2023-6512",
+                        "CVE-2023-6702",
+                        "CVE-2023-6703",
+                        "CVE-2023-6704",
+                        "CVE-2023-6705",
+                        "CVE-2023-6706",
+                        "CVE-2023-6707",
+                        "CVE-2023-7024",
+                        "CVE-2024-0222",
+                        "CVE-2024-0223",
+                        "CVE-2024-0224",
+                        "CVE-2024-0225"
+                    ],
+                    "modified": "2024-01-31T00:00:00",
+                    "id": "GLSA-202401-34",
+                    "href": "https://security.gentoo.org/glsa/202401-34",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/gentoo/GLSA-202401-34"
+                },
+                "highlight": {
+                    "affectedPackage.packageName": [
+                        "www-client/<span class=\"vulners-highlight\">google</span>-<span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> is one fast, simple, and secure browser for all your devices.",
+                        "the CVE identifiers referenced below for details.\n\n### Impact\n\nPlease review the referenced CVE identifiers for details.\n\n### Workaround\n\nThere is no known workaround at this time.\n\n### Resolution\n\nAll <span class=\"vulners-highlight\">Google</span>",
+                        "<span class=\"vulners-highlight\">Chrome</span> users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">google</span>-<span class=\"vulners-highlight\">chrome</span>-120.0.6099.109\"\n     \n\nAll Chromium users should upgrade"
+                    ],
+                    "title": [
+                        "Chromium, <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>, Microsoft Edge: Multiple Vulnerabilities"
+                    ]
+                },
+                "sort": [
+                    73.194885,
+                    1706659200000
+                ],
+                "flatDescription": "Background Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web. Google Chrome is one fast, simple, and secure browser for all your devices. Microsoft Edge is a browser that combines a minimal design with..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GCSA-1991636383217164023",
+                "_score": 72.35433,
+                "_source": {
+                    "lastseen": "2024-03-16T20:14:54",
+                    "description": "The Stable channel has been updated to 122.0.6261.94 for Mac,Linux and 122.0.6261.94/.95 to Windows which will roll out over the coming days/weeks. A full list of changes in this build is available in the [Log](<https://chromium.googlesource.com/chromium/src/+log/122.0.6261.70..122.0.6261.94?pretty=fuller&n=10000>).\n\n\n\nThe Extended Stable channel has been updated to 122.0.6261.94 for Mac and 122.0.6261.95 for Windows which will roll out over the coming days/weeks.\n\n\n\n\n Security Fixes and Rewards\n\nNote: Access to bug details and links may be kept restricted until a majority of users are updated with a fix. We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven&#x27;t yet fixed.\n\n\n\n\nThis update includes [4](<https://issues.chromium.org/issues?q=customfield1223088:1-M122>) security fixes. Below, we highlight fixes that were contributed by external researchers. Please see the [Chrome Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n\n\n\n[$7000][[324596281](<https://issues.chromium.org/issues/324596281>)] High CVE-2024-1938: Type Confusion in V8. Reported by 5f46f4ee2e17957ba7b39897fb376be8 on 2024-02-11\n\n[$7000][[323694592](<https://issues.chromium.org/issues/323694592>)] High CVE-2024-1939: Type Confusion in V8. Reported by Bohan Liu (@P4nda20371774) of Tencent Security Xuanwu Lab on 2024-02-05\n\n\n\n\nWe would also like to thank all security researchers that worked with us during the development cycle to prevent security bugs from ever reaching the stable channel.  \n\nAs usual, our ongoing internal security work was responsible for a wide range of fixes:\n\n  * [[326980493](<https://issues.chromium.org/issues/326980493>)] Various fixes from internal audits, fuzzing and other initiatives\n\n\nMany of our security bugs are detected using [AddressSanitizer](<https://code.google.com/p/address-sanitizer/wiki/AddressSanitizer>), [MemorySanitizer](<https://code.google.com/p/memory-sanitizer/wiki/MemorySanitizer>), [UndefinedBehaviorSanitizer](<https://www.chromium.org/developers/testing/undefinedbehaviorsanitizer>), [Control Flow Integrity](<https://sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/google/afl>).\n\n\n\n\nInterested in switching release channels? Find out how [here](<https://www.chromium.org/getting-involved/dev-channel>). If you find a new issue, please let us know by [filing a bug](<https://crbug.com/>). The [community help forum](<https://support.google.com/chrome/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\nGoogle Chrome",
+                    "cvss3": {},
+                    "published": "2024-02-27T00:00:00",
+                    "type": "chrome",
+                    "title": "Stable Channel Update for Desktop",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2024-1938",
+                        "CVE-2024-1939"
+                    ],
+                    "modified": "2024-02-27T00:00:00",
+                    "id": "GCSA-1991636383217164023",
+                    "href": "https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_27.html",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/chrome/GCSA-1991636383217164023"
+                },
+                "highlight": {
+                    "description": [
+                        "Please see the [<span class=\"vulners-highlight\">Chrome</span> Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n\n\n\n[$7000][[324596281](<https://issues.chromium.org/issues/324596281>)",
+                        "/sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/<span class=\"vulners-highlight\">google</span>",
+                        "The [community help forum](<https://support.google.com/<span class=\"vulners-highlight\">chrome</span>/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\n<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "type": [
+                        "<span class=\"vulners-highlight\">chrome</span>"
+                    ]
+                },
+                "sort": [
+                    72.35433,
+                    1708992000000
+                ],
+                "flatDescription": "The Stable channel has been updated to 122.0.6261.94 for Mac,Linux and 122.0.6261.94/.95 to Windows which will roll out over the coming days/weeks. A full list of changes in this build is available in the Log. The Extended Stable channel has been updated to 122.0.6261.94 for Mac and 122.0.6261.95..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GCSA-1133025810642778744",
+                "_score": 66.33563,
+                "_source": {
+                    "lastseen": "2024-03-16T20:14:54",
+                    "description": "The Chrome team is delighted to announce the promotion of Chrome 122 to the stable channel for Windows, Mac and Linux. This will roll out over the coming days/weeks.\n\n\nChrome 122.0.6261.57 (Linux and Mac), 122.0.6261.57/.58( Windows) contains a number of fixes and improvements -- a list of changes is available in the[ log](<https://chromium.googlesource.com/chromium/src/+log/121.0.6167.185..122.0.6261.58?pretty=fuller&n=10000>). Watch out for upcoming[ ](<https://chrome.blogspot.com/>)[Chrome](<https://chrome.blogspot.com/>) and[ Chromium](<https://blog.chromium.org/>) blog posts about new features and big efforts delivered in 122.\n\n\n\n\nThe Extended Stable channel has been updated to 122.0.6261.57 for Windows and 122.0.6261.57 for Mac, which will roll out over the coming days/weeks.\n\n\n\n\nSecurity Fixes and Rewards\n\nNote: Access to bug details and links may be kept restricted until a majority of users are updated with a fix. We will also retain restrictions if the bug exists in a third party library that other projects similarly depend on, but haven&#x27;t yet fixed.\n\n\n\n\nThis update includes [12](<https://issues.chromium.org/issues?q=customfield1223088:0-M122>) security fixes. Below, we highlight fixes that were contributed by external researchers. Please see the [Chrome Security Page](<https://sites.google.com/a/chromium.org/dev/Home/chromium-security>) for more information.\n\n\n\n\n[$7000][[41495060](<https://issues.chromium.org/issues/41495060>)] High CVE-2024-1669: Out of bounds memory access in Blink. Reported by Anonymous on 2024-01-26\n\n[$5000][[41481374](<https://issues.chromium.org/issues/41481374>)] High CVE-2024-1670: Use after free in Mojo. Reported by Cassidy Kim(@cassidy6564) on 2023-12-06\n\n[$8000][[41487933](<https://issues.chromium.org/issues/41487933>)] Medium CVE-2024-1671: Inappropriate implementation in Site Isolation. Reported by Harry Chen on 2024-01-03\n\n[$3000][[41485789](<https://issues.chromium.org/issues/41485789>)] Medium CVE-2024-1672: Inappropriate implementation in Content Security Policy. Reported by Georg Felber (TU Wien) &amp; Marco Squarcina (TU Wien) on 2023-12-19\n\n[$2000][[41490491](<https://issues.chromium.org/issues/41490491>)] Medium CVE-2024-1673: Use after free in Accessibility. Reported by Weipeng Jiang (@Krace) of VRI on 2024-01-11\n\n[$1000][[40095183](<https://issues.chromium.org/issues/40095183>)] Medium CVE-2024-1674: Inappropriate implementation in Navigation. Reported by David Erceg on 2019-05-27\n\n[$1000][[41486208](<https://issues.chromium.org/issues/41486208>)] Medium CVE-2024-1675: Insufficient policy enforcement in Download. Reported by Bart\u0142omiej Wacko on 2023-12-21\n\n[$1000][[40944847](<https://issues.chromium.org/issues/40944847>)] Low CVE-2024-1676: Inappropriate implementation in Navigation. Reported by Khalil Zhani on 2023-11-21\n\n\n\n\nWe would also like to thank all security researchers that worked with us during the development cycle to prevent security bugs from ever reaching the stable channel.  \n\nAs usual, our ongoing internal security work was responsible for a wide range of fixes:\n\n  * [[326063910](<https://issues.chromium.org/issues/326063910>)] Various fixes from internal audits, fuzzing and other initiatives\n\n\n\n\nMany of our security bugs are detected using [AddressSanitizer](<https://code.google.com/p/address-sanitizer/wiki/AddressSanitizer>), [MemorySanitizer](<https://code.google.com/p/memory-sanitizer/wiki/MemorySanitizer>), [UndefinedBehaviorSanitizer](<https://www.chromium.org/developers/testing/undefinedbehaviorsanitizer>), [Control Flow Integrity](<https://sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/google/afl>).\n\n\n\n\n\n\n\n\n\n\n\n\n\nInterested in switching release channels? Find out how [here](<https://www.chromium.org/getting-involved/dev-channel>). If you find a new issue, please let us know by [filing a bug](<https://crbug.com/>). The [community help forum](<https://support.google.com/chrome/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\nGoogle Chrome",
+                    "cvss3": {},
+                    "published": "2024-02-20T00:00:00",
+                    "type": "chrome",
+                    "title": "Stable Channel Update for Desktop",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2024-1669",
+                        "CVE-2024-1670",
+                        "CVE-2024-1671",
+                        "CVE-2024-1672",
+                        "CVE-2024-1673",
+                        "CVE-2024-1674",
+                        "CVE-2024-1675",
+                        "CVE-2024-1676"
+                    ],
+                    "modified": "2024-02-20T00:00:00",
+                    "id": "GCSA-1133025810642778744",
+                    "href": "https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_20.html",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/chrome/GCSA-1133025810642778744"
+                },
+                "highlight": {
+                    "description": [
+                        "The <span class=\"vulners-highlight\">Chrome</span> team is delighted to announce the promotion of <span class=\"vulners-highlight\">Chrome</span> 122 to the stable channel for Windows, Mac and Linux. This will roll out over the coming days/weeks.",
+                        "<span class=\"vulners-highlight\">Chrome</span> 122.0.6261.57 (Linux and Mac), 122.0.6261.57/.58( Windows) contains a number of fixes and improvements -- a list of changes is available in the[ log](<https://chromium.googlesource.com/chromium/",
+                        "Watch out for upcoming[ ](<https://chrome.blogspot.com/>)[<span class=\"vulners-highlight\">Chrome</span>](<https://chrome.blogspot.com/>) and[ Chromium](<https://blog.chromium.org/>) blog posts about new features and big efforts delivered in",
+                        "/sites.google.com/a/chromium.org/dev/developers/testing/control-flow-integrity>), [libFuzzer](<https://sites.google.com/a/chromium.org/dev/developers/testing/libfuzzer>), or [AFL](<https://github.com/<span class=\"vulners-highlight\">google</span>",
+                        "The [community help forum](<https://support.google.com/<span class=\"vulners-highlight\">chrome</span>/community>) is also a great place to reach out for help or learn about common issues.  \n\n\nPrudhvikumar Bommana  \n\n<span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "type": [
+                        "<span class=\"vulners-highlight\">chrome</span>"
+                    ]
+                },
+                "sort": [
+                    66.33563,
+                    1708387200000
+                ],
+                "flatDescription": "The Chrome team is delighted to announce the promotion of Chrome 122 to the stable channel for Windows, Mac and Linux. This will roll out over the coming days/weeks. Chrome 122.0.6261.57 (Linux and Mac), 122.0.6261.57/.58( Windows) contains a number of fixes and improvements -- a list of changes..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0811",
+                "_score": 66.24993,
+                "_source": {
+                    "lastseen": "2024-03-16T15:08:49",
+                    "description": "Inappropriate implementation in Extensions API in Google Chrome prior to 121.0.6167.85 allowed an attacker who convinced a user to install a malicious extension to leak cross-origin data via a crafted Chrome Extension. (Chromium security severity: Low)",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "LOW",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-24T00:15:08",
+                    "type": "cve",
+                    "title": "CVE-2024-0811",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0811"
+                    ],
+                    "modified": "2024-02-19T17:15:08",
+                    "cpe": [],
+                    "id": "CVE-2024-0811",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0811",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0811"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Google</span>"
+                    ],
+                    "references": [
+                        "http://packetstormsecurity.com/files/177172/<span class=\"vulners-highlight\">Chrome</span>-chrome.pageCapture.saveAsMHTML-Extension-API-Blocked-Origin-Bypass.html"
+                    ],
+                    "description": [
+                        "Inappropriate implementation in Extensions API in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> prior to 121.0.6167.85 allowed an attacker who convinced a user to install a malicious extension to leak cross-origin data via a crafted",
+                        "<span class=\"vulners-highlight\">Chrome</span> Extension."
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">chrome</span>-cve-admin@google.com"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    66.24993,
+                    1706055308000
+                ],
+                "flatDescription": "Inappropriate implementation in Extensions API in Google Chrome prior to 121.0.6167.85 allowed an attacker who convinced a user to install a malicious extension to leak cross-origin data via a crafted Chrome Extension. (Chromium security severity:..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2014-1745",
+                "_score": 65.68089,
+                "_source": {
+                    "lastseen": "2024-03-16T10:24:44",
+                    "description": "Use-after-free vulnerability in the SVG implementation in Blink, as used in Google Chrome before 35.0.1916.114, allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors that trigger removal of an SVGFontFaceElement object, related to core/svg/SVGFontFaceElement.cpp.",
+                    "cvss3": {},
+                    "published": "2014-05-21T11:14:00",
+                    "type": "cve",
+                    "title": "CVE-2014-1745",
+                    "cwe": [
+                        "CWE-399"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2014-1745"
+                    ],
+                    "modified": "2024-02-06T02:15:00",
+                    "cpe": [
+                        "cpe:/a:google:chrome:35.0.1916.93",
+                        "cpe:/a:google:chrome:35.0.1916.45",
+                        "cpe:/a:google:chrome:35.0.1916.77",
+                        "cpe:/a:google:chrome:35.0.1916.56",
+                        "cpe:/a:google:chrome:35.0.1916.34",
+                        "cpe:/a:google:chrome:35.0.1916.103",
+                        "cpe:/a:google:chrome:35.0.1916.5",
+                        "cpe:/a:google:chrome:35.0.1916.3",
+                        "cpe:/a:google:chrome:35.0.1916.2",
+                        "cpe:/a:google:chrome:35.0.1916.82",
+                        "cpe:/a:google:chrome:35.0.1916.15",
+                        "cpe:/a:google:chrome:35.0.1916.90",
+                        "cpe:/a:google:chrome:35.0.1916.101",
+                        "cpe:/a:google:chrome:35.0.1916.52",
+                        "cpe:/a:google:chrome:35.0.1916.99",
+                        "cpe:/a:google:chrome:35.0.1916.106",
+                        "cpe:/a:google:chrome:35.0.1916.9",
+                        "cpe:/a:google:chrome:35.0.1916.0",
+                        "cpe:/a:google:chrome:35.0.1916.41",
+                        "cpe:/a:google:chrome:35.0.1916.17",
+                        "cpe:/a:google:chrome:35.0.1916.39",
+                        "cpe:/a:google:chrome:35.0.1916.19",
+                        "cpe:/a:google:chrome:35.0.1916.46",
+                        "cpe:/a:google:chrome:35.0.1916.23",
+                        "cpe:/a:google:chrome:35.0.1916.113",
+                        "cpe:/a:google:chrome:35.0.1916.44",
+                        "cpe:/a:google:chrome:35.0.1916.107",
+                        "cpe:/a:google:chrome:35.0.1916.43",
+                        "cpe:/a:google:chrome:35.0.1916.10",
+                        "cpe:/a:google:chrome:35.0.1916.86",
+                        "cpe:/a:google:chrome:35.0.1916.51",
+                        "cpe:/a:google:chrome:35.0.1916.21",
+                        "cpe:/a:google:chrome:35.0.1916.105",
+                        "cpe:/a:google:chrome:35.0.1916.48",
+                        "cpe:/a:google:chrome:35.0.1916.20",
+                        "cpe:/a:google:chrome:35.0.1916.42",
+                        "cpe:/a:google:chrome:35.0.1916.14",
+                        "cpe:/a:google:chrome:35.0.1916.112",
+                        "cpe:/a:google:chrome:35.0.1916.33",
+                        "cpe:/a:google:chrome:35.0.1916.47",
+                        "cpe:/a:google:chrome:35.0.1916.1",
+                        "cpe:/a:google:chrome:35.0.1916.109",
+                        "cpe:/a:google:chrome:35.0.1916.4",
+                        "cpe:/a:google:chrome:35.0.1916.27",
+                        "cpe:/a:google:chrome:35.0.1916.96",
+                        "cpe:/a:google:chrome:35.0.1916.108",
+                        "cpe:/a:google:chrome:35.0.1916.32",
+                        "cpe:/a:google:chrome:35.0.1916.8",
+                        "cpe:/a:google:chrome:35.0.1916.85",
+                        "cpe:/a:google:chrome:35.0.1916.35",
+                        "cpe:/a:google:chrome:35.0.1916.36",
+                        "cpe:/a:google:chrome:35.0.1916.84",
+                        "cpe:/a:google:chrome:35.0.1916.61",
+                        "cpe:/a:google:chrome:35.0.1916.18",
+                        "cpe:/a:google:chrome:35.0.1916.111",
+                        "cpe:/a:google:chrome:35.0.1916.72",
+                        "cpe:/a:google:chrome:35.0.1916.38",
+                        "cpe:/a:google:chrome:35.0.1916.31",
+                        "cpe:/a:google:chrome:35.0.1916.92",
+                        "cpe:/a:google:chrome:35.0.1916.6",
+                        "cpe:/a:google:chrome:35.0.1916.37",
+                        "cpe:/a:google:chrome:35.0.1916.57",
+                        "cpe:/a:google:chrome:35.0.1916.74",
+                        "cpe:/a:google:chrome:35.0.1916.7",
+                        "cpe:/a:google:chrome:35.0.1916.95",
+                        "cpe:/a:google:chrome:35.0.1916.68",
+                        "cpe:/a:google:chrome:35.0.1916.104",
+                        "cpe:/a:google:chrome:35.0.1916.98",
+                        "cpe:/a:google:chrome:35.0.1916.80",
+                        "cpe:/a:google:chrome:35.0.1916.13",
+                        "cpe:/a:google:chrome:35.0.1916.71",
+                        "cpe:/a:google:chrome:35.0.1916.59",
+                        "cpe:/a:google:chrome:35.0.1916.54",
+                        "cpe:/a:google:chrome:35.0.1916.88",
+                        "cpe:/a:google:chrome:35.0.1916.110",
+                        "cpe:/a:google:chrome:35.0.1916.49",
+                        "cpe:/a:google:chrome:35.0.1916.40",
+                        "cpe:/a:google:chrome:35.0.1916.22",
+                        "cpe:/a:google:chrome:35.0.1916.69",
+                        "cpe:/a:google:chrome:35.0.1916.11"
+                    ],
+                    "id": "CVE-2014-1745",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-1745",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:google:chrome:35.0.1916.13:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.15:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.80:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.31:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.17:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.41:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.74:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.6:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.54:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.82:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.40:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.109:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.39:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.103:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.46:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.69:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.92:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.8:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.77:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.112:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.5:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.72:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.90:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.19:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.23:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.108:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.21:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.34:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.36:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.33:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.14:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.20:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.88:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.38:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.42:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.22:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.51:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.27:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.86:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.99:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.52:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.47:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.68:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.43:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.11:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.105:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.32:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.59:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.113:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.49:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.85:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.93:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.44:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.61:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.57:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.96:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.7:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.111:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.37:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.106:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.35:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.71:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.84:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.95:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.104:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.45:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.110:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.107:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.48:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.56:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.18:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.98:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:google:chrome:35.0.1916.101:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2014-1745"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Google</span>"
+                    ],
+                    "description": [
+                        "Use-after-free vulnerability in the SVG implementation in Blink, as used in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> before 35.0.1916.114, allows remote attackers to cause a denial of service or possibly have unspecified other impact"
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">chrome</span>-cve-admin@google.com"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>",
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>",
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>",
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>",
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    65.68089,
+                    1400670840000
+                ],
+                "flatDescription": "Use-after-free vulnerability in the SVG implementation in Blink, as used in Google Chrome before 35.0.1916.114, allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors that trigger removal of an SVGFontFaceElement object, related to..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "FDB613BD-2885-5B8F-B77F-0BE46EDA1621",
+                "_score": 65.03131,
+                "_source": {
+                    "lastseen": "2024-03-06T15:17:52",
+                    "description": "# libwebp CVE-2023-4863\n\n- [A Vulnerability to...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-12-18T23:12:25",
+                    "type": "githubexploit",
+                    "title": "Exploit for Out-of-bounds Write in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-4863"
+                    ],
+                    "modified": "2024-02-21T12:01:05",
+                    "id": "FDB613BD-2885-5B8F-B77F-0BE46EDA1621",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/FDB613BD-2885-5B8F-B77F-0BE46EDA1621"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Out-of-bounds Write in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    65.03131,
+                    1702941145000
+                ],
+                "flatDescription": "libwebp CVE-2023-4863  [A Vulnerability..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2019-5786",
+                "_score": 64.463745,
+                "_source": {
+                    "lastseen": "2024-03-16T16:28:47",
+                    "description": "Object lifetime issue in Blink in Google Chrome prior to 72.0.3626.121 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2019-06-27T17:15:00",
+                    "type": "cve",
+                    "title": "CVE-2019-5786",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2019-5786"
+                    ],
+                    "modified": "2024-02-15T02:00:00",
+                    "cpe": [],
+                    "id": "CVE-2019-5786",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2019-5786",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2019-5786"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Google</span>"
+                    ],
+                    "description": [
+                        "Object lifetime issue in Blink in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> prior to 72.0.3626.121 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page."
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">chrome</span>-cve-admin@google.com"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>",
+                        "<span class=\"vulners-highlight\">google</span> puppeteer"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    64.463745,
+                    1561655700000
+                ],
+                "flatDescription": "Object lifetime issue in Blink in Google Chrome prior to 72.0.3626.121 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "581A286D-B5EB-5B96-969F-E31D69EF82A8",
+                "_score": 64.23343,
+                "_source": {
+                    "lastseen": "2024-03-06T16:13:19",
+                    "description": "[\u4e2d\u6587](README_ZH.md) | EN\n\n# CVE-2023-4863 libwebp dependency chec...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-10-05T03:28:23",
+                    "type": "githubexploit",
+                    "title": "Exploit for Out-of-bounds Write in Google Chrome",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-4863"
+                    ],
+                    "modified": "2024-02-20T11:53:27",
+                    "id": "581A286D-B5EB-5B96-969F-E31D69EF82A8",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/581A286D-B5EB-5B96-969F-E31D69EF82A8"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Out-of-bounds Write in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    64.23343,
+                    1696476503000
+                ],
+                "flatDescription": "\u4e2d\u6587 | EN CVE-2023-4863 libwebp dependency..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2023-6508",
+                "_score": 62.221733,
+                "_source": {
+                    "lastseen": "2024-03-06T13:39:14",
+                    "description": "Use after free in Media Stream in Google Chrome prior to 120.0.6099.62 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-12-06T02:15:07",
+                    "type": "cve",
+                    "title": "CVE-2023-6508",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-6508"
+                    ],
+                    "modified": "2024-02-15T20:49:32",
+                    "cpe": [],
+                    "id": "CVE-2023-6508",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-6508",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2023-6508"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Google</span>"
+                    ],
+                    "description": [
+                        "Use after free in Media Stream in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> prior to 120.0.6099.62 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)"
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">chrome</span>-cve-admin@google.com"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    62.221733,
+                    1701828907000
+                ],
+                "flatDescription": "Use after free in Media Stream in Google Chrome prior to 120.0.6099.62 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity:..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2020-6572",
+                "_score": 61.97187,
+                "_source": {
+                    "lastseen": "2024-03-16T17:19:39",
+                    "description": "Use after free in Media in Google Chrome prior to 81.0.4044.92 allowed a remote attacker to execute arbitrary code via a crafted HTML page.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2021-01-14T21:15:00",
+                    "type": "cve",
+                    "title": "CVE-2020-6572",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2020-6572"
+                    ],
+                    "modified": "2024-02-15T02:00:00",
+                    "cpe": [],
+                    "id": "CVE-2020-6572",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-6572",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2020-6572"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Google</span>"
+                    ],
+                    "description": [
+                        "Use after free in Media in <span class=\"vulners-highlight\">Google</span> <span class=\"vulners-highlight\">Chrome</span> prior to 81.0.4044.92 allowed a remote attacker to execute arbitrary code via a crafted HTML page."
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">chrome</span>-cve-admin@google.com"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">google</span> <span class=\"vulners-highlight\">chrome</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Chrome</span>"
+                    ]
+                },
+                "sort": [
+                    61.97187,
+                    1610658900000
+                ],
+                "flatDescription": "Use after free in Media in Google Chrome prior to 81.0.4044.92 allowed a remote attacker to execute arbitrary code via a crafted HTML..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 26682,
+        "maxSearchSize": 100
+    }
+}

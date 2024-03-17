@@ -1,0 +1,1358 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OPENVAS:1361412562310800260",
+                "_score": 25.874126,
+                "_source": {
+                    "lastseen": "2024-02-09T10:32:01",
+                    "description": "Detects the installed version of\n  7zip on Windows.\n\n  The script logs in via smb, searches for 7zip in the registry\n  and gets the version from ",
+                    "cvss3": {},
+                    "published": "2009-04-02T00:00:00",
+                    "type": "openvas",
+                    "title": "7zip Detection (Windows SMB Login)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-02-08T00:00:00",
+                    "id": "OPENVAS:1361412562310800260",
+                    "href": "http://plugins.openvas.org/nasl.php?oid=1361412562310800260",
+                    "sourceData": "# SPDX-FileCopyrightText: 2009 Greenbone AG\n# Some text descriptions might be excerpted from (a) referenced\n# source(s), and are Copyright (C) by the respective right holder(s).\n#\n# SPDX-License-Identifier: GPL-2.0-only\n\nif(description)\n{\n  script_oid(\"1.3.6.1.4.1.25623.1.0.800260\");\n  script_version(\"2024-02-08T14:36:53+0000\");\n  script_tag(name:\"cvss_base\", value:\"0.0\");\n  script_tag(name:\"cvss_base_vector\", value:\"AV:N/AC:L/Au:N/C:N/I:N/A:N\");\n  script_tag(name:\"last_modification\", value:\"2024-02-08 14:36:53 +0000 (Thu, 08 Feb 2024)\");\n  script_tag(name:\"creation_date\", value:\"2009-04-02 08:15:32 +0200 (Thu, 02 Apr 2009)\");\n  script_tag(name:\"qod_type\", value:\"registry\");\n  script_name(\"7zip Detection (Windows SMB Login)\");\n\n  script_tag(name:\"summary\", value:\"Detects the installed version of\n  7zip on Windows.\n\n  The script logs in via smb, searches for 7zip in the registry\n  and gets the version from 'DisplayName' string in registry.\");\n\n  script_category(ACT_GATHER_INFO);\n  script_copyright(\"Copyright (C) 2009 Greenbone AG\");\n  script_family(\"Product detection\");\n  script_dependencies(\"smb_reg_service_pack.nasl\");\n  script_mandatory_keys(\"SMB/WindowsVersion\", \"SMB/Windows/Arch\");\n  script_require_ports(139, 445);\n\n  exit(0);\n}\n\ninclude(\"cpe.inc\");\ninclude(\"host_details.inc\");\ninclude(\"smb_nt.inc\");\ninclude(\"secpod_smb_func.inc\");\n\nappExists = FALSE;\n\nos_arch = get_kb_item(\"SMB/Windows/Arch\");\nif(!os_arch){\n  exit(0);\n}\n\nappKey_list = make_list(\"SOFTWARE\\7-Zip\", \"SOFTWARE\\Wow6432Node\\7-Zip\",\n                        \"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\7-Zip\");\nforeach appKey (appKey_list){\n  if(registry_key_exists(key:appKey)){\n    appExists = TRUE;\n    break;\n  }\n}\n\nif(!appExists) exit(0);\n\nif(\"x86\" >< os_arch){\n  key_list = make_list(\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\\");\n} else if(\"x64\" >< os_arch){\n  key_list = make_list(\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\\",\n                       \"SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\\");\n}\n\nforeach key (key_list){\n\n  foreach item (registry_enum_keys(key:key)){\n\n    appName = registry_get_sz(key:key + item, item:\"DisplayName\");\n\n    if(\"7-Zip\" >< appName){\n\n      appVer = eregmatch(pattern:\"7-Zip (([0-9.]+)\\ ?(beta)?)\", string:appName);\n      appVer = ereg_replace(pattern:\" \", replace:\":\", string:appVer[1]);\n      appVer = ereg_replace(pattern:\":$\", replace:\"\", string:appVer);\n\n      if(!isnull(appVer)){\n\n        insloc = registry_get_sz(key:key + item, item:\"InstallLocation\");\n        if(!insloc)\n          insloc = \"Unable to find the install location\";\n\n        set_kb_item(name:\"7zip/Win/Ver\", value:appVer);\n\n        cpe = build_cpe(value:appVer, exp:\"^([0-9.]+):?([a-z]+)?\", base:\"cpe:/a:7-zip:7-zip:\");\n        if(isnull(cpe))\n          cpe = \"cpe:/a:7-zip:7-zip\";\n\n        if(\"64\" >< os_arch && \"Wow6432Node\" >!< key){\n\n          set_kb_item(name:\"7zip64/Win/Ver\", value:appVer);\n\n          cpe = build_cpe(value:appVer, exp:\"^([0-9.]+):?([a-z]+)?\", base:\"cpe:/a:7-zip:7-zip:x64:\");\n          if(isnull(cpe))\n            cpe = \"cpe:/a:7-zip:7-zip:x64\";\n        }\n\n        # Used in gb_7zip_detect_portable_win.nasl to avoid doubled detections.\n        # We're also stripping a possible ending backslash away as the portable VT is getting\n        # the file path without the ending backslash from WMI.\n        tmp_location = tolower(insloc);\n        tmp_location = ereg_replace(pattern:\"\\\\$\", string:tmp_location, replace:'');\n        set_kb_item(name:\"7zip/Win/InstallLocations\", value:tmp_location);\n\n        register_product(cpe:cpe, location:insloc);\n\n        log_message(data:build_detection_report(app:appName,\n                                                version:appVer,\n                                                install:insloc,\n                                                cpe:cpe,\n                                                concluded:appVer));\n      }\n    }\n  }\n}\n\nexit(0);\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/openvas/OPENVAS:1361412562310800260"
+                },
+                "highlight": {
+                    "description": [
+                        "Detects the installed version of\n  <span class=\"vulners-highlight\">7zip</span> on Windows.\n\n  The script logs in via smb, searches for <span class=\"vulners-highlight\">7zip</span> in the registry\n  and gets the version from"
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">7zip</span> Detection (Windows SMB Login)"
+                    ],
+                    "sourceData": [
+                        "2024-02-08 14:36:53 +0000 (Thu, 08 Feb 2024)\");\n  script_tag(name:\"creation_date\", value:\"2009-04-02 08:15:32 +0200 (Thu, 02 Apr 2009)\");\n  script_tag(name:\"qod_type\", value:\"registry\");\n  script_name(\"<span class=\"vulners-highlight\">7zip</span>",
+                        "Detection (Windows SMB Login)\");\n\n  script_tag(name:\"summary\", value:\"Detects the installed version of\n  <span class=\"vulners-highlight\">7zip</span> on Windows.",
+                        "The script logs in via smb, searches for <span class=\"vulners-highlight\">7zip</span> in the registry\n  and gets the version from 'DisplayName' string in registry.\");\n\n  script_category(ACT_GATHER_INFO);\n  script_copyright(\"Copyright (C) 2009",
+                        "insloc)\n          insloc = \"Unable to find the install location\";\n\n        set_kb_item(name:\"<span class=\"vulners-highlight\">7zip</span>/Win/Ver\", value:appVer);\n\n        cpe = build_cpe(value:appVer, exp:\"^([0-9.]+):?([a-z]+)?\"",
+                        "tmp_location = tolower(insloc);\n        tmp_location = ereg_replace(pattern:\"\\\\$\", string:tmp_location, replace:'');\n        set_kb_item(name:\"<span class=\"vulners-highlight\">7zip</span>/Win/InstallLocations\", value:tmp_location);"
+                    ]
+                },
+                "sort": [
+                    25.874126,
+                    1238630400000
+                ],
+                "flatDescription": "Detects the installed version of   7zip on Windows. The script logs in via smb, searches for 7zip in the registry   and gets the version from  # SPDX-FileCopyrightText: 2009 Greenbone AG Some text descriptions might be excerpted from (a) referenced source(s), and are Copyright (C) by the..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OPENVAS:1361412562310800255",
+                "_score": 24.15353,
+                "_source": {
+                    "lastseen": "2024-02-09T10:32:01",
+                    "description": "Detects the installed version of 7zip.\n\n  The script logs in via ssh, searches for executable ",
+                    "cvss3": {},
+                    "published": "2009-04-02T00:00:00",
+                    "type": "openvas",
+                    "title": "7zip Detection (Linux/Unix SSH Login)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-02-08T00:00:00",
+                    "id": "OPENVAS:1361412562310800255",
+                    "href": "http://plugins.openvas.org/nasl.php?oid=1361412562310800255",
+                    "sourceData": "# SPDX-FileCopyrightText: 2009 Greenbone AG\n# Some text descriptions might be excerpted from (a) referenced\n# source(s), and are Copyright (C) by the respective right holder(s).\n#\n# SPDX-License-Identifier: GPL-2.0-only\n\nif(description)\n{\n  script_oid(\"1.3.6.1.4.1.25623.1.0.800255\");\n  script_tag(name:\"cvss_base_vector\", value:\"AV:N/AC:L/Au:N/C:N/I:N/A:N\");\n  script_version(\"2024-02-08T14:36:53+0000\");\n  script_tag(name:\"last_modification\", value:\"2024-02-08 14:36:53 +0000 (Thu, 08 Feb 2024)\");\n  script_tag(name:\"creation_date\", value:\"2009-04-02 08:15:32 +0200 (Thu, 02 Apr 2009)\");\n  script_tag(name:\"cvss_base\", value:\"0.0\");\n  script_tag(name:\"qod_type\", value:\"executable_version\");\n  script_name(\"7zip Detection (Linux/Unix SSH Login)\");\n\n  script_category(ACT_GATHER_INFO);\n  script_copyright(\"Copyright (C) 2009 Greenbone AG\");\n  script_family(\"Product detection\");\n  script_dependencies(\"gather-package-list.nasl\");\n  script_mandatory_keys(\"login/SSH/success\");\n  script_exclude_keys(\"ssh/no_linux_shell\");\n\n  script_tag(name:\"summary\", value:\"Detects the installed version of 7zip.\n\n  The script logs in via ssh, searches for executable '7za' and\n  queries the found executables via command line option 'invalidcmd'.\n  The error message output of 7za is normal because 7za in fact\n  offers no version command and thus an invalid command has to be\n  passed to obtain the version number.\");\n  exit(0);\n}\n\ninclude(\"cpe.inc\");\ninclude(\"host_details.inc\");\ninclude(\"ssh_func.inc\");\n\nsock = ssh_login_or_reuse_connection();\nif(!sock)\n  exit(0);\n\npaths = ssh_find_file(file_name:\"/7za$\", useregex:TRUE, sock:sock);\nforeach executableFile (paths)\n{\n  executableFile = chomp(executableFile);\n  if(!executableFile)\n    continue;\n\n  zipVer = ssh_get_bin_version(full_prog_name:executableFile, sock:sock, version_argv:\"invalidcmd\", ver_pattern:\"p7zip Version ([0-9]\\.[0-9][0-9]?)\");\n  if(zipVer[1] != NULL)\n  {\n    set_kb_item(name:\"7zip/Lin/Ver\", value:zipVer[1]);\n\n    cpe = build_cpe(value: zipVer[1], exp:\"^([0-9.]+)\",base:\"cpe:/a:7-zip:7-zip:\");\n    if(!isnull(cpe))\n      register_product(cpe:cpe, location:executableFile);\n\n    log_message(data:'Detected 7zip version: ' + zipVer[1] +\n        '\\nLocation: ' + executableFile +\n        '\\nCPE: '+ cpe +\n        '\\n\\nConcluded from version identification result:\\n' + zipVer[max_index(zipVer)-1]);\n  }\n}\n\nssh_close_connection();\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/openvas/OPENVAS:1361412562310800255"
+                },
+                "highlight": {
+                    "description": [
+                        "Detects the installed version of <span class=\"vulners-highlight\">7zip</span>.\n\n  The script logs in via ssh, searches for executable"
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">7zip</span> Detection (Linux/Unix SSH Login)"
+                    ],
+                    "sourceData": [
+                        "script_tag(name:\"creation_date\", value:\"2009-04-02 08:15:32 +0200 (Thu, 02 Apr 2009)\");\n  script_tag(name:\"cvss_base\", value:\"0.0\");\n  script_tag(name:\"qod_type\", value:\"executable_version\");\n  script_name(\"<span class=\"vulners-highlight\">7zip</span>",
+                        "script_dependencies(\"gather-package-list.nasl\");\n  script_mandatory_keys(\"login/SSH/success\");\n  script_exclude_keys(\"ssh/no_linux_shell\");\n\n  script_tag(name:\"summary\", value:\"Detects the installed version of <span class=\"vulners-highlight\">7zip</span>",
+                        "= NULL)\n  {\n    set_kb_item(name:\"<span class=\"vulners-highlight\">7zip</span>/Lin/Ver\", value:zipVer[1]);\n\n    cpe = build_cpe(value: zipVer[1], exp:\"^([0-9.]+)\",base:\"cpe:/a:7-zip:7-zip:\");\n    if(!",
+                        "isnull(cpe))\n      register_product(cpe:cpe, location:executableFile);\n\n    log_message(data:'Detected <span class=\"vulners-highlight\">7zip</span> version: ' + zipVer[1] +\n        '\\nLocation: ' + executableFile +\n        '\\nCPE: '+ cpe +"
+                    ]
+                },
+                "sort": [
+                    24.15353,
+                    1238630400000
+                ],
+                "flatDescription": "Detects the installed version of 7zip. The script logs in via ssh, searches for executable  # SPDX-FileCopyrightText: 2009 Greenbone AG Some text descriptions might be excerpted from (a) referenced source(s), and are Copyright (C) by the respective right holder(s).  SPDX-License-Identifier:..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "EULEROS_SA-2020-1488.NASL",
+                "_score": 11.575358,
+                "_source": {
+                    "lastseen": "2024-03-16T15:41:29",
+                    "description": "According to the versions of the libarchive package installed, the EulerOS Virtualization installation on the remote host is affected by the following vulnerabilities :\n\n  - libarchive version commit     5a98dcf8a86364b3c2c469c85b93647dfb139961 onwards     (version v2.8.0 onwards) contains a CWE-835: Loop with     Unreachable Exit Condition ('Infinite Loop')     vulnerability in ISO9660 parser,     archive_read_support_format_iso9660.c,     read_CE()/parse_rockridge() that can result in DoS by     infinite loop. This attack appears to be exploitable     via the victim opening a specially crafted ISO9660     file.(CVE-2019-1000020)\n\n  - libarchive version commit     bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards     (release v3.0.2 onwards) contains a CWE-125:\n    Out-of-bounds Read vulnerability in 7zip decompression,     archive_read_support_format_7zip.c, header_bytes() that     can result in a crash (denial of service). This attack     appears to be exploitable via the victim opening a     specially crafted 7zip file.(CVE-2019-1000019)\n\n  - The archive_string_append function in archive_string.c     in libarchive before 3.2.0 allows remote attackers to     cause a denial of service (crash) via a crafted cab     files, related to 'overlapping memcpy.'(CVE-2015-8918)\n\n  - read_header in archive_read_support_format_rar.c in     libarchive 3.3.2 suffers from an off-by-one error for     UTF-16 names in RAR archives, leading to an     out-of-bounds read in     archive_read_format_rar_read_header.(CVE-2017-14502)\n\n  - An error in the lha_read_file_header_1() function     (archive_read_support_format_lha.c) in libarchive 3.2.2     allows remote attackers to trigger an out-of-bounds     read memory access and subsequently cause a crash via a     specially crafted archive.(CVE-2017-5601)\n\n  - Stack-based buffer overflow in the safe_fprintf     function in tar/util.c in libarchive 3.2.1 allows     remote attackers to cause a denial of service via a     crafted non-printable multibyte character in a     filename.(CVE-2016-8687)\n\n  - The read_Header function in     archive_read_support_format_7zip.c in libarchive 3.2.1     allows remote attackers to cause a denial of service     (out-of-bounds read) via multiple EmptyStream     attributes in a header in a 7zip     archive.(CVE-2016-8689)\n\n  - libarchive 3.3.2 suffers from an out-of-bounds read     within lha_read_data_none() in     archive_read_support_format_lha.c when extracting a     specially crafted lha archive, related to     lha_crc16.(CVE-2017-14503)\n\n  - An out-of-bounds read flaw exists in parse_file_info in     archive_read_support_format_iso9660.c in libarchive     3.3.2 when extracting a specially crafted iso9660 iso     file, related to     archive_read_format_iso9660_read_header.(CVE-2017-14501     )\n\n  - libarchive 3.3.2 allows remote attackers to cause a     denial of service (xml_data heap-based buffer over-read     and application crash) via a crafted xar archive,     related to the mishandling of empty strings in the     atol8 function in     archive_read_support_format_xar.c.(CVE-2017-14166)\n\n  - The mtree bidder in libarchive 3.2.1 does not keep     track of line sizes when extending the read-ahead,     which allows remote attackers to cause a denial of     service (crash) via a crafted file, which triggers an     invalid read in the (1) detect_form or (2) bid_entry     function in     libarchive/archive_read_support_format_mtree.c.(CVE-201     6-8688)\n\n  - The archive_read_format_cab_read_header function in     archive_read_support_format_cab.c in libarchive 3.2.2     allows remote attackers to cause a denial of service     (heap-based buffer over-read and application crash) via     a crafted file.(CVE-2016-10350)\n\n  - The archive_le32dec function in archive_endian.h in     libarchive 3.2.2 allows remote attackers to cause a     denial of service (heap-based buffer over-read and     application crash) via a crafted file.(CVE-2016-10349)\n\n  - The archive_wstring_append_from_mbs function in     archive_string.c in libarchive 3.2.2 allows remote     attackers to cause a denial of service (NULL pointer     dereference and application crash) via a crafted     archive file.(CVE-2016-10209)\n\n  - Integer overflow in the archive_read_format_tar_skip     function in archive_read_support_format_tar.c in     libarchive before 3.2.0 allows remote attackers to     cause a denial of service (crash) via a crafted tar     file.(CVE-2015-8933)\n\n  - bsdcpio in libarchive before 3.2.0 allows remote     attackers to cause a denial of service (invalid read     and crash) via crafted cpio file.(CVE-2015-8915)\n\n  - Absolute path traversal vulnerability in bsdcpio in     libarchive 3.1.2 and earlier allows remote attackers to     write to arbitrary files via a full pathname in an     archive.(CVE-2015-2304)\n\n  - archive_read_format_rar_read_data in     archive_read_support_format_rar.c in libarchive before     3.4.0 has a use-after-free in a certain ARCHIVE_FAILED     situation, related to     Ppmd7_DecodeSymbol.(CVE-2019-18408)\n\nNote that Tenable Network Security has extracted the preceding description block directly from the EulerOS security advisory. Tenable has attempted to automatically clean and format it as much as possible without introducing additional issues.",
+                    "cvss3": {},
+                    "published": "2020-04-16T00:00:00",
+                    "type": "nessus",
+                    "title": "EulerOS Virtualization 3.0.2.2 : libarchive (EulerOS-SA-2020-1488)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2015-2304",
+                        "CVE-2015-8915",
+                        "CVE-2015-8918",
+                        "CVE-2015-8933",
+                        "CVE-2016-10209",
+                        "CVE-2016-10349",
+                        "CVE-2016-10350",
+                        "CVE-2016-8687",
+                        "CVE-2016-8688",
+                        "CVE-2016-8689",
+                        "CVE-2017-14166",
+                        "CVE-2017-14501",
+                        "CVE-2017-14502",
+                        "CVE-2017-14503",
+                        "CVE-2017-5601",
+                        "CVE-2019-1000019",
+                        "CVE-2019-1000020",
+                        "CVE-2019-18408"
+                    ],
+                    "modified": "2024-03-15T00:00:00",
+                    "cpe": [
+                        "p-cpe:/a:huawei:euleros:libarchive",
+                        "cpe:/o:huawei:euleros:uvp:3.0.2.2"
+                    ],
+                    "id": "EULEROS_SA-2020-1488.NASL",
+                    "href": "https://www.tenable.com/plugins/nessus/135650",
+                    "sourceData": "#%NASL_MIN_LEVEL 70300\n#\n# (C) Tenable Network Security, Inc.\n#\n\ninclude('deprecated_nasl_level.inc');\ninclude('compat.inc');\n\nif (description)\n{\n  script_id(135650);\n  script_version(\"1.7\");\n  script_set_attribute(attribute:\"plugin_modification_date\", value:\"2024/03/15\");\n\n  script_cve_id(\n    \"CVE-2015-2304\",\n    \"CVE-2015-8915\",\n    \"CVE-2015-8918\",\n    \"CVE-2015-8933\",\n    \"CVE-2016-10209\",\n    \"CVE-2016-10349\",\n    \"CVE-2016-10350\",\n    \"CVE-2016-8687\",\n    \"CVE-2016-8688\",\n    \"CVE-2016-8689\",\n    \"CVE-2017-14166\",\n    \"CVE-2017-14501\",\n    \"CVE-2017-14502\",\n    \"CVE-2017-14503\",\n    \"CVE-2017-5601\",\n    \"CVE-2019-1000019\",\n    \"CVE-2019-1000020\",\n    \"CVE-2019-18408\"\n  );\n  script_bugtraq_id(73137);\n\n  script_name(english:\"EulerOS Virtualization 3.0.2.2 : libarchive (EulerOS-SA-2020-1488)\");\n\n  script_set_attribute(attribute:\"synopsis\", value:\n\"The remote EulerOS Virtualization host is missing multiple security\nupdates.\");\n  script_set_attribute(attribute:\"description\", value:\n\"According to the versions of the libarchive package installed, the\nEulerOS Virtualization installation on the remote host is affected by\nthe following vulnerabilities :\n\n  - libarchive version commit\n    5a98dcf8a86364b3c2c469c85b93647dfb139961 onwards\n    (version v2.8.0 onwards) contains a CWE-835: Loop with\n    Unreachable Exit Condition ('Infinite Loop')\n    vulnerability in ISO9660 parser,\n    archive_read_support_format_iso9660.c,\n    read_CE()/parse_rockridge() that can result in DoS by\n    infinite loop. This attack appears to be exploitable\n    via the victim opening a specially crafted ISO9660\n    file.(CVE-2019-1000020)\n\n  - libarchive version commit\n    bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards\n    (release v3.0.2 onwards) contains a CWE-125:\n    Out-of-bounds Read vulnerability in 7zip decompression,\n    archive_read_support_format_7zip.c, header_bytes() that\n    can result in a crash (denial of service). This attack\n    appears to be exploitable via the victim opening a\n    specially crafted 7zip file.(CVE-2019-1000019)\n\n  - The archive_string_append function in archive_string.c\n    in libarchive before 3.2.0 allows remote attackers to\n    cause a denial of service (crash) via a crafted cab\n    files, related to 'overlapping memcpy.'(CVE-2015-8918)\n\n  - read_header in archive_read_support_format_rar.c in\n    libarchive 3.3.2 suffers from an off-by-one error for\n    UTF-16 names in RAR archives, leading to an\n    out-of-bounds read in\n    archive_read_format_rar_read_header.(CVE-2017-14502)\n\n  - An error in the lha_read_file_header_1() function\n    (archive_read_support_format_lha.c) in libarchive 3.2.2\n    allows remote attackers to trigger an out-of-bounds\n    read memory access and subsequently cause a crash via a\n    specially crafted archive.(CVE-2017-5601)\n\n  - Stack-based buffer overflow in the safe_fprintf\n    function in tar/util.c in libarchive 3.2.1 allows\n    remote attackers to cause a denial of service via a\n    crafted non-printable multibyte character in a\n    filename.(CVE-2016-8687)\n\n  - The read_Header function in\n    archive_read_support_format_7zip.c in libarchive 3.2.1\n    allows remote attackers to cause a denial of service\n    (out-of-bounds read) via multiple EmptyStream\n    attributes in a header in a 7zip\n    archive.(CVE-2016-8689)\n\n  - libarchive 3.3.2 suffers from an out-of-bounds read\n    within lha_read_data_none() in\n    archive_read_support_format_lha.c when extracting a\n    specially crafted lha archive, related to\n    lha_crc16.(CVE-2017-14503)\n\n  - An out-of-bounds read flaw exists in parse_file_info in\n    archive_read_support_format_iso9660.c in libarchive\n    3.3.2 when extracting a specially crafted iso9660 iso\n    file, related to\n    archive_read_format_iso9660_read_header.(CVE-2017-14501\n    )\n\n  - libarchive 3.3.2 allows remote attackers to cause a\n    denial of service (xml_data heap-based buffer over-read\n    and application crash) via a crafted xar archive,\n    related to the mishandling of empty strings in the\n    atol8 function in\n    archive_read_support_format_xar.c.(CVE-2017-14166)\n\n  - The mtree bidder in libarchive 3.2.1 does not keep\n    track of line sizes when extending the read-ahead,\n    which allows remote attackers to cause a denial of\n    service (crash) via a crafted file, which triggers an\n    invalid read in the (1) detect_form or (2) bid_entry\n    function in\n    libarchive/archive_read_support_format_mtree.c.(CVE-201\n    6-8688)\n\n  - The archive_read_format_cab_read_header function in\n    archive_read_support_format_cab.c in libarchive 3.2.2\n    allows remote attackers to cause a denial of service\n    (heap-based buffer over-read and application crash) via\n    a crafted file.(CVE-2016-10350)\n\n  - The archive_le32dec function in archive_endian.h in\n    libarchive 3.2.2 allows remote attackers to cause a\n    denial of service (heap-based buffer over-read and\n    application crash) via a crafted file.(CVE-2016-10349)\n\n  - The archive_wstring_append_from_mbs function in\n    archive_string.c in libarchive 3.2.2 allows remote\n    attackers to cause a denial of service (NULL pointer\n    dereference and application crash) via a crafted\n    archive file.(CVE-2016-10209)\n\n  - Integer overflow in the archive_read_format_tar_skip\n    function in archive_read_support_format_tar.c in\n    libarchive before 3.2.0 allows remote attackers to\n    cause a denial of service (crash) via a crafted tar\n    file.(CVE-2015-8933)\n\n  - bsdcpio in libarchive before 3.2.0 allows remote\n    attackers to cause a denial of service (invalid read\n    and crash) via crafted cpio file.(CVE-2015-8915)\n\n  - Absolute path traversal vulnerability in bsdcpio in\n    libarchive 3.1.2 and earlier allows remote attackers to\n    write to arbitrary files via a full pathname in an\n    archive.(CVE-2015-2304)\n\n  - archive_read_format_rar_read_data in\n    archive_read_support_format_rar.c in libarchive before\n    3.4.0 has a use-after-free in a certain ARCHIVE_FAILED\n    situation, related to\n    Ppmd7_DecodeSymbol.(CVE-2019-18408)\n\nNote that Tenable Network Security has extracted the preceding\ndescription block directly from the EulerOS security advisory. Tenable\nhas attempted to automatically clean and format it as much as possible\nwithout introducing additional issues.\");\n  # https://developer.huaweicloud.com/ict/en/site-euleros/euleros/security-advisories/EulerOS-SA-2020-1488\n  script_set_attribute(attribute:\"see_also\", value:\"http://www.nessus.org/u?e4a17127\");\n  script_set_attribute(attribute:\"solution\", value:\n\"Update the affected libarchive packages.\");\n  script_set_cvss_base_vector(\"CVSS2#AV:N/AC:L/Au:N/C:N/I:P/A:P\");\n  script_set_cvss_temporal_vector(\"CVSS2#E:POC/RL:OF/RC:C\");\n  script_set_cvss3_base_vector(\"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H\");\n  script_set_cvss3_temporal_vector(\"CVSS:3.0/E:P/RL:O/RC:C\");\n  script_set_attribute(attribute:\"cvss_score_source\", value:\"CVE-2015-2304\");\n  script_set_attribute(attribute:\"cvss3_score_source\", value:\"CVE-2019-18408\");\n\n  script_set_attribute(attribute:\"exploitability_ease\", value:\"Exploits are available\");\n  script_set_attribute(attribute:\"exploit_available\", value:\"true\");\n\n  script_set_attribute(attribute:\"patch_publication_date\", value:\"2020/04/16\");\n  script_set_attribute(attribute:\"plugin_publication_date\", value:\"2020/04/16\");\n\n  script_set_attribute(attribute:\"plugin_type\", value:\"local\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:huawei:euleros:libarchive\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:huawei:euleros:uvp:3.0.2.2\");\n  script_set_attribute(attribute:\"generated_plugin\", value:\"current\");\n  script_end_attributes();\n\n  script_category(ACT_GATHER_INFO);\n  script_family(english:\"Huawei Local Security Checks\");\n\n  script_copyright(english:\"This script is Copyright (C) 2020-2024 and is owned by Tenable, Inc. or an Affiliate thereof.\");\n\n  script_dependencies(\"ssh_get_info.nasl\");\n  script_require_keys(\"Host/local_checks_enabled\", \"Host/cpu\", \"Host/EulerOS/release\", \"Host/EulerOS/rpm-list\", \"Host/EulerOS/uvp_version\");\n\n  exit(0);\n}\n\ninclude(\"audit.inc\");\ninclude(\"global_settings.inc\");\ninclude(\"rpm.inc\");\n\nif (!get_kb_item(\"Host/local_checks_enabled\")) audit(AUDIT_LOCAL_CHECKS_NOT_ENABLED);\n\nrelease = get_kb_item(\"Host/EulerOS/release\");\nif (isnull(release) || release !~ \"^EulerOS\") audit(AUDIT_OS_NOT, \"EulerOS\");\nuvp = get_kb_item(\"Host/EulerOS/uvp_version\");\nif (uvp != \"3.0.2.2\") audit(AUDIT_OS_NOT, \"EulerOS Virtualization 3.0.2.2\");\nif (!get_kb_item(\"Host/EulerOS/rpm-list\")) audit(AUDIT_PACKAGE_LIST_MISSING);\n\ncpu = get_kb_item(\"Host/cpu\");\nif (isnull(cpu)) audit(AUDIT_UNKNOWN_ARCH);\nif (\"x86_64\" >!< cpu && cpu !~ \"^i[3-6]86$\" && \"aarch64\" >!< cpu) audit(AUDIT_LOCAL_CHECKS_NOT_IMPLEMENTED, \"EulerOS\", cpu);\nif (\"x86_64\" >!< cpu && cpu !~ \"^i[3-6]86$\") audit(AUDIT_ARCH_NOT, \"i686 / x86_64\", cpu);\n\nflag = 0;\n\npkgs = [\"libarchive-3.1.2-10.h8.eulerosv2r7\"];\n\nforeach (pkg in pkgs)\n  if (rpm_check(release:\"EulerOS-2.0\", reference:pkg)) flag++;\n\nif (flag)\n{\n  security_report_v4(\n    port       : 0,\n    severity   : SECURITY_WARNING,\n    extra      : rpm_report_get()\n  );\n  exit(0);\n}\nelse\n{\n  tested = pkg_tests_get();\n  if (tested) audit(AUDIT_PACKAGE_NOT_AFFECTED, tested);\n  else audit(AUDIT_PACKAGE_NOT_INSTALLED, \"libarchive\");\n}\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/nessus/EULEROS_SA-2020-1488.NASL"
+                },
+                "highlight": {
+                    "description": [
+                        "(CVE-2019-1000020)\n\n  - libarchive version commit     bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards     (release v3.0.2 onwards) contains a CWE-125:\n    Out-of-bounds Read vulnerability in <span class=\"vulners-highlight\">7zip</span> decompression",
+                        "This attack     appears to be exploitable via the victim opening a     specially crafted <span class=\"vulners-highlight\">7zip</span> file.",
+                        "in     archive_read_support_format_7zip.c in libarchive 3.2.1     allows remote attackers to cause a denial of service     (out-of-bounds read) via multiple EmptyStream     attributes in a header in a <span class=\"vulners-highlight\">7zip</span>"
+                    ],
+                    "sourceData": [
+                        "(CVE-2019-1000020)\n\n  - libarchive version commit\n    bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards\n    (release v3.0.2 onwards) contains a CWE-125:\n    Out-of-bounds Read vulnerability in <span class=\"vulners-highlight\">7zip</span> decompression",
+                        "This attack\n    appears to be exploitable via the victim opening a\n    specially crafted <span class=\"vulners-highlight\">7zip</span> file.",
+                        "in\n    archive_read_support_format_7zip.c in libarchive 3.2.1\n    allows remote attackers to cause a denial of service\n    (out-of-bounds read) via multiple EmptyStream\n    attributes in a header in a <span class=\"vulners-highlight\">7zip</span>"
+                    ]
+                },
+                "sort": [
+                    11.575358,
+                    1586995200000
+                ],
+                "flatDescription": "According to the versions of the libarchive package installed, the EulerOS Virtualization installation on the remote host is affected by the following vulnerabilities :   libarchive version commit     5a98dcf8a86364b3c2c469c85b93647dfb139961 onwards     (version v2.8.0 onwards) contains a CWE-835:..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "AL2023_ALAS2023-2024-481.NASL",
+                "_score": 3.500737,
+                "_source": {
+                    "lastseen": "2024-01-11T11:03:37",
+                    "description": "It is, therefore, affected by a vulnerability as referenced in the ALAS2023-2024-481 advisory.\n\n  - p7zip 16.02 was discovered to contain a heap-buffer-overflow vulnerability via the function     NArchive::NZip::CInArchive::FindCd(bool) at CPP/7zip/Archive/Zip/ZipIn.cpp. (CVE-2022-47069)\n\nNote that Nessus has not tested for this issue but has instead relied only on the application's self-reported version number.",
+                    "cvss3": {},
+                    "published": "2024-01-08T00:00:00",
+                    "type": "nessus",
+                    "title": "Amazon Linux 2023 : p7zip, p7zip-plugins (ALAS2023-2024-481)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2022-47069"
+                    ],
+                    "modified": "2024-01-09T00:00:00",
+                    "cpe": [
+                        "p-cpe:/a:amazon:linux:p7zip",
+                        "p-cpe:/a:amazon:linux:p7zip-debugsource",
+                        "p-cpe:/a:amazon:linux:p7zip-doc",
+                        "p-cpe:/a:amazon:linux:p7zip-plugins",
+                        "p-cpe:/a:amazon:linux:p7zip-plugins-debuginfo",
+                        "cpe:/o:amazon:linux:2023"
+                    ],
+                    "id": "AL2023_ALAS2023-2024-481.NASL",
+                    "href": "https://www.tenable.com/plugins/nessus/187697",
+                    "sourceData": "#%NASL_MIN_LEVEL 80900\n##\n# (C) Tenable, Inc.\n#\n# The descriptive text and package checks in this plugin were\n# extracted from Amazon Linux 2023 Security Advisory ALAS2023-2024-481.\n##\n\ninclude('compat.inc');\n\nif (description)\n{\n  script_id(187697);\n  script_version(\"1.1\");\n  script_set_attribute(attribute:\"plugin_modification_date\", value:\"2024/01/09\");\n\n  script_cve_id(\"CVE-2022-47069\");\n\n  script_name(english:\"Amazon Linux 2023 : p7zip, p7zip-plugins (ALAS2023-2024-481)\");\n\n  script_set_attribute(attribute:\"synopsis\", value:\n\"The remote Amazon Linux 2023 host is missing a security update.\");\n  script_set_attribute(attribute:\"description\", value:\n\"It is, therefore, affected by a vulnerability as referenced in the ALAS2023-2024-481 advisory.\n\n  - p7zip 16.02 was discovered to contain a heap-buffer-overflow vulnerability via the function\n    NArchive::NZip::CInArchive::FindCd(bool) at CPP/7zip/Archive/Zip/ZipIn.cpp. (CVE-2022-47069)\n\nNote that Nessus has not tested for this issue but has instead relied only on the application's self-reported version\nnumber.\");\n  script_set_attribute(attribute:\"see_also\", value:\"https://alas.aws.amazon.com/AL2023/ALAS-2024-481.html\");\n  script_set_attribute(attribute:\"see_also\", value:\"https://alas.aws.amazon.com/cve/html/CVE-2022-47069.html\");\n  script_set_attribute(attribute:\"see_also\", value:\"https://alas.aws.amazon.com/faqs.html\");\n  script_set_attribute(attribute:\"solution\", value:\n\"Run 'dnf update p7zip --releasever 2023.3.20240108' to update your system.\");\n  script_set_cvss_base_vector(\"CVSS2#AV:L/AC:L/Au:N/C:C/I:C/A:C\");\n  script_set_cvss_temporal_vector(\"CVSS2#E:POC/RL:OF/RC:C\");\n  script_set_cvss3_base_vector(\"CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H\");\n  script_set_cvss3_temporal_vector(\"CVSS:3.0/E:P/RL:O/RC:C\");\n  script_set_attribute(attribute:\"cvss_score_source\", value:\"CVE-2022-47069\");\n\n  script_set_attribute(attribute:\"exploitability_ease\", value:\"Exploits are available\");\n  script_set_attribute(attribute:\"exploit_available\", value:\"true\");\n\n  script_set_attribute(attribute:\"vuln_publication_date\", value:\"2023/08/22\");\n  script_set_attribute(attribute:\"patch_publication_date\", value:\"2024/01/03\");\n  script_set_attribute(attribute:\"plugin_publication_date\", value:\"2024/01/08\");\n\n  script_set_attribute(attribute:\"plugin_type\", value:\"local\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:amazon:linux:p7zip\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:amazon:linux:p7zip-debugsource\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:amazon:linux:p7zip-doc\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:amazon:linux:p7zip-plugins\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:amazon:linux:p7zip-plugins-debuginfo\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:amazon:linux:2023\");\n  script_set_attribute(attribute:\"generated_plugin\", value:\"current\");\n  script_end_attributes();\n\n  script_category(ACT_GATHER_INFO);\n  script_family(english:\"Amazon Linux Local Security Checks\");\n\n  script_copyright(english:\"This script is Copyright (C) 2024 and is owned by Tenable, Inc. or an Affiliate thereof.\");\n\n  script_dependencies(\"ssh_get_info.nasl\");\n  script_require_keys(\"Host/local_checks_enabled\", \"Host/AmazonLinux/release\", \"Host/AmazonLinux/rpm-list\");\n\n  exit(0);\n}\n\ninclude(\"rpm.inc\");\n\nif (!get_kb_item(\"Host/local_checks_enabled\")) audit(AUDIT_LOCAL_CHECKS_NOT_ENABLED);\n\nvar alas_release = get_kb_item(\"Host/AmazonLinux/release\");\nif (isnull(alas_release) || !strlen(alas_release)) audit(AUDIT_OS_NOT, \"Amazon Linux\");\nvar os_ver = pregmatch(pattern: \"^AL(A|\\d+|-\\d+)\", string:alas_release);\nif (isnull(os_ver)) audit(AUDIT_UNKNOWN_APP_VER, \"Amazon Linux\");\nos_ver = os_ver[1];\nif (os_ver != \"-2023\")\n{\n  if (os_ver == 'A') os_ver = 'AMI';\n  audit(AUDIT_OS_NOT, \"Amazon Linux 2023\", \"Amazon Linux \" + os_ver);\n}\n\nif (!get_kb_item(\"Host/AmazonLinux/rpm-list\")) audit(AUDIT_PACKAGE_LIST_MISSING);\n\nvar pkgs = [\n    {'reference':'p7zip-16.02-20.amzn2023.0.5', 'cpu':'aarch64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-16.02-20.amzn2023.0.5', 'cpu':'x86_64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-debugsource-16.02-20.amzn2023.0.5', 'cpu':'aarch64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-debugsource-16.02-20.amzn2023.0.5', 'cpu':'x86_64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-doc-16.02-20.amzn2023.0.5', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-plugins-16.02-20.amzn2023.0.5', 'cpu':'aarch64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-plugins-16.02-20.amzn2023.0.5', 'cpu':'x86_64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-plugins-debuginfo-16.02-20.amzn2023.0.5', 'cpu':'aarch64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE},\n    {'reference':'p7zip-plugins-debuginfo-16.02-20.amzn2023.0.5', 'cpu':'x86_64', 'release':'AL-2023', 'rpm_spec_vers_cmp':TRUE}\n];\n\nvar flag = 0;\nforeach var package_array ( pkgs ) {\n  var reference = NULL;\n  var _release = NULL;\n  var sp = NULL;\n  var _cpu = NULL;\n  var el_string = NULL;\n  var rpm_spec_vers_cmp = NULL;\n  var epoch = NULL;\n  var allowmaj = NULL;\n  var exists_check = NULL;\n  if (!empty_or_null(package_array['reference'])) reference = package_array['reference'];\n  if (!empty_or_null(package_array['release'])) _release = package_array['release'];\n  if (!empty_or_null(package_array['sp'])) sp = package_array['sp'];\n  if (!empty_or_null(package_array['cpu'])) _cpu = package_array['cpu'];\n  if (!empty_or_null(package_array['el_string'])) el_string = package_array['el_string'];\n  if (!empty_or_null(package_array['rpm_spec_vers_cmp'])) rpm_spec_vers_cmp = package_array['rpm_spec_vers_cmp'];\n  if (!empty_or_null(package_array['epoch'])) epoch = package_array['epoch'];\n  if (!empty_or_null(package_array['allowmaj'])) allowmaj = package_array['allowmaj'];\n  if (!empty_or_null(package_array['exists_check'])) exists_check = package_array['exists_check'];\n  if (reference && _release && (!exists_check || rpm_exists(release:_release, rpm:exists_check))) {\n    if (rpm_check(release:_release, sp:sp, cpu:_cpu, reference:reference, epoch:epoch, el_string:el_string, rpm_spec_vers_cmp:rpm_spec_vers_cmp, allowmaj:allowmaj)) flag++;\n  }\n}\n\nif (flag)\n{\n  security_report_v4(\n      port       : 0,\n      severity   : SECURITY_HOLE,\n      extra      : rpm_report_get()\n  );\n  exit(0);\n}\nelse\n{\n  var tested = pkg_tests_get();\n  if (tested) audit(AUDIT_PACKAGE_NOT_AFFECTED, tested);\n  else audit(AUDIT_PACKAGE_NOT_INSTALLED, \"p7zip / p7zip-debugsource / p7zip-doc / etc\");\n}",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/nessus/AL2023_ALAS2023-2024-481.NASL"
+                },
+                "highlight": {
+                    "description": [
+                        "- p7zip 16.02 was discovered to contain a heap-buffer-overflow vulnerability via the function     NArchive::NZip::CInArchive::FindCd(bool) at CPP/<span class=\"vulners-highlight\">7zip</span>/Archive/Zip/ZipIn.cpp."
+                    ],
+                    "sourceData": [
+                        "- p7zip 16.02 was discovered to contain a heap-buffer-overflow vulnerability via the function\n    NArchive::NZip::CInArchive::FindCd(bool) at CPP/<span class=\"vulners-highlight\">7zip</span>/Archive/Zip/ZipIn.cpp."
+                    ]
+                },
+                "sort": [
+                    3.500737,
+                    1704672000000
+                ],
+                "flatDescription": "It is, therefore, affected by a vulnerability as referenced in the ALAS2023-2024-481 advisory.  p7zip 16.02 was discovered to contain a heap-buffer-overflow vulnerability via the function     NArchive::NZip::CInArchive::FindCd(bool) at CPP/7zip/Archive/Zip/ZipIn.cpp. (CVE-2022-47069)  Note that..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "RH:CVE-2019-1000019",
+                "_score": 2.259407,
+                "_source": {
+                    "lastseen": "2024-02-14T23:50:25",
+                    "description": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to be exploitable via the victim opening a specially crafted 7zip file.\n",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2019-02-06T07:19:19",
+                    "type": "redhatcve",
+                    "title": "CVE-2019-1000019",
+                    "bulletinFamily": "info",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2019-1000019"
+                    ],
+                    "modified": "2024-01-24T14:04:26",
+                    "id": "RH:CVE-2019-1000019",
+                    "href": "https://access.redhat.com/security/cve/cve-2019-1000019",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "vhref": "https://vulners.com/redhatcve/RH:CVE-2019-1000019"
+                },
+                "highlight": {
+                    "description": [
+                        "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in <span class=\"vulners-highlight\">7zip</span> decompression, archive_read_support_format",
+                        "This attack appears to be exploitable via the victim opening a specially crafted <span class=\"vulners-highlight\">7zip</span> file."
+                    ]
+                },
+                "sort": [
+                    2.259407,
+                    1549437559000
+                ],
+                "flatDescription": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "KLA10823",
+                "_score": 1.522334,
+                "_source": {
+                    "lastseen": "2024-03-16T15:27:41",
+                    "description": "### *Detect date*:\n06/01/2016\n\n### *Severity*:\nHigh\n\n### *Description*:\nImproper processing of UDF files was found in 7zip. By exploiting this vulnerability malicious users can cause a denial of service or execute arbitrary code. This vulnerability can be exploited remotely via specially crafted UDF file.\n\n### *Affected products*:\n7-Zip 9.20  \n7-Zip 15.05 beta\n\n### *Solution*:\nUpdate to the latest version.  \n[Get 7-Zip](<http://www.7-zip.org/download.html>)\n\n### *Impacts*:\nACE \n\n### *Related products*:\n[7-Zip](<https://threats.kaspersky.com/en/product/7-Zip/>)\n\n### *CVE-IDS*:\n[CVE-2016-2335](<https://vulners.com/cve/CVE-2016-2335>)6.8High",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.0",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2016-06-01T00:00:00",
+                    "type": "kaspersky",
+                    "title": "KLA10823 Denial of service and arbitrary code execution  vulnerabilities in 7-Zip",
+                    "bulletinFamily": "info",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2016-2335"
+                    ],
+                    "modified": "2024-01-22T00:00:00",
+                    "id": "KLA10823",
+                    "href": "https://threats.kaspersky.com/en/vulnerability/KLA10823/",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/kaspersky/KLA10823"
+                },
+                "highlight": {
+                    "description": [
+                        "### *Detect date*:\n06/01/2016\n\n### *Severity*:\nHigh\n\n### *Description*:\nImproper processing of UDF files was found in <span class=\"vulners-highlight\">7zip</span>."
+                    ]
+                },
+                "sort": [
+                    1.522334,
+                    1464739200000
+                ],
+                "flatDescription": "Detect date: 06/01/2016 Severity: High Description: Improper processing of UDF files was found in 7zip. By exploiting this vulnerability malicious users can cause a denial of service or execute arbitrary code. This vulnerability can be exploited remotely via specially crafted UDF file. Affected..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:CVE-2019-1000019",
+                "_score": 1.2349831,
+                "_source": {
+                    "lastseen": "2024-03-16T17:10:15",
+                    "description": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to be exploitable via the victim opening a specially crafted 7zip file.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2019-02-04T21:29:01",
+                    "type": "osv",
+                    "title": "CVE-2019-1000019",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2019-1000019"
+                    ],
+                    "modified": "2023-11-29T06:50:33",
+                    "id": "OSV:CVE-2019-1000019",
+                    "href": "https://osv.dev/vulnerability/CVE-2019-1000019",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:CVE-2019-1000019"
+                },
+                "highlight": {
+                    "description": [
+                        "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in <span class=\"vulners-highlight\">7zip</span> decompression, archive_read_support_format",
+                        "This attack appears to be exploitable via the victim opening a specially crafted <span class=\"vulners-highlight\">7zip</span> file."
+                    ]
+                },
+                "sort": [
+                    1.2349831,
+                    1549315741000
+                ],
+                "flatDescription": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "UB:CVE-2023-31102",
+                "_score": 0.8303877,
+                "_source": {
+                    "lastseen": "2024-03-06T16:02:47",
+                    "description": "Ppmd7.c in 7-Zip before 23.00 allows an integer underflow and invalid read\noperation via a crafted 7Z archive.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-03T00:00:00",
+                    "type": "ubuntucve",
+                    "title": "CVE-2023-31102",
+                    "bulletinFamily": "unix",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-31102"
+                    ],
+                    "modified": "2023-11-03T00:00:00",
+                    "id": "UB:CVE-2023-31102",
+                    "href": "https://ubuntu.com/security/CVE-2023-31102",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/ubuntucve/UB:CVE-2023-31102"
+                },
+                "highlight": {
+                    "affectedPackage.packageName.keyword": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ],
+                    "affectedPackage.packageName": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ]
+                },
+                "sort": [
+                    0.8303877,
+                    1698969600000
+                ],
+                "flatDescription": "Ppmd7.c in 7-Zip before 23.00 allows an integer underflow and invalid read operation via a crafted 7Z..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "DEBIANCVE:CVE-2023-31102",
+                "_score": 0.78048044,
+                "_source": {
+                    "lastseen": "2024-03-06T18:46:57",
+                    "description": "Ppmd7.c in 7-Zip before 23.00 allows an integer underflow and invalid read operation via a crafted 7Z archive.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-03T04:15:20",
+                    "type": "debiancve",
+                    "title": "CVE-2023-31102",
+                    "bulletinFamily": "unix",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-31102"
+                    ],
+                    "modified": "2023-11-03T04:15:20",
+                    "id": "DEBIANCVE:CVE-2023-31102",
+                    "href": "https://security-tracker.debian.org/tracker/CVE-2023-31102",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/debiancve/DEBIANCVE:CVE-2023-31102"
+                },
+                "highlight": {
+                    "affectedPackage.packageName.keyword": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ],
+                    "affectedPackage.packageName": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ]
+                },
+                "sort": [
+                    0.78048044,
+                    1698984920000
+                ],
+                "flatDescription": "Ppmd7.c in 7-Zip before 23.00 allows an integer underflow and invalid read operation via a crafted 7Z..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "VERACODE:43049",
+                "_score": 0.5593764,
+                "_source": {
+                    "lastseen": "2024-03-06T14:17:46",
+                    "description": "7zip is vulnerable to Arbitrary Code Execution. This vulnerability exists due to a flaw in the way 7-Zip parses 7Z files. A remote attacker can exploit this vulnerability by tricking the victim to open a specially crafted archive, which could lead to arbitrary code execution on the victim's system\n",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-08-31T16:16:16",
+                    "type": "veracode",
+                    "title": "Arbitrary Code Execution",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-31102"
+                    ],
+                    "modified": "2023-11-20T01:27:29",
+                    "id": "VERACODE:43049",
+                    "href": "https://sca.analysiscenter.veracode.com/vulnerability-database/security/1/1/sid-43049/summary",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/veracode/VERACODE:43049"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">7zip</span> is vulnerable to Arbitrary Code Execution. This vulnerability exists due to a flaw in the way 7-Zip parses 7Z files."
+                    ]
+                },
+                "sort": [
+                    0.5593764,
+                    1693498576000
+                ],
+                "flatDescription": "7zip is vulnerable to Arbitrary Code Execution. This vulnerability exists due to a flaw in the way 7-Zip parses 7Z files. A remote attacker can exploit this vulnerability by tricking the victim to open a specially crafted archive, which could lead to arbitrary code execution on the victim&#x27;s..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2019-1000019",
+                "_score": 0.28593308,
+                "_source": {
+                    "lastseen": "2024-03-16T14:50:55",
+                    "description": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to be exploitable via the victim opening a specially crafted 7zip file.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2019-02-04T21:29:00",
+                    "type": "cve",
+                    "title": "CVE-2019-1000019",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2019-1000019"
+                    ],
+                    "modified": "2023-11-07T03:02:00",
+                    "cpe": [
+                        "cpe:/o:canonical:ubuntu_linux:18.04",
+                        "cpe:/o:redhat:enterprise_linux_workstation:7.0",
+                        "cpe:/o:redhat:enterprise_linux_desktop:7.0",
+                        "cpe:/o:redhat:enterprise_linux_server:7.0",
+                        "cpe:/o:fedoraproject:fedora:28",
+                        "cpe:/o:fedoraproject:fedora:29",
+                        "cpe:/o:debian:debian_linux:8.0",
+                        "cpe:/o:opensuse:leap:15.0",
+                        "cpe:/o:canonical:ubuntu_linux:14.04",
+                        "cpe:/o:canonical:ubuntu_linux:16.04",
+                        "cpe:/o:canonical:ubuntu_linux:18.10"
+                    ],
+                    "id": "CVE-2019-1000019",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2019-1000019",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*",
+                        "cpe:2.3:o:redhat:enterprise_linux_server:7.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:opensuse:leap:15.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:redhat:enterprise_linux_workstation:7.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:18.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:redhat:enterprise_linux_desktop:7.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:16.04:*:*:*:lts:*:*:*",
+                        "cpe:2.3:o:fedoraproject:fedora:29:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:fedoraproject:fedora:28:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:18.04:*:*:*:lts:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2019-1000019"
+                },
+                "highlight": {
+                    "description": [
+                        "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in <span class=\"vulners-highlight\">7zip</span> decompression, archive_read_support_format",
+                        "This attack appears to be exploitable via the victim opening a specially crafted <span class=\"vulners-highlight\">7zip</span> file."
+                    ]
+                },
+                "sort": [
+                    0.28593308,
+                    1549315740000
+                ],
+                "flatDescription": "libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2016-2334",
+                "_score": 0.25253636,
+                "_source": {
+                    "lastseen": "2024-03-16T14:47:34",
+                    "description": "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in 7zip before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+ image.",
+                    "cvss3": {
+                        "exploitabilityScore": 1.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.0",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2016-12-13T22:59:00",
+                    "type": "cve",
+                    "title": "CVE-2016-2334",
+                    "cwe": [
+                        "CWE-119"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2016-2334"
+                    ],
+                    "modified": "2023-11-07T02:31:00",
+                    "cpe": [
+                        "cpe:/o:oracle:solaris:*",
+                        "cpe:/o:fedoraproject:fedora:23",
+                        "cpe:/o:fedoraproject:fedora:24",
+                        "cpe:/a:7-zip:7-zip:15.14"
+                    ],
+                    "id": "CVE-2016-2334",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2334",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:fedoraproject:fedora:23:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:7-zip:7-zip:15.14:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:oracle:solaris:*:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:fedoraproject:fedora:24:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2016-2334"
+                },
+                "highlight": {
+                    "description": [
+                        "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in <span class=\"vulners-highlight\">7zip</span> before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+ image."
+                    ]
+                },
+                "sort": [
+                    0.25253636,
+                    1481669940000
+                ],
+                "flatDescription": "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in 7zip before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PRION:CVE-2016-2334",
+                "_score": 0.24985078,
+                "_source": {
+                    "lastseen": "2024-03-14T17:49:42",
+                    "description": "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in 7zip before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+ image.",
+                    "cvss3": {
+                        "exploitabilityScore": 1.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.0",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2016-12-13T22:59:00",
+                    "type": "prion",
+                    "title": "Heap overflow",
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2016-2334"
+                    ],
+                    "modified": "2023-11-07T02:31:00",
+                    "id": "PRION:CVE-2016-2334",
+                    "href": "https://www.prio-n.com/kb/vulnerability/CVE-2016-2334",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "vhref": "https://vulners.com/prion/PRION:CVE-2016-2334"
+                },
+                "highlight": {
+                    "description": [
+                        "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in <span class=\"vulners-highlight\">7zip</span> before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+ image."
+                    ]
+                },
+                "sort": [
+                    0.24985078,
+                    1481669940000
+                ],
+                "flatDescription": "Heap-based buffer overflow in the NArchive::NHfs::CHandler::ExtractZlibFile method in 7zip before 16.00 and p7zip allows remote attackers to execute arbitrary code via a crafted HFS+..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PRION:CVE-2016-2335",
+                "_score": 0.23870562,
+                "_source": {
+                    "lastseen": "2024-03-14T17:49:44",
+                    "description": "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in 7zip 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via the PartitionRef field in the Long Allocation Descriptor in a UDF file.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.0",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2016-06-07T14:06:00",
+                    "type": "prion",
+                    "title": "Out-of-bounds",
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2016-2335"
+                    ],
+                    "modified": "2023-11-07T02:31:00",
+                    "id": "PRION:CVE-2016-2335",
+                    "href": "https://www.prio-n.com/kb/vulnerability/CVE-2016-2335",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/prion/PRION:CVE-2016-2335"
+                },
+                "highlight": {
+                    "description": [
+                        "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in <span class=\"vulners-highlight\">7zip</span> 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via"
+                    ]
+                },
+                "sort": [
+                    0.23870562,
+                    1465308360000
+                ],
+                "flatDescription": "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in 7zip 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via the PartitionRef field in the Long Allocation Descriptor in a UDF..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2016-2335",
+                "_score": 0.23201768,
+                "_source": {
+                    "lastseen": "2024-03-16T14:48:15",
+                    "description": "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in 7zip 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via the PartitionRef field in the Long Allocation Descriptor in a UDF file.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.0",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2016-06-07T14:06:00",
+                    "type": "cve",
+                    "title": "CVE-2016-2335",
+                    "cwe": [
+                        "CWE-119"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2016-2335"
+                    ],
+                    "modified": "2023-11-07T02:31:00",
+                    "cpe": [
+                        "cpe:/o:debian:debian_linux:9.0",
+                        "cpe:/o:debian:debian_linux:8.0",
+                        "cpe:/o:opensuse:opensuse:13.2",
+                        "cpe:/a:7-zip:7-zip:9.20",
+                        "cpe:/a:7-zip:7-zip:15.05"
+                    ],
+                    "id": "CVE-2016-2335",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2335",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:opensuse:opensuse:13.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:7-zip:7-zip:9.20:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:7-zip:7-zip:15.05:beta:*:*:*:*:*:*",
+                        "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2016-2335"
+                },
+                "highlight": {
+                    "description": [
+                        "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in <span class=\"vulners-highlight\">7zip</span> 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via"
+                    ]
+                },
+                "sort": [
+                    0.23201768,
+                    1465308360000
+                ],
+                "flatDescription": "The CInArchive::ReadFileItem method in Archive/Udf/UdfIn.cpp in 7zip 9.20 and 15.05 beta and p7zip allows remote attackers to cause a denial of service (out-of-bounds read) or execute arbitrary code via the PartitionRef field in the Long Allocation Descriptor in a UDF..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "DEBIANCVE:CVE-2023-40481",
+                "_score": 0.074053474,
+                "_source": {
+                    "lastseen": "2024-02-23T10:42:31",
+                    "description": "This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+                    "cvss3": {},
+                    "published": "2023-10-04T14:00:07",
+                    "type": "debiancve",
+                    "title": "CVE-2023-40481",
+                    "bulletinFamily": "unix",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2023-40481"
+                    ],
+                    "modified": "2023-10-04T14:00:07",
+                    "id": "DEBIANCVE:CVE-2023-40481",
+                    "href": "https://security-tracker.debian.org/tracker/CVE-2023-40481",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/debiancve/DEBIANCVE:CVE-2023-40481"
+                },
+                "highlight": {
+                    "affectedPackage.packageName.keyword": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ],
+                    "affectedPackage.packageName": [
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>",
+                        "<span class=\"vulners-highlight\">7zip</span>"
+                    ]
+                },
+                "sort": [
+                    0.074053474,
+                    1696428007000
+                ],
+                "flatDescription": "This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "UBUNTU_USN-3884-1.NASL",
+                "_score": 0.028056895,
+                "_source": {
+                    "lastseen": "2024-01-09T15:01:31",
+                    "description": "It was discovered that libarchive incorrectly handled certain 7zip files. An attacker could possibly use this issue to cause a denial of service. (CVE-2019-1000019, CVE-2019-1000020).\n\nNote that Tenable Network Security has extracted the preceding description block directly from the Ubuntu security advisory. Tenable has attempted to automatically clean and format it as much as possible without introducing additional issues.",
+                    "cvss3": {},
+                    "published": "2019-02-08T00:00:00",
+                    "type": "nessus",
+                    "title": "Ubuntu 14.04 LTS / 16.04 LTS / 18.04 LTS : libarchive vulnerabilities (USN-3884-1)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2019-1000019",
+                        "CVE-2019-1000020"
+                    ],
+                    "modified": "2023-10-20T00:00:00",
+                    "cpe": [
+                        "p-cpe:/a:canonical:ubuntu_linux:libarchive13",
+                        "cpe:/o:canonical:ubuntu_linux:14.04:-:lts",
+                        "cpe:/o:canonical:ubuntu_linux:16.04:-:lts",
+                        "cpe:/o:canonical:ubuntu_linux:18.04:-:lts",
+                        "p-cpe:/a:canonical:ubuntu_linux:bsdcpio",
+                        "p-cpe:/a:canonical:ubuntu_linux:bsdtar",
+                        "p-cpe:/a:canonical:ubuntu_linux:libarchive-dev",
+                        "p-cpe:/a:canonical:ubuntu_linux:libarchive-tools"
+                    ],
+                    "id": "UBUNTU_USN-3884-1.NASL",
+                    "href": "https://www.tenable.com/plugins/nessus/122054",
+                    "sourceData": "#\n# (C) Tenable Network Security, Inc.\n#\n# The descriptive text and package checks in this plugin were\n# extracted from Ubuntu Security Notice USN-3884-1. The text \n# itself is copyright (C) Canonical, Inc. See \n# <http://www.ubuntu.com/usn/>. Ubuntu(R) is a registered \n# trademark of Canonical, Inc.\n#\n\ninclude('compat.inc');\n\nif (description)\n{\n  script_id(122054);\n  script_version(\"1.6\");\n  script_set_attribute(attribute:\"plugin_modification_date\", value:\"2023/10/20\");\n\n  script_cve_id(\"CVE-2019-1000019\", \"CVE-2019-1000020\");\n  script_xref(name:\"USN\", value:\"3884-1\");\n\n  script_name(english:\"Ubuntu 14.04 LTS / 16.04 LTS / 18.04 LTS : libarchive vulnerabilities (USN-3884-1)\");\n\n  script_set_attribute(attribute:\"synopsis\", value:\n\"The remote Ubuntu host is missing one or more security updates.\");\n  script_set_attribute(attribute:\"description\", value:\n\"It was discovered that libarchive incorrectly handled certain 7zip\nfiles. An attacker could possibly use this issue to cause a denial of\nservice. (CVE-2019-1000019, CVE-2019-1000020).\n\nNote that Tenable Network Security has extracted the preceding\ndescription block directly from the Ubuntu security advisory. Tenable\nhas attempted to automatically clean and format it as much as possible\nwithout introducing additional issues.\");\n  script_set_attribute(attribute:\"see_also\", value:\"https://ubuntu.com/security/notices/USN-3884-1\");\n  script_set_attribute(attribute:\"solution\", value:\n\"Update the affected packages.\");\n  script_set_cvss_base_vector(\"CVSS2#AV:N/AC:M/Au:N/C:N/I:N/A:P\");\n  script_set_cvss_temporal_vector(\"CVSS2#E:POC/RL:OF/RC:C\");\n  script_set_cvss3_base_vector(\"CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H\");\n  script_set_cvss3_temporal_vector(\"CVSS:3.0/E:P/RL:O/RC:C\");\n  script_set_attribute(attribute:\"cvss_score_source\", value:\"CVE-2019-1000020\");\n\n  script_set_attribute(attribute:\"exploitability_ease\", value:\"Exploits are available\");\n  script_set_attribute(attribute:\"exploit_available\", value:\"true\");\n\n  script_set_attribute(attribute:\"vuln_publication_date\", value:\"2019/02/04\");\n  script_set_attribute(attribute:\"patch_publication_date\", value:\"2019/02/07\");\n  script_set_attribute(attribute:\"plugin_publication_date\", value:\"2019/02/08\");\n\n  script_set_attribute(attribute:\"plugin_type\", value:\"local\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:libarchive13\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:canonical:ubuntu_linux:14.04:-:lts\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:canonical:ubuntu_linux:16.04:-:lts\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:canonical:ubuntu_linux:18.04:-:lts\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:bsdcpio\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:bsdtar\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:libarchive-dev\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:libarchive-tools\");\n  script_set_attribute(attribute:\"generated_plugin\", value:\"current\");\n  script_end_attributes();\n\n  script_category(ACT_GATHER_INFO);\n  script_family(english:\"Ubuntu Local Security Checks\");\n\n  script_copyright(english:\"Ubuntu Security Notice (C) 2019-2023 Canonical, Inc. / NASL script (C) 2019-2023 and is owned by Tenable, Inc. or an Affiliate thereof.\");\n\n  script_dependencies(\"ssh_get_info.nasl\");\n  script_require_keys(\"Host/cpu\", \"Host/Ubuntu\", \"Host/Ubuntu/release\", \"Host/Debian/dpkg-l\");\n\n  exit(0);\n}\n\ninclude('debian_package.inc');\n\nif ( ! get_kb_item('Host/local_checks_enabled') ) audit(AUDIT_LOCAL_CHECKS_NOT_ENABLED);\nvar os_release = get_kb_item('Host/Ubuntu/release');\nif ( isnull(os_release) ) audit(AUDIT_OS_NOT, 'Ubuntu');\nos_release = chomp(os_release);\nif (! ('14.04' >< os_release || '16.04' >< os_release || '18.04' >< os_release)) audit(AUDIT_OS_NOT, 'Ubuntu 14.04 / 16.04 / 18.04', 'Ubuntu ' + os_release);\nif ( ! get_kb_item('Host/Debian/dpkg-l') ) audit(AUDIT_PACKAGE_LIST_MISSING);\n\nvar cpu = get_kb_item('Host/cpu');\nif (isnull(cpu)) audit(AUDIT_UNKNOWN_ARCH);\nif ('x86_64' >!< cpu && cpu !~ \"^i[3-6]86$\" && 's390' >!< cpu && 'aarch64' >!< cpu) audit(AUDIT_LOCAL_CHECKS_NOT_IMPLEMENTED, 'Ubuntu', cpu);\n\nvar pkgs = [\n    {'osver': '14.04', 'pkgname': 'bsdcpio', 'pkgver': '3.1.2-7ubuntu2.8'},\n    {'osver': '14.04', 'pkgname': 'bsdtar', 'pkgver': '3.1.2-7ubuntu2.8'},\n    {'osver': '14.04', 'pkgname': 'libarchive-dev', 'pkgver': '3.1.2-7ubuntu2.8'},\n    {'osver': '14.04', 'pkgname': 'libarchive13', 'pkgver': '3.1.2-7ubuntu2.8'},\n    {'osver': '16.04', 'pkgname': 'bsdcpio', 'pkgver': '3.1.2-11ubuntu0.16.04.6'},\n    {'osver': '16.04', 'pkgname': 'bsdtar', 'pkgver': '3.1.2-11ubuntu0.16.04.6'},\n    {'osver': '16.04', 'pkgname': 'libarchive-dev', 'pkgver': '3.1.2-11ubuntu0.16.04.6'},\n    {'osver': '16.04', 'pkgname': 'libarchive13', 'pkgver': '3.1.2-11ubuntu0.16.04.6'},\n    {'osver': '18.04', 'pkgname': 'bsdcpio', 'pkgver': '3.2.2-3.1ubuntu0.3'},\n    {'osver': '18.04', 'pkgname': 'bsdtar', 'pkgver': '3.2.2-3.1ubuntu0.3'},\n    {'osver': '18.04', 'pkgname': 'libarchive-dev', 'pkgver': '3.2.2-3.1ubuntu0.3'},\n    {'osver': '18.04', 'pkgname': 'libarchive-tools', 'pkgver': '3.2.2-3.1ubuntu0.3'},\n    {'osver': '18.04', 'pkgname': 'libarchive13', 'pkgver': '3.2.2-3.1ubuntu0.3'}\n];\n\nvar flag = 0;\nforeach package_array ( pkgs ) {\n  var osver = NULL;\n  var pkgname = NULL;\n  var pkgver = NULL;\n  if (!empty_or_null(package_array['osver'])) osver = package_array['osver'];\n  if (!empty_or_null(package_array['pkgname'])) pkgname = package_array['pkgname'];\n  if (!empty_or_null(package_array['pkgver'])) pkgver = package_array['pkgver'];\n  if (osver && pkgname && pkgver) {\n    if (ubuntu_check(osver:osver, pkgname:pkgname, pkgver:pkgver)) flag++;\n  }\n}\n\nif (flag)\n{\n  security_report_v4(\n    port       : 0,\n    severity   : SECURITY_WARNING,\n    extra      : ubuntu_report_get()\n  );\n  exit(0);\n}\nelse\n{\n  var tested = ubuntu_pkg_tests_get();\n  if (tested) audit(AUDIT_PACKAGE_NOT_AFFECTED, tested);\n  else audit(AUDIT_PACKAGE_NOT_INSTALLED, 'bsdcpio / bsdtar / libarchive-dev / libarchive-tools / libarchive13');\n}\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/nessus/UBUNTU_USN-3884-1.NASL"
+                },
+                "highlight": {
+                    "description": [
+                        "It was discovered that libarchive incorrectly handled certain <span class=\"vulners-highlight\">7zip</span> files. An attacker could possibly use this issue to cause a denial of service. (CVE-2019-1000019, CVE-2019-1000020)."
+                    ],
+                    "sourceData": [
+                        ".\");\n  script_set_attribute(attribute:\"description\", value:\n\"It was discovered that libarchive incorrectly handled certain <span class=\"vulners-highlight\">7zip</span>\nfiles."
+                    ]
+                },
+                "sort": [
+                    0.028056895,
+                    1549584000000
+                ],
+                "flatDescription": "It was discovered that libarchive incorrectly handled certain 7zip files. An attacker could possibly use this issue to cause a denial of service. (CVE-2019-1000019, CVE-2019-1000020). Note that Tenable Network Security has extracted the preceding description block directly from the Ubuntu security..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "UBUNTU_USN-3225-1.NASL",
+                "_score": 0.016718779,
+                "_source": {
+                    "lastseen": "2024-01-13T15:53:00",
+                    "description": "It was discovered that libarchive incorrectly handled hardlink entries when extracting archives. A remote attacker could possibly use this issue to overwrite arbitrary files. (CVE-2016-5418)\n\nChristian Wressnegger, Alwin Maier, and Fabian Yamaguchi discovered that libarchive incorrectly handled filename lengths when writing ISO9660 archives. A remote attacker could use this issue to cause libarchive to crash, resulting in a denial of service, or possibly execute arbitrary code. This issue only applied to Ubuntu 12.04 LTS, Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2016-6250)\n\nAlexander Cherepanov discovered that libarchive incorrectly handled recursive decompressions. A remote attacker could possibly use this issue to cause libarchive to hang, resulting in a denial of service.\nThis issue only applied to Ubuntu 12.04 LTS, Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2016-7166)\n\nIt was discovered that libarchive incorrectly handled non-printable multibyte characters in filenames. A remote attacker could possibly use this issue to cause libarchive to crash, resulting in a denial of service. (CVE-2016-8687)\n\nIt was discovered that libarchive incorrectly handled line sizes when extracting certain archives. A remote attacker could possibly use this issue to cause libarchive to crash, resulting in a denial of service.\n(CVE-2016-8688)\n\nIt was discovered that libarchive incorrectly handled multiple EmptyStream attributes when extracting certain 7zip archives. A remote attacker could possibly use this issue to cause libarchive to crash, resulting in a denial of service. (CVE-2016-8689)\n\nJakub Jirasek discovered that libarchive incorrectly handled memory when extracting certain archives. A remote attacker could possibly use this issue to cause libarchive to crash, resulting in a denial of service. (CVE-2017-5601).\n\nNote that Tenable Network Security has extracted the preceding description block directly from the Ubuntu security advisory. Tenable has attempted to automatically clean and format it as much as possible without introducing additional issues.",
+                    "cvss3": {},
+                    "published": "2017-03-10T00:00:00",
+                    "type": "nessus",
+                    "title": "Ubuntu 14.04 LTS / 16.04 LTS : libarchive vulnerabilities (USN-3225-1)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2016-5418",
+                        "CVE-2016-6250",
+                        "CVE-2016-7166",
+                        "CVE-2016-8687",
+                        "CVE-2016-8688",
+                        "CVE-2016-8689",
+                        "CVE-2017-5601"
+                    ],
+                    "modified": "2023-10-20T00:00:00",
+                    "cpe": [
+                        "p-cpe:/a:canonical:ubuntu_linux:libarchive13",
+                        "cpe:/o:canonical:ubuntu_linux:14.04:-:lts",
+                        "cpe:/o:canonical:ubuntu_linux:16.04:-:lts",
+                        "p-cpe:/a:canonical:ubuntu_linux:bsdcpio",
+                        "p-cpe:/a:canonical:ubuntu_linux:bsdtar",
+                        "p-cpe:/a:canonical:ubuntu_linux:libarchive-dev"
+                    ],
+                    "id": "UBUNTU_USN-3225-1.NASL",
+                    "href": "https://www.tenable.com/plugins/nessus/97660",
+                    "sourceData": "#\n# (C) Tenable Network Security, Inc.\n#\n# The descriptive text and package checks in this plugin were\n# extracted from Ubuntu Security Notice USN-3225-1. The text \n# itself is copyright (C) Canonical, Inc. See \n# <http://www.ubuntu.com/usn/>. Ubuntu(R) is a registered \n# trademark of Canonical, Inc.\n#\n\ninclude('compat.inc');\n\nif (description)\n{\n  script_id(97660);\n  script_version(\"3.7\");\n  script_set_attribute(attribute:\"plugin_modification_date\", value:\"2023/10/20\");\n\n  script_cve_id(\n    \"CVE-2016-5418\",\n    \"CVE-2016-6250\",\n    \"CVE-2016-7166\",\n    \"CVE-2016-8687\",\n    \"CVE-2016-8688\",\n    \"CVE-2016-8689\",\n    \"CVE-2017-5601\"\n  );\n  script_xref(name:\"USN\", value:\"3225-1\");\n\n  script_name(english:\"Ubuntu 14.04 LTS / 16.04 LTS : libarchive vulnerabilities (USN-3225-1)\");\n\n  script_set_attribute(attribute:\"synopsis\", value:\n\"The remote Ubuntu host is missing one or more security updates.\");\n  script_set_attribute(attribute:\"description\", value:\n\"It was discovered that libarchive incorrectly handled hardlink entries\nwhen extracting archives. A remote attacker could possibly use this\nissue to overwrite arbitrary files. (CVE-2016-5418)\n\nChristian Wressnegger, Alwin Maier, and Fabian Yamaguchi discovered\nthat libarchive incorrectly handled filename lengths when writing\nISO9660 archives. A remote attacker could use this issue to cause\nlibarchive to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. This issue only applied to Ubuntu 12.04 LTS,\nUbuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2016-6250)\n\nAlexander Cherepanov discovered that libarchive incorrectly handled\nrecursive decompressions. A remote attacker could possibly use this\nissue to cause libarchive to hang, resulting in a denial of service.\nThis issue only applied to Ubuntu 12.04 LTS, Ubuntu 14.04 LTS and\nUbuntu 16.04 LTS. (CVE-2016-7166)\n\nIt was discovered that libarchive incorrectly handled non-printable\nmultibyte characters in filenames. A remote attacker could possibly\nuse this issue to cause libarchive to crash, resulting in a denial of\nservice. (CVE-2016-8687)\n\nIt was discovered that libarchive incorrectly handled line sizes when\nextracting certain archives. A remote attacker could possibly use this\nissue to cause libarchive to crash, resulting in a denial of service.\n(CVE-2016-8688)\n\nIt was discovered that libarchive incorrectly handled multiple\nEmptyStream attributes when extracting certain 7zip archives. A remote\nattacker could possibly use this issue to cause libarchive to crash,\nresulting in a denial of service. (CVE-2016-8689)\n\nJakub Jirasek discovered that libarchive incorrectly handled memory\nwhen extracting certain archives. A remote attacker could possibly use\nthis issue to cause libarchive to crash, resulting in a denial of\nservice. (CVE-2017-5601).\n\nNote that Tenable Network Security has extracted the preceding\ndescription block directly from the Ubuntu security advisory. Tenable\nhas attempted to automatically clean and format it as much as possible\nwithout introducing additional issues.\");\n  script_set_attribute(attribute:\"see_also\", value:\"https://ubuntu.com/security/notices/USN-3225-1\");\n  script_set_attribute(attribute:\"solution\", value:\n\"Update the affected packages.\");\n  script_set_cvss_base_vector(\"CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P\");\n  script_set_cvss_temporal_vector(\"CVSS2#E:POC/RL:OF/RC:C\");\n  script_set_cvss3_base_vector(\"CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H\");\n  script_set_cvss3_temporal_vector(\"CVSS:3.0/E:P/RL:O/RC:C\");\n  script_set_attribute(attribute:\"cvss_score_source\", value:\"CVE-2016-6250\");\n\n  script_set_attribute(attribute:\"exploitability_ease\", value:\"Exploits are available\");\n  script_set_attribute(attribute:\"exploit_available\", value:\"true\");\n\n  script_set_attribute(attribute:\"vuln_publication_date\", value:\"2016/09/21\");\n  script_set_attribute(attribute:\"patch_publication_date\", value:\"2017/03/09\");\n  script_set_attribute(attribute:\"plugin_publication_date\", value:\"2017/03/10\");\n\n  script_set_attribute(attribute:\"plugin_type\", value:\"local\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:libarchive13\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:canonical:ubuntu_linux:14.04:-:lts\");\n  script_set_attribute(attribute:\"cpe\", value:\"cpe:/o:canonical:ubuntu_linux:16.04:-:lts\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:bsdcpio\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:bsdtar\");\n  script_set_attribute(attribute:\"cpe\", value:\"p-cpe:/a:canonical:ubuntu_linux:libarchive-dev\");\n  script_set_attribute(attribute:\"generated_plugin\", value:\"current\");\n  script_end_attributes();\n\n  script_category(ACT_GATHER_INFO);\n  script_family(english:\"Ubuntu Local Security Checks\");\n\n  script_copyright(english:\"Ubuntu Security Notice (C) 2017-2023 Canonical, Inc. / NASL script (C) 2017-2023 and is owned by Tenable, Inc. or an Affiliate thereof.\");\n\n  script_dependencies(\"ssh_get_info.nasl\");\n  script_require_keys(\"Host/cpu\", \"Host/Ubuntu\", \"Host/Ubuntu/release\", \"Host/Debian/dpkg-l\");\n\n  exit(0);\n}\n\ninclude('debian_package.inc');\n\nif ( ! get_kb_item('Host/local_checks_enabled') ) audit(AUDIT_LOCAL_CHECKS_NOT_ENABLED);\nvar os_release = get_kb_item('Host/Ubuntu/release');\nif ( isnull(os_release) ) audit(AUDIT_OS_NOT, 'Ubuntu');\nos_release = chomp(os_release);\nif (! ('14.04' >< os_release || '16.04' >< os_release)) audit(AUDIT_OS_NOT, 'Ubuntu 14.04 / 16.04', 'Ubuntu ' + os_release);\nif ( ! get_kb_item('Host/Debian/dpkg-l') ) audit(AUDIT_PACKAGE_LIST_MISSING);\n\nvar cpu = get_kb_item('Host/cpu');\nif (isnull(cpu)) audit(AUDIT_UNKNOWN_ARCH);\nif ('x86_64' >!< cpu && cpu !~ \"^i[3-6]86$\" && 's390' >!< cpu && 'aarch64' >!< cpu) audit(AUDIT_LOCAL_CHECKS_NOT_IMPLEMENTED, 'Ubuntu', cpu);\n\nvar pkgs = [\n    {'osver': '14.04', 'pkgname': 'bsdcpio', 'pkgver': '3.1.2-7ubuntu2.4'},\n    {'osver': '14.04', 'pkgname': 'bsdtar', 'pkgver': '3.1.2-7ubuntu2.4'},\n    {'osver': '14.04', 'pkgname': 'libarchive-dev', 'pkgver': '3.1.2-7ubuntu2.4'},\n    {'osver': '14.04', 'pkgname': 'libarchive13', 'pkgver': '3.1.2-7ubuntu2.4'},\n    {'osver': '16.04', 'pkgname': 'bsdcpio', 'pkgver': '3.1.2-11ubuntu0.16.04.3'},\n    {'osver': '16.04', 'pkgname': 'bsdtar', 'pkgver': '3.1.2-11ubuntu0.16.04.3'},\n    {'osver': '16.04', 'pkgname': 'libarchive-dev', 'pkgver': '3.1.2-11ubuntu0.16.04.3'},\n    {'osver': '16.04', 'pkgname': 'libarchive13', 'pkgver': '3.1.2-11ubuntu0.16.04.3'}\n];\n\nvar flag = 0;\nforeach package_array ( pkgs ) {\n  var osver = NULL;\n  var pkgname = NULL;\n  var pkgver = NULL;\n  if (!empty_or_null(package_array['osver'])) osver = package_array['osver'];\n  if (!empty_or_null(package_array['pkgname'])) pkgname = package_array['pkgname'];\n  if (!empty_or_null(package_array['pkgver'])) pkgver = package_array['pkgver'];\n  if (osver && pkgname && pkgver) {\n    if (ubuntu_check(osver:osver, pkgname:pkgname, pkgver:pkgver)) flag++;\n  }\n}\n\nif (flag)\n{\n  security_report_v4(\n    port       : 0,\n    severity   : SECURITY_HOLE,\n    extra      : ubuntu_report_get()\n  );\n  exit(0);\n}\nelse\n{\n  var tested = ubuntu_pkg_tests_get();\n  if (tested) audit(AUDIT_PACKAGE_NOT_AFFECTED, tested);\n  else audit(AUDIT_PACKAGE_NOT_INSTALLED, 'bsdcpio / bsdtar / libarchive-dev / libarchive13');\n}\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/nessus/UBUNTU_USN-3225-1.NASL"
+                },
+                "highlight": {
+                    "description": [
+                        "(CVE-2016-8688)\n\nIt was discovered that libarchive incorrectly handled multiple EmptyStream attributes when extracting certain <span class=\"vulners-highlight\">7zip</span> archives."
+                    ],
+                    "sourceData": [
+                        "(CVE-2016-8688)\n\nIt was discovered that libarchive incorrectly handled multiple\nEmptyStream attributes when extracting certain <span class=\"vulners-highlight\">7zip</span> archives."
+                    ]
+                },
+                "sort": [
+                    0.016718779,
+                    1489104000000
+                ],
+                "flatDescription": "It was discovered that libarchive incorrectly handled hardlink entries when extracting archives. A remote attacker could possibly use this issue to overwrite arbitrary files. (CVE-2016-5418) Christian Wressnegger, Alwin Maier, and Fabian Yamaguchi discovered that libarchive incorrectly handled..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "VERACODE:43106",
+                "_score": 0.012835367,
+                "_source": {
+                    "lastseen": "2023-10-04T13:59:34",
+                    "description": "7zip is vulnerable to Out-Of-Bounds Write. The vulnerability exists due to the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated buffer, allowing an attacker to leverage this vulnerability to execute code in the context of the current process. \n",
+                    "cvss3": {},
+                    "published": "2023-09-04T11:37:36",
+                    "type": "veracode",
+                    "title": "Out-Of-Bounds Write ",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2023-40481"
+                    ],
+                    "modified": "2023-10-03T03:07:53",
+                    "id": "VERACODE:43106",
+                    "href": "https://sca.analysiscenter.veracode.com/vulnerability-database/security/1/1/sid-43106/summary",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/veracode/VERACODE:43106"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">7zip</span> is vulnerable to Out-Of-Bounds Write."
+                    ]
+                },
+                "sort": [
+                    0.012835367,
+                    1693827456000
+                ],
+                "flatDescription": "7zip is vulnerable to Out-Of-Bounds Write. The vulnerability exists due to the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated buffer, allowing an attacker to leverage this vulnerability to execute code in the context of the current..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "FCCAAA4B-646B-578D-8CE2-5439E7799C32",
+                "_score": 0.008264938,
+                "_source": {
+                    "lastseen": "2024-03-15T20:42:45",
+                    "description": "# MS-MSDT-Office-RCE-Follina\nCVE-2022-30190 | MS-MSDT Follina On...",
+                    "cvss3": {
+                        "exploitabilityScore": 1.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2022-06-02T16:09:02",
+                    "type": "githubexploit",
+                    "title": "Exploit for Externally Controlled Reference to a Resource in Another Sphere in Microsoft",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2022-30190"
+                    ],
+                    "modified": "2023-09-28T11:39:22",
+                    "id": "FCCAAA4B-646B-578D-8CE2-5439E7799C32",
+                    "href": "",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/FCCAAA4B-646B-578D-8CE2-5439E7799C32"
+                },
+                "highlight": {},
+                "sort": [
+                    0.008264938,
+                    1654186142000
+                ],
+                "flatDescription": "MS-MSDT-Office-RCE-Follina CVE-2022-30190 | MS-MSDT Follina..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 254,
+        "maxSearchSize": 100
+    }
+}

