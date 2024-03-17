@@ -1,0 +1,1794 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0743",
+                "_score": 92.54743,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:21",
+                    "description": "An unchecked return value in TLS handshake code could have caused a potentially exploitable crash. This vulnerability affects Firefox < 122.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0743",
+                    "cwe": [
+                        "CWE-252"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0743"
+                    ],
+                    "modified": "2024-03-11T06:15:06",
+                    "cpe": [],
+                    "id": "CVE-2024-0743",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0743",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0743"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    92.54743,
+                    1706019338000
+                ],
+                "flatDescription": "An unchecked return value in TLS handshake code could have caused a potentially exploitable crash. This vulnerability affects Firefox &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2006-4253",
+                "_score": 87.828255,
+                "_source": {
+                    "lastseen": "2024-03-16T14:55:15",
+                    "description": "Concurrency vulnerability in Mozilla Firefox 1.5.0.6 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via multiple Javascript timed events that load a deeply nested XML file, followed by redirecting the browser to another page, which leads to a concurrency failure that causes structures to be freed incorrectly, as demonstrated by (1) ffoxdie and (2) ffoxdie3.  NOTE: it has been reported that Netscape 8.1 and K-Meleon 1.0.1 are also affected by ffoxdie.  Mozilla confirmed to CVE that ffoxdie and ffoxdie3 trigger the same underlying vulnerability.  NOTE: it was later reported that Firefox 2.0 RC2 and 1.5.0.7 are also affected.",
+                    "cvss3": {},
+                    "published": "2006-08-21T20:04:00",
+                    "type": "cve",
+                    "title": "CVE-2006-4253",
+                    "cwe": [
+                        "CWE-264"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 4.9,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "HIGH",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 7.6,
+                            "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2006-4253"
+                    ],
+                    "modified": "2024-02-14T01:17:00",
+                    "cpe": [
+                        "cpe:/a:netscape:navigator:8.1",
+                        "cpe:/a:mozilla:firefox:1.5.0.6",
+                        "cpe:/a:mozilla:firefox:1.0.3",
+                        "cpe:/a:mozilla:firefox:1.5.0.2",
+                        "cpe:/a:mozilla:firefox:1.0.7",
+                        "cpe:/a:mozilla:firefox:1.5",
+                        "cpe:/a:mozilla:firefox:0.9.1",
+                        "cpe:/a:mozilla:firefox:1.0.2",
+                        "cpe:/a:mozilla:firefox:1.0.8",
+                        "cpe:/a:mozilla:firefox:1.0.5",
+                        "cpe:/a:mozilla:firefox:1.0",
+                        "cpe:/a:mozilla:firefox:1.0.6",
+                        "cpe:/a:mozilla:firefox:1.5.0.3",
+                        "cpe:/a:mozilla:firefox:0.9",
+                        "cpe:/a:mozilla:firefox:0.10",
+                        "cpe:/a:mozilla:firefox:0.9.2",
+                        "cpe:/a:mozilla:firefox:1.5.0.4",
+                        "cpe:/a:mozilla:firefox:0.8",
+                        "cpe:/a:k-meleon_project:k-meleon:1.0.1",
+                        "cpe:/a:mozilla:firefox:1.0.4",
+                        "cpe:/a:mozilla:firefox:0.9.3",
+                        "cpe:/a:mozilla:firefox:1.5.0.1",
+                        "cpe:/a:mozilla:firefox:1.0.1",
+                        "cpe:/a:mozilla:firefox:1.5.0.5",
+                        "cpe:/a:mozilla:firefox:0.10.1"
+                    ],
+                    "id": "CVE-2006-4253",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-4253",
+                    "cvss": {
+                        "score": 7.6,
+                        "vector": "AV:N/AC:H/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:firefox:0.9:rc:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.5:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.8:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.9.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.6:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5:beta1:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.10.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.6:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.8:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.7:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:netscape:navigator:8.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.9:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5:beta2:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.5:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:k-meleon_project:k-meleon:1.0.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.9.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:0.9.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:mozilla:firefox:1.0:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2006-4253"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "Concurrency vulnerability in <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> 1.5.0.6 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via multiple Javascript timed events that",
+                        "<span class=\"vulners-highlight\">Mozilla</span> confirmed to CVE that ffoxdie and ffoxdie3 trigger the same underlying vulnerability.  NOTE: it was later reported that <span class=\"vulners-highlight\">Firefox</span> 2.0 RC2 and 1.5.0.7 are also affected."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    87.828255,
+                    1156190640000
+                ],
+                "flatDescription": "Concurrency vulnerability in Mozilla Firefox 1.5.0.6 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via multiple Javascript timed events that load a deeply nested XML file, followed by redirecting the browser to another page, which..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "SSA-2024-051-01",
+                "_score": 85.64513,
+                "_source": {
+                    "lastseen": "2024-03-16T18:56:28",
+                    "description": "New mozilla-firefox packages are available for Slackware 15.0 and -current to\nfix security issues.\n\n\nHere are the details from the Slackware 15.0 ChangeLog:\n\npatches/packages/mozilla-firefox-115.8.0esr-i686-1_slack15.0.txz:  Upgraded.\n  This update contains security fixes and improvements.\n  For more information, see:\n    https://www.mozilla.org/en-US/firefox/115.8.0/releasenotes/\n    https://www.mozilla.org/security/advisories/mfsa2024-06/\n    https://vulners.com/cve/CVE-2024-1546\n    https://vulners.com/cve/CVE-2024-1547\n    https://vulners.com/cve/CVE-2024-1548\n    https://vulners.com/cve/CVE-2024-1549\n    https://vulners.com/cve/CVE-2024-1550\n    https://vulners.com/cve/CVE-2024-1551\n    https://vulners.com/cve/CVE-2024-1552\n    https://vulners.com/cve/CVE-2024-1553\n  (* Security fix *)\n\nWhere to find the new packages:\n\nThanks to the friendly folks at the OSU Open Source Lab\n(http://osuosl.org) for donating FTP and rsync hosting\nto the Slackware project!  :-)\n\nAlso see the \"Get Slack\" section on http://slackware.com for\nadditional mirror sites near you.\n\nUpdated package for Slackware 15.0:\nftp://ftp.slackware.com/pub/slackware/slackware-15.0/patches/packages/mozilla-firefox-115.8.0esr-i686-1_slack15.0.txz\n\nUpdated package for Slackware x86_64 15.0:\nftp://ftp.slackware.com/pub/slackware/slackware64-15.0/patches/packages/mozilla-firefox-115.8.0esr-x86_64-1_slack15.0.txz\n\nUpdated package for Slackware -current:\nftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/xap/mozilla-firefox-115.8.0esr-i686-1.txz\n\nUpdated package for Slackware x86_64 -current:\nftp://ftp.slackware.com/pub/slackware/slackware64-current/slackware64/xap/mozilla-firefox-115.8.0esr-x86_64-1.txz\n\n\nMD5 signatures:\n\nSlackware 15.0 package:\n02f08793a474ae14ee79dfe55a46f978  mozilla-firefox-115.8.0esr-i686-1_slack15.0.txz\n\nSlackware x86_64 15.0 package:\nab30a974f11126bde6c390a51e8506f8  mozilla-firefox-115.8.0esr-x86_64-1_slack15.0.txz\n\nSlackware -current package:\n67d3f23b17823a87b6130a3bcb746631  xap/mozilla-firefox-115.8.0esr-i686-1.txz\n\nSlackware x86_64 -current package:\n98e662cff14e1b4885ebf83339c32f9f  xap/mozilla-firefox-115.8.0esr-x86_64-1.txz\n\n\nInstallation instructions:\n\nUpgrade the package as root:\n  > upgradepkg mozilla-firefox-115.8.0esr-i686-1_slack15.0.txz",
+                    "cvss3": {},
+                    "published": "2024-02-20T18:47:43",
+                    "type": "slackware",
+                    "title": "[slackware-security]  mozilla-firefox",
+                    "bulletinFamily": "unix",
+                    "cvss2": {},
+                    "cvelist": [
+                        "CVE-2024-1546",
+                        "CVE-2024-1547",
+                        "CVE-2024-1548",
+                        "CVE-2024-1549",
+                        "CVE-2024-1550",
+                        "CVE-2024-1551",
+                        "CVE-2024-1552",
+                        "CVE-2024-1553"
+                    ],
+                    "modified": "2024-02-20T18:47:43",
+                    "id": "SSA-2024-051-01",
+                    "href": "http://www.slackware.com/security/viewer.php?l=slackware-security&y=2024&m=slackware-security.390001",
+                    "cvss": {
+                        "score": 0.0,
+                        "vector": "NONE"
+                    },
+                    "vhref": "https://vulners.com/slackware/SSA-2024-051-01"
+                },
+                "highlight": {
+                    "affectedPackage.packageFilename": [
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1_slack15.0.txz",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-x86_64-1_slack15.0.txz",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1.txz",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-x86_64-1.txz"
+                    ],
+                    "affectedPackage.packageName": [
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "description": [
+                        "New <span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span> packages are available for Slackware 15.0 and -current to\nfix security issues.",
+                        "Here are the details from the Slackware 15.0 ChangeLog:\n\npatches/packages/<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1_slack15.0.txz:  Upgraded.\n  This update contains security fixes and improvements.",
+                        "/slackware/xap/<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1.txz\n\nUpdated package for Slackware x86_64 -current:\nftp://ftp.slackware.com/pub/slackware/slackware64-current/slackware64/xap/<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-x86",
+                        "<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-x86_64-1_slack15.0.txz\n\nSlackware -current package:\n67d3f23b17823a87b6130a3bcb746631  xap/<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1.txz\n\nSlackware x86_64 -current package:\n98e662cff14e1b4885ebf83339c32f9f",
+                        "xap/<span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-x86_64-1.txz\n\n\nInstallation instructions:\n\nUpgrade the package as root:\n  > upgradepkg <span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>-115.8.0esr-i686-1_slack15.0.txz"
+                    ],
+                    "title": [
+                        "[slackware-security]  <span class=\"vulners-highlight\">mozilla</span>-<span class=\"vulners-highlight\">firefox</span>"
+                    ]
+                },
+                "sort": [
+                    85.64513,
+                    1708454863000
+                ],
+                "flatDescription": "New mozilla-firefox packages are available for Slackware 15.0 and -current to fix security issues. Here are the details from the Slackware 15.0 ChangeLog: patches/packages/mozilla-firefox-115.8.0esr-i686-1_slack15.0.txz:  Upgraded.   This update contains security fixes and improvements.   For more..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0749",
+                "_score": 72.064995,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:53",
+                    "description": "A phishing site could have repurposed an `about:` dialog to show phishing content with an incorrect origin in the address bar. This vulnerability affects Firefox < 122 and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "LOW",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0749",
+                    "cwe": [
+                        "CWE-346"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0749"
+                    ],
+                    "modified": "2024-02-09T02:15:08",
+                    "cpe": [],
+                    "id": "CVE-2024-0749",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0749",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0749"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122 and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    72.064995,
+                    1706019338000
+                ],
+                "flatDescription": "A phishing site could have repurposed an about: dialog to show phishing content with an incorrect origin in the address bar. This vulnerability affects Firefox &lt; 122 and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2006-2057",
+                "_score": 70.121284,
+                "_source": {
+                    "lastseen": "2024-03-16T14:24:53",
+                    "description": "Argument injection vulnerability in Mozilla Firefox 1.0.6 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via \" (double quote) characters in a mailto: scheme handler, as demonstrated by launching Microsoft Outlook with an arbitrary filename as an attachment.  NOTE: it is not clear whether this issue is implementation-specific or a problem in the Microsoft API.",
+                    "cvss3": {},
+                    "published": "2006-04-26T20:06:00",
+                    "type": "cve",
+                    "title": "CVE-2006-2057",
+                    "cwe": [
+                        "CWE-88"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2006-2057"
+                    ],
+                    "modified": "2024-02-13T17:51:00",
+                    "cpe": [
+                        "cpe:/a:mozilla:firefox:1.0.6"
+                    ],
+                    "id": "CVE-2006-2057",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-2057",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:firefox:1.0.6:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2006-2057"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "Argument injection vulnerability in <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> 1.0.6 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via \" (double quote) characters in a mailto: scheme"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    70.121284,
+                    1146081960000
+                ],
+                "flatDescription": "Argument injection vulnerability in Mozilla Firefox 1.0.6 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via &quot; (double quote) characters in a mailto: scheme handler, as demonstrated by launching Microsoft Outlook with an arbitrary filename as an..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2006-4561",
+                "_score": 69.495636,
+                "_source": {
+                    "lastseen": "2024-03-16T14:57:54",
+                    "description": "Mozilla Firefox 1.5.0.6 allows remote attackers to execute arbitrary JavaScript in the context of the browser's session with an arbitrary intranet web server, by hosting script on an Internet web server that can be made inaccessible by the attacker and that has a domain name under the attacker's control, which can force the browser to drop DNS pinning and perform a new DNS query for the domain name after the script is already running.",
+                    "cvss3": {},
+                    "published": "2006-09-06T00:04:00",
+                    "type": "cve",
+                    "title": "CVE-2006-4561",
+                    "cwe": [
+                        "NVD-CWE-Other"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": true,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2006-4561"
+                    ],
+                    "modified": "2024-02-14T01:17:00",
+                    "cpe": [
+                        "cpe:/a:mozilla:firefox:1.5.0.6"
+                    ],
+                    "id": "CVE-2006-4561",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-4561",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.6:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2006-4561"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> 1.5.0.6 allows remote attackers to execute arbitrary JavaScript in the context of the browser's session with an arbitrary intranet web server, by hosting script on an Internet web server"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    69.495636,
+                    1157501040000
+                ],
+                "flatDescription": "Mozilla Firefox 1.5.0.6 allows remote attackers to execute arbitrary JavaScript in the context of the browser&#x27;s session with an arbitrary intranet web server, by hosting script on an Internet web server that can be made inaccessible by the attacker and that has a domain name under the attacker&#x27;s..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2006-2332",
+                "_score": 69.495636,
+                "_source": {
+                    "lastseen": "2024-03-16T14:27:50",
+                    "description": "Mozilla Firefox 1.5.0.3 allows remote attackers to cause a denial of service via a web page with a large number of IMG elements in which the SRC attribute is a mailto URI.  NOTE: another researcher found that the web page caused a temporary browser slowdown instead of a crash.",
+                    "cvss3": {},
+                    "published": "2006-05-12T00:02:00",
+                    "type": "cve",
+                    "title": "CVE-2006-2332",
+                    "cwe": [
+                        "NVD-CWE-Other"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 4.9,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 2.6,
+                            "vectorString": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2006-2332"
+                    ],
+                    "modified": "2024-02-14T01:17:00",
+                    "cpe": [
+                        "cpe:/a:mozilla:firefox:1.5.0.3"
+                    ],
+                    "id": "CVE-2006-2332",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-2332",
+                    "cvss": {
+                        "score": 2.6,
+                        "vector": "AV:N/AC:H/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:firefox:1.5.0.3:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2006-2332"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "references": [
+                        "http://www.securityview.org/confirmed-bug-in-<span class=\"vulners-highlight\">firefox</span>-1503.html"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> 1.5.0.3 allows remote attackers to cause a denial of service via a web page with a large number of IMG elements in which the SRC attribute is a mailto URI."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    69.495636,
+                    1147392120000
+                ],
+                "flatDescription": "Mozilla Firefox 1.5.0.3 allows remote attackers to cause a denial of service via a web page with a large number of IMG elements in which the SRC attribute is a mailto URI.  NOTE: another researcher found that the web page caused a temporary browser slowdown instead of a..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0953",
+                "_score": 64.467445,
+                "_source": {
+                    "lastseen": "2024-03-16T16:36:01",
+                    "description": "When a user scans a QR Code with the QR Code Scanner feature, the user is not prompted before being navigated to the page specified in the code.  This may surprise the user and potentially direct them to unwanted content.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "LOW",
+                            "attackComplexity": "LOW",
+                            "scope": "CHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "LOW",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.1,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-05T17:15:09",
+                    "type": "cve",
+                    "title": "CVE-2024-0953",
+                    "cwe": [
+                        "CWE-601"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 5.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 4.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0953"
+                    ],
+                    "modified": "2024-02-09T16:38:45",
+                    "cpe": [
+                        "cpe:/a:mozilla:firefox:-"
+                    ],
+                    "id": "CVE-2024-0953",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0953",
+                    "cvss": {
+                        "score": 5.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:firefox:-:*:*:*:*:iphone_os:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0953"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span> for iOS"
+                    ]
+                },
+                "sort": [
+                    64.467445,
+                    1707153309000
+                ],
+                "flatDescription": "When a user scans a QR Code with the QR Code Scanner feature, the user is not prompted before being navigated to the page specified in the code.  This may surprise the user and potentially direct them to unwanted..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2019-9805",
+                "_score": 63.552765,
+                "_source": {
+                    "lastseen": "2024-03-16T16:50:02",
+                    "description": "A latent vulnerability exists in the Prio library where data may be read from uninitialized memory for some functions, leading to potential memory corruption. This vulnerability affects Firefox < 66.",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "CRITICAL",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 9.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2019-04-26T17:29:00",
+                    "type": "cve",
+                    "title": "CVE-2019-9805",
+                    "cwe": [
+                        "CWE-908"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 7.5,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2019-9805"
+                    ],
+                    "modified": "2024-02-08T23:43:00",
+                    "cpe": [],
+                    "id": "CVE-2019-9805",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2019-9805",
+                    "cvss": {
+                        "score": 7.5,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2019-9805"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 66."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    63.552765,
+                    1556299740000
+                ],
+                "flatDescription": "A latent vulnerability exists in the Prio library where data may be read from uninitialized memory for some functions, leading to potential memory corruption. This vulnerability affects Firefox &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0742",
+                "_score": 63.292595,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:16",
+                    "description": "It was possible for certain browser prompts and dialogs to be activated or dismissed unintentionally by the user due to an incorrect timestamp used to prevent input after page load. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "LOW",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0742",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0742"
+                    ],
+                    "modified": "2024-02-02T17:19:23",
+                    "cpe": [],
+                    "id": "CVE-2024-0742",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0742",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0742"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.292595,
+                    1706019338000
+                ],
+                "flatDescription": "It was possible for certain browser prompts and dialogs to be activated or dismissed unintentionally by the user due to an incorrect timestamp used to prevent input after page load. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0747",
+                "_score": 63.292297,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:44",
+                    "description": "When a parent page loaded a child in an iframe with `unsafe-inline`, the parent Content Security Policy could have overridden the child Content Security Policy. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0747",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0747"
+                    ],
+                    "modified": "2024-02-02T17:19:06",
+                    "cpe": [],
+                    "id": "CVE-2024-0747",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0747",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0747"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.292297,
+                    1706019338000
+                ],
+                "flatDescription": "When a parent page loaded a child in an iframe with unsafe-inline, the parent Content Security Policy could have overridden the child Content Security Policy. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0751",
+                "_score": 63.28723,
+                "_source": {
+                    "lastseen": "2024-03-16T15:04:04",
+                    "description": "A malicious devtools extension could have been used to escalate privileges. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0751",
+                    "cwe": [
+                        "CWE-269"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0751"
+                    ],
+                    "modified": "2024-02-02T17:14:17",
+                    "cpe": [],
+                    "id": "CVE-2024-0751",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0751",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0751"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.28723,
+                    1706019338000
+                ],
+                "flatDescription": "A malicious devtools extension could have been used to escalate privileges. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0746",
+                "_score": 63.09396,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:43",
+                    "description": "A Linux user opening the print preview dialog could have caused the browser to crash. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0746",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0746"
+                    ],
+                    "modified": "2024-02-02T17:19:10",
+                    "cpe": [],
+                    "id": "CVE-2024-0746",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0746",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0746"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.09396,
+                    1706019338000
+                ],
+                "flatDescription": "A Linux user opening the print preview dialog could have caused the browser to crash. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0750",
+                "_score": 63.08893,
+                "_source": {
+                    "lastseen": "2024-03-16T15:04:00",
+                    "description": "A bug in popup notifications delay calculation could have made it possible for an attacker to trick a user into granting permissions. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0750",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0750"
+                    ],
+                    "modified": "2024-02-02T17:14:22",
+                    "cpe": [
+                        "cpe:/a:mozilla:thunderbird:115.7"
+                    ],
+                    "id": "CVE-2024-0750",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0750",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:mozilla:thunderbird:115.7:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0750"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.08893,
+                    1706019338000
+                ],
+                "flatDescription": "A bug in popup notifications delay calculation could have made it possible for an attacker to trick a user into granting permissions. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0755",
+                "_score": 63.088703,
+                "_source": {
+                    "lastseen": "2024-03-16T15:04:22",
+                    "description": "Memory safety bugs present in Firefox 121, Firefox ESR 115.6, and Thunderbird 115.6. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0755",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0755"
+                    ],
+                    "modified": "2024-02-02T17:14:09",
+                    "cpe": [],
+                    "id": "CVE-2024-0755",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0755",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0755"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "Memory safety bugs present in <span class=\"vulners-highlight\">Firefox</span> 121, <span class=\"vulners-highlight\">Firefox</span> ESR 115.6, and Thunderbird 115.6.",
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    63.088703,
+                    1706019338000
+                ],
+                "flatDescription": "Memory safety bugs present in Firefox 121, Firefox ESR 115.6, and Thunderbird 115.6. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2020-6819",
+                "_score": 63.05709,
+                "_source": {
+                    "lastseen": "2024-03-16T17:21:15",
+                    "description": "Under certain conditions, when running the nsDocShell destructor, a race condition can cause a use-after-free. We are aware of targeted attacks in the wild abusing this flaw. This vulnerability affects Thunderbird < 68.7.0, Firefox < 74.0.1, and Firefox ESR < 68.6.1.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.2,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "HIGH",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.1,
+                            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2020-04-24T16:15:00",
+                    "type": "cve",
+                    "title": "CVE-2020-6819",
+                    "cwe": [
+                        "CWE-362",
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2020-6819"
+                    ],
+                    "modified": "2024-02-02T16:44:00",
+                    "cpe": [],
+                    "id": "CVE-2020-6819",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-6819",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2020-6819"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects Thunderbird < 68.7.0, <span class=\"vulners-highlight\">Firefox</span> < 74.0.1, and <span class=\"vulners-highlight\">Firefox</span> ESR < 68.6.1."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR",
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    63.05709,
+                    1587744900000
+                ],
+                "flatDescription": "Under certain conditions, when running the nsDocShell destructor, a race condition can cause a use-after-free. We are aware of targeted attacks in the wild abusing this flaw. This vulnerability affects Thunderbird &lt; 68.7.0, Firefox &lt; 74.0.1, and Firefox ESR &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2010-1208",
+                "_score": 62.676334,
+                "_source": {
+                    "lastseen": "2024-03-16T14:20:52",
+                    "description": "Use-after-free vulnerability in the attribute-cloning functionality in the DOM implementation in Mozilla Firefox 3.5.x before 3.5.11 and 3.6.x before 3.6.7, and SeaMonkey before 2.0.6, allows remote attackers to execute arbitrary code via vectors related to deletion of an event attribute node with a nonzero reference count.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2010-07-30T20:30:00",
+                    "type": "cve",
+                    "title": "CVE-2010-1208",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2010-1208"
+                    ],
+                    "modified": "2024-02-02T16:10:00",
+                    "cpe": [],
+                    "id": "CVE-2010-1208",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1208",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2010-1208"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "Use-after-free vulnerability in the attribute-cloning functionality in the DOM implementation in <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> 3.5.x before 3.5.11 and 3.6.x before 3.6.7, and SeaMonkey before 2.0.6, allows remote attackers"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> seamonkey"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>"
+                    ]
+                },
+                "sort": [
+                    62.676334,
+                    1280521800000
+                ],
+                "flatDescription": "Use-after-free vulnerability in the attribute-cloning functionality in the DOM implementation in Mozilla Firefox 3.5.x before 3.5.11 and 3.6.x before 3.6.7, and SeaMonkey before 2.0.6, allows remote attackers to execute arbitrary code via vectors related to deletion of an event attribute node with..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "GLSA-202402-26",
+                "_score": 62.484592,
+                "_source": {
+                    "lastseen": "2024-03-16T17:10:56",
+                    "description": "### Background\n\nMozilla Firefox is a popular open-source web browser from the Mozilla project.\n\n### Description\n\nMultiple vulnerabilities have been discovered in Mozilla Firefox. Please review the CVE identifiers referenced below for details.\n\n### Impact\n\nPlease review the referenced CVE identifiers for details.\n\n### Workaround\n\nThere is no known workaround at this time.\n\n### Resolution\n\nAll Mozilla Firefox ESR users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/firefox-115.7.0:esr\"\n     \n\nAll Mozilla Firefox ESR binary users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/firefox-bin-115.7.0:esr\"\n     \n\nAll Mozilla Firefox users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/firefox-122.0:rapid\"\n     \n\nAll Mozilla Firefox binary users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/firefox-bin-122.0:rapid\"",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-19T00:00:00",
+                    "type": "gentoo",
+                    "title": "Mozilla Firefox: Multiple Vulnerabilities",
+                    "bulletinFamily": "unix",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 6.8,
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0741",
+                        "CVE-2024-0742",
+                        "CVE-2024-0743",
+                        "CVE-2024-0744",
+                        "CVE-2024-0745",
+                        "CVE-2024-0746",
+                        "CVE-2024-0747",
+                        "CVE-2024-0748",
+                        "CVE-2024-0749",
+                        "CVE-2024-0750",
+                        "CVE-2024-0751",
+                        "CVE-2024-0752",
+                        "CVE-2024-0753",
+                        "CVE-2024-0754",
+                        "CVE-2024-0755"
+                    ],
+                    "modified": "2024-02-19T00:00:00",
+                    "id": "GLSA-202402-26",
+                    "href": "https://security.gentoo.org/glsa/202402-26",
+                    "cvss": {
+                        "score": 6.8,
+                        "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/gentoo/GLSA-202402-26"
+                },
+                "highlight": {
+                    "affectedPackage.packageName": [
+                        "www-client/<span class=\"vulners-highlight\">firefox</span>",
+                        "www-client/<span class=\"vulners-highlight\">firefox</span>-bin"
+                    ],
+                    "description": [
+                        "### Background\n\n<span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> is a popular open-source web browser from the <span class=\"vulners-highlight\">Mozilla</span> project.\n\n### Description\n\nMultiple vulnerabilities have been discovered in <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span>.",
+                        ".\n\n### Resolution\n\nAll <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> ESR users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">firefox</span>-115.7.0:esr\"\n     \n\nAll",
+                        "<span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> ESR binary users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">firefox</span>-bin-115.7.0:esr\"\n     \n\nAll <span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> users should upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">firefox</span>-122.0:rapid\"\n     \n\nAll <span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span> binary users should",
+                        "upgrade to the latest version:\n    \n    \n     # emerge --sync\n     # emerge --ask --oneshot --verbose \">=www-client/<span class=\"vulners-highlight\">firefox</span>-bin-122.0:rapid\""
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Mozilla</span> <span class=\"vulners-highlight\">Firefox</span>: Multiple Vulnerabilities"
+                    ]
+                },
+                "sort": [
+                    62.484592,
+                    1708300800000
+                ],
+                "flatDescription": "Background Mozilla Firefox is a popular open-source web browser from the Mozilla project. Description Multiple vulnerabilities have been discovered in Mozilla Firefox. Please review the CVE identifiers referenced below for details. Impact Please review the referenced CVE identifiers for details...."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0741",
+                "_score": 62.270138,
+                "_source": {
+                    "lastseen": "2024-03-16T15:03:11",
+                    "description": "An out of bounds write in ANGLE could have allowed an attacker to corrupt memory leading to a potentially exploitable crash. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0741",
+                    "cwe": [
+                        "CWE-787"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0741"
+                    ],
+                    "modified": "2024-02-02T17:19:30",
+                    "cpe": [],
+                    "id": "CVE-2024-0741",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0741",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0741"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    62.270138,
+                    1706019338000
+                ],
+                "flatDescription": "An out of bounds write in ANGLE could have allowed an attacker to corrupt memory leading to a potentially exploitable crash. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-0753",
+                "_score": 62.194546,
+                "_source": {
+                    "lastseen": "2024-03-16T15:04:11",
+                    "description": "In specific HSTS configurations an attacker could have bypassed HSTS on a subdomain. This vulnerability affects Firefox < 122, Firefox ESR < 115.7, and Thunderbird < 115.7.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 6.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-01-23T14:15:38",
+                    "type": "cve",
+                    "title": "CVE-2024-0753",
+                    "cwe": [
+                        "NVD-CWE-noinfo"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-0753"
+                    ],
+                    "modified": "2024-02-02T17:14:13",
+                    "cpe": [],
+                    "id": "CVE-2024-0753",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-0753",
+                    "cvss": {
+                        "score": 4.3,
+                        "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-0753"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>",
+                        "<span class=\"vulners-highlight\">Mozilla</span>"
+                    ],
+                    "description": [
+                        "This vulnerability affects <span class=\"vulners-highlight\">Firefox</span> < 122, <span class=\"vulners-highlight\">Firefox</span> ESR < 115.7, and Thunderbird < 115.7."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span>",
+                        "<span class=\"vulners-highlight\">mozilla</span> <span class=\"vulners-highlight\">firefox</span> esr",
+                        "<span class=\"vulners-highlight\">mozilla</span> thunderbird"
+                    ],
+                    "product_info.product": [
+                        "<span class=\"vulners-highlight\">Firefox</span>",
+                        "<span class=\"vulners-highlight\">Firefox</span> ESR"
+                    ]
+                },
+                "sort": [
+                    62.194546,
+                    1706019338000
+                ],
+                "flatDescription": "In specific HSTS configurations an attacker could have bypassed HSTS on a subdomain. This vulnerability affects Firefox &lt; 122, Firefox ESR &lt; 115.7, and Thunderbird &lt;..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 34484,
+        "maxSearchSize": 100
+    }
+}

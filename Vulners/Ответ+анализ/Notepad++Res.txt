@@ -1,0 +1,48 @@
+Title: CVE-2023-6401
+CVE List: ['CVE-2023-6401']
+ID: OSV:CVE-2023-6401
+
+Title: CVE-2023-0909
+CVE List: ['CVE-2023-0909']
+ID: CVE-2023-0909
+
+Title: CVE-2023-6401
+CVE List: ['CVE-2023-6401']
+ID: CVE-2023-6401
+
+Title: Design/Logic Flaw
+CVE List: ['CVE-2023-6401']
+ID: PRION:CVE-2023-6401
+
+Title: Design/Logic Flaw
+CVE List: ['CVE-2023-0909']
+ID: PRION:CVE-2023-0909
+
+Title: CVE-2023-47452
+CVE List: ['CVE-2023-47452']
+ID: OSV:CVE-2023-47452
+
+Title: Directory traversal + file write causing arbitrary code execution
+CVE List: ['CVE-2023-30626', 'CVE-2023-30627']
+ID: OSV:GHSA-9P5F-5X8V-X65M
+
+Title: Exploit for Externally Controlled Reference to a Resource in Another Sphere in Microsoft
+CVE List: ['CVE-2022-30190']
+ID: 70407390-C149-54F1-89B0-7611FB420601
+
+Title: CVE-2023-47452
+CVE List: ['CVE-2023-47452']
+ID: CVE-2023-47452
+
+Title: Design/Logic Flaw
+CVE List: ['CVE-2023-47452']
+ID: PRION:CVE-2023-47452
+
+Title: KLA60810 Multiple vulnerabilities in Notepad++
+CVE List: ['CVE-2023-40031', 'CVE-2023-40036', 'CVE-2023-40164', 'CVE-2023-40166']
+ID: KLA60810
+
+Title: CVE-2023-40164
+CVE List: ['CVE-2023-40164']
+ID: OSV:CVE-2023-40164
+

@@ -1,0 +1,1779 @@
+{
+    "result": "OK",
+    "data": {
+        "search": [
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20735",
+                "_score": 92.94083,
+                "_source": {
+                    "lastseen": "2024-03-16T17:54:05",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:48",
+                    "type": "cve",
+                    "title": "CVE-2024-20735",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20735"
+                    ],
+                    "modified": "2024-03-12T14:54:29",
+                    "cpe": [],
+                    "id": "CVE-2024-20735",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20735",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20735"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    92.94083,
+                    1708002948000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20736",
+                "_score": 92.09057,
+                "_source": {
+                    "lastseen": "2024-03-16T17:54:11",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:48",
+                    "type": "cve",
+                    "title": "CVE-2024-20736",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20736"
+                    ],
+                    "modified": "2024-03-12T14:54:37",
+                    "cpe": [],
+                    "id": "CVE-2024-20736",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20736",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20736"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    92.09057,
+                    1708002948000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20748",
+                "_score": 91.97231,
+                "_source": {
+                    "lastseen": "2024-03-16T17:56:26",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:49",
+                    "type": "cve",
+                    "title": "CVE-2024-20748",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20748"
+                    ],
+                    "modified": "2024-03-05T22:17:26",
+                    "cpe": [],
+                    "id": "CVE-2024-20748",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20748",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20748"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    91.97231,
+                    1708002949000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20749",
+                "_score": 91.97226,
+                "_source": {
+                    "lastseen": "2024-03-16T17:56:14",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:49",
+                    "type": "cve",
+                    "title": "CVE-2024-20749",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20749"
+                    ],
+                    "modified": "2024-03-05T22:17:17",
+                    "cpe": [],
+                    "id": "CVE-2024-20749",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20749",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20749"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    91.97226,
+                    1708002949000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20747",
+                "_score": 91.5158,
+                "_source": {
+                    "lastseen": "2024-03-16T17:54:48",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:48",
+                    "type": "cve",
+                    "title": "CVE-2024-20747",
+                    "cwe": [
+                        "CWE-125"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20747"
+                    ],
+                    "modified": "2024-03-05T22:17:24",
+                    "cpe": [],
+                    "id": "CVE-2024-20747",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20747",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20747"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    91.5158,
+                    1708002948000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20733",
+                "_score": 89.394424,
+                "_source": {
+                    "lastseen": "2024-03-16T17:54:01",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an Improper Input Validation vulnerability that could lead to an application denial-of-service. An attacker could leverage this vulnerability to cause the application to crash, resulting in a denial of service. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:47",
+                    "type": "cve",
+                    "title": "CVE-2024-20733",
+                    "cwe": [
+                        "CWE-20"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20733"
+                    ],
+                    "modified": "2024-03-01T23:06:53",
+                    "cpe": [],
+                    "id": "CVE-2024-20733",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20733",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20733"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an Improper Input Validation vulnerability that could lead to an application denial-of-service."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    89.394424,
+                    1708002947000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an Improper Input Validation vulnerability that could lead to an application denial-of-service. An attacker could leverage this vulnerability to cause the application to crash, resulting in a denial of service...."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20729",
+                "_score": 89.39406,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:39",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:47",
+                    "type": "cve",
+                    "title": "CVE-2024-20729",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20729"
+                    ],
+                    "modified": "2024-03-01T23:06:10",
+                    "cpe": [],
+                    "id": "CVE-2024-20729",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20729",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20729"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    89.39406,
+                    1708002947000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20728",
+                "_score": 89.39389,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:47",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:46",
+                    "type": "cve",
+                    "title": "CVE-2024-20728",
+                    "cwe": [
+                        "CWE-787"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20728"
+                    ],
+                    "modified": "2024-03-01T23:05:51",
+                    "cpe": [],
+                    "id": "CVE-2024-20728",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20728",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20728"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    89.39389,
+                    1708002946000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20727",
+                "_score": 89.39374,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:38",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:46",
+                    "type": "cve",
+                    "title": "CVE-2024-20727",
+                    "cwe": [
+                        "CWE-787"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20727"
+                    ],
+                    "modified": "2024-03-01T23:05:33",
+                    "cpe": [],
+                    "id": "CVE-2024-20727",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20727",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20727"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    89.39374,
+                    1708002946000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20726",
+                "_score": 88.94966,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:43",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:46",
+                    "type": "cve",
+                    "title": "CVE-2024-20726",
+                    "cwe": [
+                        "CWE-787"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20726"
+                    ],
+                    "modified": "2024-03-01T23:04:49",
+                    "cpe": [],
+                    "id": "CVE-2024-20726",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20726",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20726"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    88.94966,
+                    1708002946000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20734",
+                "_score": 87.823975,
+                "_source": {
+                    "lastseen": "2024-03-16T17:54:10",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:47",
+                    "type": "cve",
+                    "title": "CVE-2024-20734",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20734"
+                    ],
+                    "modified": "2024-03-01T23:07:08",
+                    "cpe": [],
+                    "id": "CVE-2024-20734",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20734",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20734"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could lead to disclosure of sensitive memory."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    87.823975,
+                    1708002947000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20731",
+                "_score": 87.82375,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:45",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:47",
+                    "type": "cve",
+                    "title": "CVE-2024-20731",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20731"
+                    ],
+                    "modified": "2024-03-01T23:06:42",
+                    "cpe": [],
+                    "id": "CVE-2024-20731",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20731",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20731"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    87.82375,
+                    1708002947000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2024-20730",
+                "_score": 87.82364,
+                "_source": {
+                    "lastseen": "2024-03-16T17:53:51",
+                    "description": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an Integer Overflow or Wraparound vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-15T13:15:47",
+                    "type": "cve",
+                    "title": "CVE-2024-20730",
+                    "cwe": [
+                        "CWE-190"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20730"
+                    ],
+                    "modified": "2024-03-01T23:06:28",
+                    "cpe": [],
+                    "id": "CVE-2024-20730",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-20730",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2024-20730"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span> versions 20.005.30539, 23.008.20470 and earlier are affected by an Integer Overflow or Wraparound vulnerability that could result in arbitrary code execution in the context of the current"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    87.82364,
+                    1708002947000
+                ],
+                "flatDescription": "Acrobat Reader versions 20.005.30539, 23.008.20470 and earlier are affected by an Integer Overflow or Wraparound vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2023-44372",
+                "_score": 83.06566,
+                "_source": {
+                    "lastseen": "2024-03-06T13:36:00",
+                    "description": "Adobe Acrobat Reader versions 23.006.20360 (and earlier) and 20.005.30524 (and earlier) are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2023-11-16T10:15:18",
+                    "type": "cve",
+                    "title": "CVE-2023-44372",
+                    "cwe": [
+                        "CWE-416"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2023-44372"
+                    ],
+                    "modified": "2024-02-23T19:15:08",
+                    "cpe": [],
+                    "id": "CVE-2023-44372",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-44372",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "cpe23": [],
+                    "vhref": "https://vulners.com/cve/CVE-2023-44372"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat <span class=\"vulners-highlight\">Reader</span> versions 23.006.20360 (and earlier) and 20.005.30524 (and earlier) are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc"
+                    ],
+                    "product_info.product": [
+                        "Acrobat <span class=\"vulners-highlight\">Reader</span>"
+                    ]
+                },
+                "sort": [
+                    83.06566,
+                    1700129718000
+                ],
+                "flatDescription": "Adobe Acrobat Reader versions 23.006.20360 (and earlier) and 20.005.30524 (and earlier) are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2005-1347",
+                "_score": 82.09433,
+                "_source": {
+                    "lastseen": "2024-03-16T14:19:33",
+                    "description": "** UNVERIFIABLE **  NOTE: this issue describes a problem that can not be independently verified as of 20050421.  Adobe Acrobat reader (AcroRd32.exe) 6.0 and earlier allows remote attackers to cause a denial of service (\"Invalid-ID-Handle-Error\" error) and modify memory beginning at a particular address, possibly allowing the execution of arbitrary code, via a crafted PDF file.  NOTE: the vendor has stated that the reporter refused to provide sufficient details to confirm the issue.  In addition, due to the lack of details in the original advisory, an independent verification is not possible.  Finally, the reliability of the original reporter is unknown.  This item has only been assigned a CVE identifier for tracking purposes, and to serve as a concrete example of the newly defined UNVERIFIABLE and PRERELEASE content decisions in CVE, which must be discussed by the Editorial Board. Without additional details or independent verification by reliable sources, it is highly likely that this item will be REJECTED.",
+                    "cvss3": {},
+                    "published": "2005-05-02T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2005-1347",
+                    "cwe": [
+                        "NVD-CWE-Other"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 4.9,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "HIGH",
+                            "confidentialityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "baseScore": 2.6,
+                            "vectorString": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2005-1347"
+                    ],
+                    "modified": "2024-02-14T01:17:00",
+                    "cpe": [
+                        "cpe:/a:adobe:acrobat_reader:6.0",
+                        "cpe:/a:adobe:acrobat_reader:5.0.10",
+                        "cpe:/a:adobe:acrobat_reader:3.0"
+                    ],
+                    "id": "CVE-2005-1347",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1347",
+                    "cvss": {
+                        "score": 2.6,
+                        "vector": "AV:N/AC:H/Au:N/C:N/I:N/A:P"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:adobe:acrobat_reader:3.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat_reader:5.0.10:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat_reader:6.0:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2005-1347"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat <span class=\"vulners-highlight\">reader</span> (AcroRd32.exe) 6.0 and earlier allows remote attackers to cause a denial of service (\"Invalid-ID-Handle-Error\" error) and modify memory beginning at a particular address, possibly"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>"
+                    ]
+                },
+                "sort": [
+                    82.09433,
+                    1115006400000
+                ],
+                "flatDescription": "** UNVERIFIABLE **  NOTE: this issue describes a problem that can not be independently verified as of 20050421.  Adobe Acrobat reader (AcroRd32.exe) 6.0 and earlier allows remote attackers to cause a denial of service (&quot;Invalid-ID-Handle-Error&quot; error) and modify memory beginning at a particular..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2005-1306",
+                "_score": 70.89462,
+                "_source": {
+                    "lastseen": "2024-03-16T14:19:10",
+                    "description": "The Adobe Reader control in Adobe Reader and Acrobat 7.0 and 7.0.1 allows remote attackers to determine the existence of files via Javascript containing XML script, aka the \"XML External Entity vulnerability.\"",
+                    "cvss3": {
+                        "exploitabilityScore": 3.9,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.5,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "NONE"
+                        },
+                        "impactScore": 3.6
+                    },
+                    "published": "2005-06-15T04:00:00",
+                    "type": "cve",
+                    "title": "CVE-2005-1306",
+                    "cwe": [
+                        "CWE-611"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "LOW",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 5.0,
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2005-1306"
+                    ],
+                    "modified": "2024-02-08T19:55:00",
+                    "cpe": [
+                        "cpe:/a:adobe:acrobat:7.0",
+                        "cpe:/a:adobe:acrobat_reader:7.0",
+                        "cpe:/a:adobe:acrobat_reader:7.0.1",
+                        "cpe:/a:adobe:acrobat:7.0.1"
+                    ],
+                    "id": "CVE-2005-1306",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1306",
+                    "cvss": {
+                        "score": 5.0,
+                        "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:a:adobe:acrobat_reader:7.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat:7.0:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat:7.0.1:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat_reader:7.0.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2005-1306"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>",
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "description": [
+                        "The <span class=\"vulners-highlight\">Adobe</span> <span class=\"vulners-highlight\">Reader</span> control in <span class=\"vulners-highlight\">Adobe</span> <span class=\"vulners-highlight\">Reader</span> and Acrobat 7.0 and 7.0.1 allows remote attackers to determine the existence of files via Javascript containing XML script, aka the \"XML External Entity vulnerability"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat"
+                    ]
+                },
+                "sort": [
+                    70.89462,
+                    1118808000000
+                ],
+                "flatDescription": "The Adobe Reader control in Adobe Reader and Acrobat 7.0 and 7.0.1 allows remote attackers to determine the existence of files via Javascript containing XML script, aka the &quot;XML External Entity..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CVE-2011-0611",
+                "_score": 58.708714,
+                "_source": {
+                    "lastseen": "2024-03-16T14:11:28",
+                    "description": "Adobe Flash Player before 10.2.154.27 on Windows, Mac OS X, Linux, and Solaris and 10.2.156.12 and earlier on Android; Adobe AIR before 2.6.19140; and Authplay.dll (aka AuthPlayLib.bundle) in Adobe Reader 9.x before 9.4.4 and 10.x through 10.0.1 on Windows, Adobe Reader 9.x before 9.4.4 and 10.x before 10.0.3 on Mac OS X, and Adobe Acrobat 9.x before 9.4.4 and 10.x before 10.0.3 on Windows and Mac OS X allow remote attackers to execute arbitrary code or cause a denial of service (application crash) via crafted Flash content; as demonstrated by a Microsoft Office document with an embedded .swf file that has a size inconsistency in a \"group of included constants,\" object type confusion, ActionScript that adds custom functions to prototypes, and Date objects; and as exploited in the wild in April 2011.",
+                    "cvss3": {
+                        "exploitabilityScore": 2.8,
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "NETWORK",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 8.8,
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        },
+                        "impactScore": 5.9
+                    },
+                    "published": "2011-04-13T14:55:00",
+                    "type": "cve",
+                    "title": "CVE-2011-0611",
+                    "cwe": [
+                        "CWE-843"
+                    ],
+                    "bulletinFamily": "NVD",
+                    "cvss2": {
+                        "severity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": true,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "COMPLETE",
+                            "availabilityImpact": "COMPLETE",
+                            "integrityImpact": "COMPLETE",
+                            "baseScore": 9.3,
+                            "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                            "version": "2.0",
+                            "accessVector": "NETWORK",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 10.0,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2011-0611"
+                    ],
+                    "modified": "2024-02-02T02:39:00",
+                    "cpe": [
+                        "cpe:/o:opensuse:opensuse:11.4",
+                        "cpe:/a:adobe:acrobat_reader:10.0.1",
+                        "cpe:/o:suse:linux_enterprise_desktop:10",
+                        "cpe:/a:adobe:flash_player:10.2.156.12",
+                        "cpe:/o:opensuse:opensuse:11.2",
+                        "cpe:/o:suse:linux_enterprise_desktop:11",
+                        "cpe:/o:opensuse:opensuse:11.3"
+                    ],
+                    "id": "CVE-2011-0611",
+                    "href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0611",
+                    "cvss": {
+                        "score": 9.3,
+                        "vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                    },
+                    "cpe23": [
+                        "cpe:2.3:o:suse:linux_enterprise_desktop:11:sp1:*:*:*:*:*:*",
+                        "cpe:2.3:o:opensuse:opensuse:11.3:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:flash_player:10.2.156.12:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:suse:linux_enterprise_desktop:10:sp4:*:*:-:*:*:*",
+                        "cpe:2.3:o:opensuse:opensuse:11.2:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:opensuse:opensuse:11.4:*:*:*:*:*:*:*",
+                        "cpe:2.3:a:adobe:acrobat_reader:10.0.1:*:*:*:*:*:*:*"
+                    ],
+                    "vhref": "https://vulners.com/cve/CVE-2011-0611"
+                },
+                "highlight": {
+                    "product_info.vendor": [
+                        "<span class=\"vulners-highlight\">Adobe</span>",
+                        "<span class=\"vulners-highlight\">Adobe</span>",
+                        "<span class=\"vulners-highlight\">Adobe</span>",
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "references": [
+                        "http://bugix-security.blogspot.com/2011/04/cve-2011-0611-<span class=\"vulners-highlight\">adobe</span>-flash-zero-day.html",
+                        "http://blogs.technet.com/b/mmpc/archive/2011/04/12/analysis-of-the-cve-2011-0611-<span class=\"vulners-highlight\">adobe</span>-flash-player-vulnerability-exploitation.aspx"
+                    ],
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Flash Player before 10.2.154.27 on Windows, Mac OS X, Linux, and Solaris and 10.2.156.12 and earlier on Android; <span class=\"vulners-highlight\">Adobe</span> AIR before 2.6.19140; and Authplay.dll (aka AuthPlayLib.bundle) in <span class=\"vulners-highlight\">Adobe</span> <span class=\"vulners-highlight\">Reader</span>",
+                        "9.x before 9.4.4 and 10.x through 10.0.1 on Windows, <span class=\"vulners-highlight\">Adobe</span> <span class=\"vulners-highlight\">Reader</span> 9.x before 9.4.4 and 10.x before 10.0.3 on Mac OS X, and <span class=\"vulners-highlight\">Adobe</span> Acrobat 9.x before 9.4.4 and 10.x before 10.0.3 on Windows and Mac OS X"
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> <span class=\"vulners-highlight\">adobe</span> air",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span>",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat"
+                    ]
+                },
+                "sort": [
+                    58.708714,
+                    1302706500000
+                ],
+                "flatDescription": "Adobe Flash Player before 10.2.154.27 on Windows, Mac OS X, Linux, and Solaris and 10.2.156.12 and earlier on Android; Adobe AIR before 2.6.19140; and Authplay.dll (aka AuthPlayLib.bundle) in Adobe Reader 9.x before 9.4.4 and 10.x through 10.0.1 on Windows, Adobe Reader 9.x before 9.4.4 and 10.x..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CNVD-2024-11667",
+                "_score": 49.784622,
+                "_source": {
+                    "lastseen": "2024-03-06T01:23:15",
+                    "description": "Adobe Acrobat Reader is the United States of America Audobee (Adobe), a PDF viewer. Adobe Acrobat and Reader has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds read.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-29T00:00:00",
+                    "type": "cnvd",
+                    "title": "Adobe Acrobat and Reader Out-of-Bounds Read Vulnerability (CNVD-2024-11667)",
+                    "bulletinFamily": "cnvd",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20749"
+                    ],
+                    "modified": "2024-03-05T00:00:00",
+                    "id": "CNVD-2024-11667",
+                    "href": "https://www.cnvd.org.cn/flaw/show/CNVD-2024-11667",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "vhref": "https://vulners.com/cnvd/CNVD-2024-11667"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat <span class=\"vulners-highlight\">Reader</span> is the United States of America Audobee (<span class=\"vulners-highlight\">Adobe</span>), a PDF viewer.",
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span> has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds read."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> 2020",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat 2020"
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span> Out-of-Bounds Read Vulnerability (CNVD-2024-11667)"
+                    ]
+                },
+                "sort": [
+                    49.784622,
+                    1709164800000
+                ],
+                "flatDescription": "Adobe Acrobat Reader is the United States of America Audobee (Adobe), a PDF viewer. Adobe Acrobat and Reader has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "CNVD-2024-11664",
+                "_score": 49.784622,
+                "_source": {
+                    "lastseen": "2024-03-05T19:17:48",
+                    "description": "Adobe Acrobat Reader is the United States of America Audobee (Adobe), a PDF viewer. Adobe Acrobat and Reader has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds read.",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "MEDIUM",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 5.5,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-29T00:00:00",
+                    "type": "cnvd",
+                    "title": "Adobe Acrobat and Reader Out-of-Bounds Read Vulnerability (CNVD-2024-11664)",
+                    "bulletinFamily": "cnvd",
+                    "cvss2": {
+                        "severity": "LOW",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "baseScore": 1.9,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20747"
+                    ],
+                    "modified": "2024-03-05T00:00:00",
+                    "id": "CNVD-2024-11664",
+                    "href": "https://www.cnvd.org.cn/flaw/show/CNVD-2024-11664",
+                    "cvss": {
+                        "score": 1.9,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                    },
+                    "vhref": "https://vulners.com/cnvd/CNVD-2024-11664"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat <span class=\"vulners-highlight\">Reader</span> is the United States of America Audobee (<span class=\"vulners-highlight\">Adobe</span>), a PDF viewer.",
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span> has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds read."
+                    ],
+                    "affectedSoftware.name": [
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat <span class=\"vulners-highlight\">reader</span> 2020",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat dc",
+                        "<span class=\"vulners-highlight\">adobe</span> acrobat 2020"
+                    ],
+                    "title": [
+                        "<span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span> Out-of-Bounds Read Vulnerability (CNVD-2024-11664)"
+                    ]
+                },
+                "sort": [
+                    49.784622,
+                    1709164800000
+                ],
+                "flatDescription": "Adobe Acrobat Reader is the United States of America Audobee (Adobe), a PDF viewer. Adobe Acrobat and Reader has an out-of-bounds read vulnerability that can be exploited by an attacker to obtain sensitive information caused by an out-of-bounds..."
+            },
+            {
+                "_index": "es6_bulletins_bulletin_v5",
+                "_type": "_doc",
+                "_id": "APSB24-07",
+                "_score": 49.549843,
+                "_source": {
+                    "lastseen": "2024-03-16T20:39:39",
+                    "description": "Adobe has released a security update for Adobe Acrobat and Reader for Windows and macOS. This update addresses critical and important vulnerabilities. Successful exploitation could lead to arbitrary code execution, application denial-of-service, and memory leak. \n",
+                    "cvss3": {
+                        "cvssV3": {
+                            "baseSeverity": "HIGH",
+                            "confidentialityImpact": "HIGH",
+                            "attackComplexity": "LOW",
+                            "scope": "UNCHANGED",
+                            "attackVector": "LOCAL",
+                            "availabilityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "baseScore": 7.8,
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "version": "3.1",
+                            "userInteraction": "REQUIRED"
+                        }
+                    },
+                    "published": "2024-02-13T00:00:00",
+                    "type": "adobe",
+                    "title": "APSB24-07 : Security update available for Adobe Acrobat and Reader",
+                    "bulletinFamily": "software",
+                    "cvss2": {
+                        "severity": "MEDIUM",
+                        "exploitabilityScore": 3.4,
+                        "obtainAllPrivilege": false,
+                        "userInteractionRequired": false,
+                        "obtainOtherPrivilege": false,
+                        "cvssV2": {
+                            "accessComplexity": "MEDIUM",
+                            "confidentialityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "baseScore": 4.4,
+                            "vectorString": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+                            "version": "2.0",
+                            "accessVector": "LOCAL",
+                            "authentication": "NONE"
+                        },
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainUserPrivilege": false
+                    },
+                    "cvelist": [
+                        "CVE-2024-20726",
+                        "CVE-2024-20727",
+                        "CVE-2024-20728",
+                        "CVE-2024-20729",
+                        "CVE-2024-20730",
+                        "CVE-2024-20731",
+                        "CVE-2024-20733",
+                        "CVE-2024-20734",
+                        "CVE-2024-20735",
+                        "CVE-2024-20736",
+                        "CVE-2024-20747",
+                        "CVE-2024-20748",
+                        "CVE-2024-20749",
+                        "CVE-2024-20765"
+                    ],
+                    "modified": "2024-02-28T00:00:00",
+                    "id": "APSB24-07",
+                    "href": "https://helpx.adobe.com/security/products/acrobat/apsb24-07.html",
+                    "cvss": {
+                        "score": 4.4,
+                        "vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "vhref": "https://vulners.com/adobe/APSB24-07"
+                },
+                "highlight": {
+                    "description": [
+                        "<span class=\"vulners-highlight\">Adobe</span> has released a security update for <span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span> for Windows and macOS. This update addresses critical and important vulnerabilities."
+                    ],
+                    "reporter": [
+                        "<span class=\"vulners-highlight\">Adobe</span>"
+                    ],
+                    "affectedSoftware.name": [
+                        "acrobat <span class=\"vulners-highlight\">reader</span> dc",
+                        "acrobat <span class=\"vulners-highlight\">reader</span> 2020"
+                    ],
+                    "title": [
+                        "APSB24-07 : Security update available for <span class=\"vulners-highlight\">Adobe</span> Acrobat and <span class=\"vulners-highlight\">Reader</span>"
+                    ],
+                    "type": [
+                        "<span class=\"vulners-highlight\">adobe</span>"
+                    ]
+                },
+                "sort": [
+                    49.549843,
+                    1707782400000
+                ],
+                "flatDescription": "Adobe has released a security update for Adobe Acrobat and Reader for Windows and macOS. This update addresses critical and important vulnerabilities. Successful exploitation could lead to arbitrary code execution, application denial-of-service, and memory..."
+            }
+        ],
+        "occurrences": {},
+        "exactMatch": null,
+        "references": null,
+        "total": 9418,
+        "maxSearchSize": 100
+    }
+}
